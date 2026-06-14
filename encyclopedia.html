@@ -148,12 +148,11 @@
     }
 
     /* 无图时的占位 SVG 背景 */
-    .plant-placeholder {
+    .plant-img {
       width: 100%;
       height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      object-fit: cover;
+      transition: transform 0.4s ease;
     }
 
     /* 植物卡片内容区 */
@@ -407,13 +406,7 @@
         <!-- 1. 绿萝 -->
         <article class="plant-card" data-light="耐阴" data-diff="新手" data-func="净化空气">
           <div class="plant-img-wrap">
-            <div class="plant-placeholder">
-              <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-                <defs><linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#52b788;stop-opacity:0.6"/><stop offset="100%" style="stop-color:#1b4332;stop-opacity:0.9"/></linearGradient></defs>
-                <rect width="300" height="200" fill="url(#g1)"/>
-                <text x="150" y="110" text-anchor="middle" fill="#fff" font-size="42" font-family="sans-serif">&#127807;</text>
-              </svg>
-            </div>
+            <img src="assets/encyclopedia/plant-pothos.jpg" alt="绿萝" class="plant-img" loading="lazy">
           </div>
           <div class="plant-body">
             <h3 class="plant-name-zh">绿萝</h3>
@@ -431,13 +424,7 @@
         <!-- 2. 虎皮兰 -->
         <article class="plant-card" data-light="耐阴" data-diff="新手" data-func="净化空气">
           <div class="plant-img-wrap">
-            <div class="plant-placeholder">
-              <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-                <defs><linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#74c69d;stop-opacity:0.6"/><stop offset="100%" style="stop-color:#2d6a4f;stop-opacity:0.9"/></linearGradient></defs>
-                <rect width="300" height="200" fill="url(#g2)"/>
-                <text x="150" y="110" text-anchor="middle" fill="#fff" font-size="42" font-family="sans-serif">&#127797;</text>
-              </svg>
-            </div>
+            <img src="assets/encyclopedia/plant-snake.jpg" alt="虎皮兰" class="plant-img" loading="lazy">
           </div>
           <div class="plant-body">
             <h3 class="plant-name-zh">虎皮兰</h3>
@@ -455,13 +442,7 @@
         <!-- 3. 龟背竹 -->
         <article class="plant-card" data-light="散射光" data-diff="新手" data-func="观赏">
           <div class="plant-img-wrap">
-            <div class="plant-placeholder">
-              <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-                <defs><linearGradient id="g3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#40916c;stop-opacity:0.6"/><stop offset="100%" style="stop-color:#081c15;stop-opacity:0.9"/></linearGradient></defs>
-                <rect width="300" height="200" fill="url(#g3)"/>
-                <text x="150" y="110" text-anchor="middle" fill="#fff" font-size="42" font-family="sans-serif">&#127793;</text>
-              </svg>
-            </div>
+            <img src="assets/encyclopedia/plant-monstera.jpg" alt="龟背竹" class="plant-img" loading="lazy">
           </div>
           <div class="plant-body">
             <h3 class="plant-name-zh">龟背竹</h3>
@@ -479,13 +460,7 @@
         <!-- 4. 吊兰 -->
         <article class="plant-card" data-light="散射光" data-diff="新手" data-func="净化空气">
           <div class="plant-img-wrap">
-            <div class="plant-placeholder">
-              <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-                <defs><linearGradient id="g4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#95d5b2;stop-opacity:0.6"/><stop offset="100%" style="stop-color:#2d6a4f;stop-opacity:0.9"/></linearGradient></defs>
-                <rect width="300" height="200" fill="url(#g4)"/>
-                <text x="150" y="110" text-anchor="middle" fill="#fff" font-size="42" font-family="sans-serif">&#127795;</text>
-              </svg>
-            </div>
+            <img src="assets/encyclopedia/plant-spider.jpg" alt="吊兰" class="plant-img" loading="lazy">
           </div>
           <div class="plant-body">
             <h3 class="plant-name-zh">吊兰</h3>
@@ -503,13 +478,7 @@
         <!-- 5. 琴叶榕 -->
         <article class="plant-card" data-light="强光" data-diff="进阶" data-func="观赏">
           <div class="plant-img-wrap">
-            <div class="plant-placeholder">
-              <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-                <defs><linearGradient id="g5" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#b7e4c7;stop-opacity:0.6"/><stop offset="100%" style="stop-color:#40916c;stop-opacity:0.9"/></linearGradient></defs>
-                <rect width="300" height="200" fill="url(#g5)"/>
-                <text x="150" y="110" text-anchor="middle" fill="#fff" font-size="42" font-family="sans-serif">&#127811;</text>
-              </svg>
-            </div>
+            <img src="assets/encyclopedia/plant-fiddle.jpg" alt="琴叶榕" class="plant-img" loading="lazy">
           </div>
           <div class="plant-body">
             <h3 class="plant-name-zh">琴叶榕</h3>
@@ -527,13 +496,7 @@
         <!-- 6. 多肉 -->
         <article class="plant-card" data-light="强光" data-diff="新手" data-func="观赏">
           <div class="plant-img-wrap">
-            <div class="plant-placeholder">
-              <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-                <defs><linearGradient id="g6" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#d8f3dc;stop-opacity:0.6"/><stop offset="100%" style="stop-color:#52b788;stop-opacity:0.9"/></linearGradient></defs>
-                <rect width="300" height="200" fill="url(#g6)"/>
-                <text x="150" y="110" text-anchor="middle" fill="#1b4332" font-size="42" font-family="sans-serif">&#127800;</text>
-              </svg>
-            </div>
+            <img src="assets/encyclopedia/plant-succulent.jpg" alt="多肉" class="plant-img" loading="lazy">
           </div>
           <div class="plant-body">
             <h3 class="plant-name-zh">多肉</h3>
@@ -551,13 +514,7 @@
         <!-- 7. 富贵竹 -->
         <article class="plant-card" data-light="散射光" data-diff="新手" data-func="招财">
           <div class="plant-img-wrap">
-            <div class="plant-placeholder">
-              <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-                <defs><linearGradient id="g7" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#52b788;stop-opacity:0.6"/><stop offset="100%" style="stop-color:#1b4332;stop-opacity:0.9"/></linearGradient></defs>
-                <rect width="300" height="200" fill="url(#g7)"/>
-                <text x="150" y="110" text-anchor="middle" fill="#fff" font-size="42" font-family="sans-serif">&#127802;</text>
-              </svg>
-            </div>
+            <img src="assets/encyclopedia/plant-lucky-bamboo.jpg" alt="富贵竹" class="plant-img" loading="lazy">
           </div>
           <div class="plant-body">
             <h3 class="plant-name-zh">富贵竹</h3>
@@ -575,13 +532,7 @@
         <!-- 8. 巴西铁树 -->
         <article class="plant-card" data-light="耐阴" data-diff="新手" data-func="净化空气">
           <div class="plant-img-wrap">
-            <div class="plant-placeholder">
-              <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-                <defs><linearGradient id="g8" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#74c69d;stop-opacity:0.6"/><stop offset="100%" style="stop-color:#081c15;stop-opacity:0.9"/></linearGradient></defs>
-                <rect width="300" height="200" fill="url(#g8)"/>
-                <text x="150" y="110" text-anchor="middle" fill="#fff" font-size="42" font-family="sans-serif">&#127794;</text>
-              </svg>
-            </div>
+            <img src="assets/encyclopedia/plant-dracaena.jpg" alt="巴西铁树" class="plant-img" loading="lazy">
           </div>
           <div class="plant-body">
             <h3 class="plant-name-zh">巴西铁树</h3>
@@ -599,13 +550,7 @@
         <!-- 9. 常春藤 -->
         <article class="plant-card" data-light="散射光" data-diff="新手" data-func="净化空气">
           <div class="plant-img-wrap">
-            <div class="plant-placeholder">
-              <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-                <defs><linearGradient id="g9" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#40916c;stop-opacity:0.6"/><stop offset="100%" style="stop-color:#1b4332;stop-opacity:0.9"/></linearGradient></defs>
-                <rect width="300" height="200" fill="url(#g9)"/>
-                <text x="150" y="110" text-anchor="middle" fill="#fff" font-size="42" font-family="sans-serif">&#9752;</text>
-              </svg>
-            </div>
+            <img src="assets/encyclopedia/plant-english-ivy.jpg" alt="常春藤" class="plant-img" loading="lazy">
           </div>
           <div class="plant-body">
             <h3 class="plant-name-zh">常春藤</h3>
@@ -623,13 +568,7 @@
         <!-- 10. 天堂鸟 -->
         <article class="plant-card" data-light="强光" data-diff="进阶" data-func="观赏">
           <div class="plant-img-wrap">
-            <div class="plant-placeholder">
-              <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-                <defs><linearGradient id="g10" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#95d5b2;stop-opacity:0.6"/><stop offset="100%" style="stop-color:#2d6a4f;stop-opacity:0.9"/></linearGradient></defs>
-                <rect width="300" height="200" fill="url(#g10)"/>
-                <text x="150" y="110" text-anchor="middle" fill="#fff" font-size="42" font-family="sans-serif">&#127804;</text>
-              </svg>
-            </div>
+            <img src="assets/encyclopedia/plant-bird-of-paradise.jpg" alt="天堂鸟" class="plant-img" loading="lazy">
           </div>
           <div class="plant-body">
             <h3 class="plant-name-zh">天堂鸟</h3>
@@ -647,13 +586,7 @@
         <!-- 11. 金钱树 -->
         <article class="plant-card" data-light="耐阴" data-diff="新手" data-func="招财">
           <div class="plant-img-wrap">
-            <div class="plant-placeholder">
-              <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-                <defs><linearGradient id="g11" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#52b788;stop-opacity:0.6"/><stop offset="100%" style="stop-color:#081c15;stop-opacity:0.9"/></linearGradient></defs>
-                <rect width="300" height="200" fill="url(#g11)"/>
-                <text x="150" y="110" text-anchor="middle" fill="#fff" font-size="42" font-family="sans-serif">&#127792;</text>
-              </svg>
-            </div>
+            <img src="assets/encyclopedia/plant-zz.jpg" alt="金钱树" class="plant-img" loading="lazy">
           </div>
           <div class="plant-body">
             <h3 class="plant-name-zh">金钱树</h3>
@@ -671,13 +604,7 @@
         <!-- 12. 万年青 -->
         <article class="plant-card" data-light="散射光" data-diff="新手" data-func="观赏">
           <div class="plant-img-wrap">
-            <div class="plant-placeholder">
-              <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-                <defs><linearGradient id="g12" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#b7e4c7;stop-opacity:0.6"/><stop offset="100%" style="stop-color:#40916c;stop-opacity:0.9"/></linearGradient></defs>
-                <rect width="300" height="200" fill="url(#g12)"/>
-                <text x="150" y="110" text-anchor="middle" fill="#fff" font-size="42" font-family="sans-serif">&#127796;</text>
-              </svg>
-            </div>
+            <img src="assets/encyclopedia/plant-evergreen.jpg" alt="万年青" class="plant-img" loading="lazy">
           </div>
           <div class="plant-body">
             <h3 class="plant-name-zh">万年青</h3>
@@ -695,13 +622,7 @@
         <!-- 13. 兰花 -->
         <article class="plant-card" data-light="散射光" data-diff="进阶" data-func="观赏">
           <div class="plant-img-wrap">
-            <div class="plant-placeholder">
-              <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-                <defs><linearGradient id="g13" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#d8f3dc;stop-opacity:0.6"/><stop offset="100%" style="stop-color:#2d6a4f;stop-opacity:0.9"/></linearGradient></defs>
-                <rect width="300" height="200" fill="url(#g13)"/>
-                <text x="150" y="110" text-anchor="middle" fill="#fff" font-size="42" font-family="sans-serif">&#127799;</text>
-              </svg>
-            </div>
+            <img src="assets/encyclopedia/plant-orchid.jpg" alt="兰花" class="plant-img" loading="lazy">
           </div>
           <div class="plant-body">
             <h3 class="plant-name-zh">兰花</h3>
@@ -719,13 +640,7 @@
         <!-- 14. 蕨类 -->
         <article class="plant-card" data-light="耐阴" data-diff="新手" data-func="净化空气">
           <div class="plant-img-wrap">
-            <div class="plant-placeholder">
-              <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-                <defs><linearGradient id="g14" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#74c69d;stop-opacity:0.6"/><stop offset="100%" style="stop-color:#1b4332;stop-opacity:0.9"/></linearGradient></defs>
-                <rect width="300" height="200" fill="url(#g14)"/>
-                <text x="150" y="110" text-anchor="middle" fill="#fff" font-size="42" font-family="sans-serif">&#9758;</text>
-              </svg>
-            </div>
+            <img src="assets/encyclopedia/plant-fern.jpg" alt="蕨类" class="plant-img" loading="lazy">
           </div>
           <div class="plant-body">
             <h3 class="plant-name-zh">蕨类</h3>
@@ -743,13 +658,7 @@
         <!-- 15. 发财树 -->
         <article class="plant-card" data-light="散射光" data-diff="新手" data-func="招财">
           <div class="plant-img-wrap">
-            <div class="plant-placeholder">
-              <svg viewBox="0 0 300 200" xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-                <defs><linearGradient id="g15" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#52b788;stop-opacity:0.6"/><stop offset="100%" style="stop-color:#081c15;stop-opacity:0.9"/></linearGradient></defs>
-                <rect width="300" height="200" fill="url(#g15)"/>
-                <text x="150" y="110" text-anchor="middle" fill="#fff" font-size="42" font-family="sans-serif">&#127873;</text>
-              </svg>
-            </div>
+            <img src="assets/encyclopedia/plant-fortune.jpg" alt="发财树" class="plant-img" loading="lazy">
           </div>
           <div class="plant-body">
             <h3 class="plant-name-zh">发财树</h3>
