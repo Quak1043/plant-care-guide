@@ -1,62 +1,67 @@
 /**
- * 绿植养护指南 - 全局 JavaScript
+ * 绿植养护指南 - 全局 JavaScript v2
+ * 移动端菜单、表单验证、滚动效果、渐入动画
  */
 
 (function() {
   'use strict';
 
   // 移动端菜单切换
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
+  var menuToggle = document.querySelector('.menu-toggle');
+  var navLinks = document.querySelector('.nav-links');
 
   if (menuToggle && navLinks) {
     menuToggle.addEventListener('click', function() {
       navLinks.classList.toggle('active');
-      const isOpen = navLinks.classList.contains('active');
+      var isOpen = navLinks.classList.contains('active');
       menuToggle.setAttribute('aria-expanded', isOpen);
     });
 
-    // 点击导航链接后关闭菜单
     navLinks.querySelectorAll('a').forEach(function(link) {
       link.addEventListener('click', function() {
         navLinks.classList.remove('active');
         menuToggle.setAttribute('aria-expanded', 'false');
       });
     });
+
+    // 点击外部关闭菜单
+    document.addEventListener('click', function(e) {
+      if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+        navLinks.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
   }
 
   // 联系表单验证与提交
-  const contactForm = document.getElementById('contactForm');
+  var contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
 
-      const name = document.getElementById('name').value.trim();
-      const email = document.getElementById('email').value.trim();
-      const message = document.getElementById('message').value.trim();
-      const formStatus = document.getElementById('formStatus');
+      var name = document.getElementById('name').value.trim();
+      var email = document.getElementById('email').value.trim();
+      var message = document.getElementById('message').value.trim();
+      var formStatus = document.getElementById('formStatus');
 
-      // 简单验证
       if (!name || !email || !message) {
         showFormStatus('请填写所有必填字段', 'error');
         return;
       }
 
-      // 邮箱格式验证
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(email)) {
         showFormStatus('请输入有效的邮箱地址', 'error');
         return;
       }
 
-      // 模拟提交成功
       showFormStatus('感谢您的留言！我们会尽快回复您。', 'success');
       contactForm.reset();
     });
   }
 
   function showFormStatus(text, type) {
-    const formStatus = document.getElementById('formStatus');
+    var formStatus = document.getElementById('formStatus');
     if (!formStatus) return;
 
     formStatus.textContent = text;
@@ -69,14 +74,48 @@
   }
 
   // 滚动时导航栏阴影效果
-  const navbar = document.querySelector('.navbar');
+  var navbar = document.querySelector('.navbar');
   if (navbar) {
+    var scrollTimeout;
     window.addEventListener('scroll', function() {
-      if (window.scrollY > 10) {
-        navbar.style.boxShadow = '0 2px 12px rgba(0,0,0,0.08)';
-      } else {
-        navbar.style.boxShadow = '0 1px 4px rgba(0,0,0,0.04)';
+      if (!scrollTimeout) {
+        scrollTimeout = setTimeout(function() {
+          if (window.scrollY > 10) {
+            navbar.style.boxShadow = '0 2px 16px rgba(27, 67, 50, 0.08)';
+          } else {
+            navbar.style.boxShadow = 'none';
+          }
+          scrollTimeout = null;
+        }, 50);
       }
+    }, { passive: true });
+  }
+
+  // 滚动渐入动画 (IntersectionObserver)
+  if ('IntersectionObserver' in window) {
+    var observerOptions = {
+      root: null,
+      rootMargin: '0px 0px -40px 0px',
+      threshold: 0.1
+    };
+
+    var revealObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    // 观察所有带 .reveal 类的元素
+    document.querySelectorAll('.reveal').forEach(function(el) {
+      revealObserver.observe(el);
+    });
+  } else {
+    // 降级：直接显示所有元素
+    document.querySelectorAll('.reveal').forEach(function(el) {
+      el.classList.add('visible');
     });
   }
 
