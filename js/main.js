@@ -1,122 +1,76 @@
 /**
- * 绿植养护指南 - 全局 JavaScript v2
- * 移动端菜单、表单验证、滚动效果、渐入动画
+ * 绿植养护指南 v3 - 交互脚本
+ * 移动端菜单、导航阴影、滚动渐入、表单
  */
-
-(function() {
+(function(){
   'use strict';
 
-  // 移动端菜单切换
-  var menuToggle = document.querySelector('.menu-toggle');
-  var navLinks = document.querySelector('.nav-links');
-
-  if (menuToggle && navLinks) {
-    menuToggle.addEventListener('click', function() {
-      navLinks.classList.toggle('active');
-      var isOpen = navLinks.classList.contains('active');
-      menuToggle.setAttribute('aria-expanded', isOpen);
+  // 移动端菜单
+  var toggle=document.querySelector('.menu-toggle');
+  var nav=document.querySelector('.nav-links');
+  if(toggle&&nav){
+    toggle.addEventListener('click',function(){
+      nav.classList.toggle('active');
+      toggle.setAttribute('aria-expanded',nav.classList.contains('active'));
     });
-
-    navLinks.querySelectorAll('a').forEach(function(link) {
-      link.addEventListener('click', function() {
-        navLinks.classList.remove('active');
-        menuToggle.setAttribute('aria-expanded', 'false');
+    nav.querySelectorAll('a').forEach(function(l){
+      l.addEventListener('click',function(){
+        nav.classList.remove('active');
+        toggle.setAttribute('aria-expanded','false');
       });
     });
-
-    // 点击外部关闭菜单
-    document.addEventListener('click', function(e) {
-      if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
-        navLinks.classList.remove('active');
-        menuToggle.setAttribute('aria-expanded', 'false');
+    document.addEventListener('click',function(e){
+      if(!nav.contains(e.target)&&!toggle.contains(e.target)){
+        nav.classList.remove('active');
+        toggle.setAttribute('aria-expanded','false');
       }
     });
   }
 
-  // 联系表单验证与提交
-  var contactForm = document.getElementById('contactForm');
-  if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+  // 导航栏滚动阴影
+  var navbar=document.querySelector('.navbar');
+  if(navbar){
+    var scrollTimer;
+    window.addEventListener('scroll',function(){
+      if(!scrollTimer){
+        scrollTimer=setTimeout(function(){
+          navbar.classList.toggle('scrolled',window.scrollY>10);
+          scrollTimer=null;
+        },50);
+      }
+    },{passive:true});
+  }
+
+  // 联系表单
+  var form=document.getElementById('contactForm');
+  if(form){
+    form.addEventListener('submit',function(e){
       e.preventDefault();
-
-      var name = document.getElementById('name').value.trim();
-      var email = document.getElementById('email').value.trim();
-      var message = document.getElementById('message').value.trim();
-      var formStatus = document.getElementById('formStatus');
-
-      if (!name || !email || !message) {
-        showFormStatus('请填写所有必填字段', 'error');
-        return;
-      }
-
-      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailRegex.test(email)) {
-        showFormStatus('请输入有效的邮箱地址', 'error');
-        return;
-      }
-
-      showFormStatus('感谢您的留言！我们会尽快回复您。', 'success');
-      contactForm.reset();
+      var name=document.getElementById('name').value.trim();
+      var email=document.getElementById('email').value.trim();
+      var msg=document.getElementById('message').value.trim();
+      if(!name||!email||!msg){showStatus('请填写所有必填字段','error');return;}
+      if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){showStatus('请输入有效的邮箱地址','error');return;}
+      showStatus('感谢您的留言！我们会尽快回复您。','success');
+      form.reset();
     });
   }
-
-  function showFormStatus(text, type) {
-    var formStatus = document.getElementById('formStatus');
-    if (!formStatus) return;
-
-    formStatus.textContent = text;
-    formStatus.className = 'form-status ' + type;
-    formStatus.style.display = 'block';
-
-    setTimeout(function() {
-      formStatus.style.display = 'none';
-    }, 5000);
+  function showStatus(text,type){
+    var el=document.getElementById('formStatus');
+    if(!el)return;
+    el.textContent=text;el.className='form-status '+type;el.style.display='block';
+    setTimeout(function(){el.style.display='none';},5000);
   }
 
-  // 滚动时导航栏阴影效果
-  var navbar = document.querySelector('.navbar');
-  if (navbar) {
-    var scrollTimeout;
-    window.addEventListener('scroll', function() {
-      if (!scrollTimeout) {
-        scrollTimeout = setTimeout(function() {
-          if (window.scrollY > 10) {
-            navbar.style.boxShadow = '0 2px 16px rgba(27, 67, 50, 0.08)';
-          } else {
-            navbar.style.boxShadow = 'none';
-          }
-          scrollTimeout = null;
-        }, 50);
-      }
-    }, { passive: true });
-  }
-
-  // 滚动渐入动画 (IntersectionObserver)
-  if ('IntersectionObserver' in window) {
-    var observerOptions = {
-      root: null,
-      rootMargin: '0px 0px -40px 0px',
-      threshold: 0.1
-    };
-
-    var revealObserver = new IntersectionObserver(function(entries) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          revealObserver.unobserve(entry.target);
-        }
+  // 滚动渐入
+  if('IntersectionObserver' in window){
+    var obs=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}
       });
-    }, observerOptions);
-
-    // 观察所有带 .reveal 类的元素
-    document.querySelectorAll('.reveal').forEach(function(el) {
-      revealObserver.observe(el);
-    });
-  } else {
-    // 降级：直接显示所有元素
-    document.querySelectorAll('.reveal').forEach(function(el) {
-      el.classList.add('visible');
-    });
+    },{rootMargin:'0px 0px -40px 0px',threshold:0.1});
+    document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el);});
+  }else{
+    document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('visible');});
   }
-
 })();
