@@ -1,10 +1,9 @@
 /* ============================================
-   绿植养护指南 - 全局样式表 v3
-   主题：自然绿 + 大胆排版 + 现代布局
-   2026 重设计
+   绿植养护指南 - 全局样式表 v4
+   主题：自然绿 + 动画系统 + 现代布局
    ============================================ */
 
-/* ---- CSS 变量 ---- */
+/* ---- CSS 变量（v3 + 旧版兼容）---- */
 :root {
   --green-900: #1b4332;
   --green-800: #2d6a4f;
@@ -14,14 +13,23 @@
   --green-100: #d8f3dc;
   --green-50: #f0faf3;
 
+  --primary: #2d6a4f;
+  --primary-light: #40916c;
+  --primary-dark: #1b4332;
+  --accent: #52b788;
+  --accent-light: #95d5b2;
+
   --bg: #fafcfa;
-  --bg-warm: #f5f8f4;
+  --bg2: #f5f8f4;
+  --bg3: #e4ebe6;
   --surface: #ffffff;
   --ink: #111613;
   --ink-2: #2d352f;
+  --ink-secondary: #2d352f;
   --muted: #5a6b5f;
   --border: #dde6df;
   --border-light: #ecf2ed;
+  --rule: #dde6df;
 
   --radius: 12px;
   --radius-lg: 20px;
@@ -32,6 +40,7 @@
   --shadow: 0 2px 12px rgba(0,0,0,0.05);
   --shadow-md: 0 6px 24px rgba(0,0,0,0.07);
   --shadow-lg: 0 12px 40px rgba(0,0,0,0.09);
+  --shadow-hover: 0 6px 24px rgba(0,0,0,0.07);
 
   --transition: 0.25s cubic-bezier(0.22, 1, 0.36, 1);
   --transition-slow: 0.45s cubic-bezier(0.22, 1, 0.36, 1);
@@ -44,8 +53,8 @@
 html{scroll-behavior:smooth;font-size:16px;-webkit-text-size-adjust:100%}
 body{font-family:var(--font);color:var(--ink);background:var(--bg);line-height:1.7;-webkit-font-smoothing:antialiased}
 img{max-width:100%;height:auto;display:block}
-a{color:var(--green-800);text-decoration:none;transition:color 0.2s}
-a:hover{color:var(--green-900)}
+a{color:var(--primary);text-decoration:none;transition:color 0.2s}
+a:hover{color:var(--primary-dark)}
 h1,h2,h3,h4{text-wrap:balance;line-height:1.2}
 p{text-wrap:pretty}
 
@@ -62,52 +71,34 @@ p{text-wrap:pretty}
 }
 .navbar.scrolled{box-shadow:0 2px 20px rgba(0,0,0,0.06)}
 .navbar .container{display:flex;align-items:center;justify-content:space-between;height:68px}
-.logo{display:flex;align-items:center;gap:0.6rem;font-size:1.2rem;font-weight:700;color:var(--green-900)}
-.logo svg{width:34px;height:34px;flex-shrink:0}
+.logo{display:flex;align-items:center;gap:0.6rem;font-size:1.2rem;font-weight:700;color:var(--primary-dark)}
+.logo svg,.logo-icon{width:34px;height:34px;flex-shrink:0}
 .nav-links{display:flex;list-style:none;gap:0.15rem}
-.nav-links a{
-  color:var(--ink-2);font-weight:500;font-size:0.9rem;
-  padding:0.5rem 0.9rem;border-radius:var(--radius-sm);
-  transition:background 0.2s,color 0.2s;
-}
-.nav-links a:hover{color:var(--green-800);background:rgba(45,106,79,0.06)}
-.nav-links a.active{color:var(--green-800);background:rgba(45,106,79,0.1);font-weight:600}
+.nav-links a{color:var(--ink-2);font-weight:500;font-size:0.9rem;padding:0.5rem 0.9rem;border-radius:var(--radius-sm);transition:background 0.2s,color 0.2s}
+.nav-links a:hover{color:var(--primary);background:rgba(45,106,79,0.06)}
+.nav-links a.active{color:var(--primary);background:rgba(45,106,79,0.1);font-weight:600}
 .menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:0.5rem;border-radius:var(--radius-xs)}
-.menu-toggle:hover{background:var(--bg-warm)}
+.menu-toggle:hover{background:var(--bg2)}
 .menu-toggle span{display:block;width:22px;height:2px;background:var(--ink);margin:5px 0;border-radius:1px;transition:0.25s}
 
 /* ---- 按钮 ---- */
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;
-  padding:0.75rem 1.8rem;border-radius:var(--radius);font-size:0.95rem;font-weight:600;
-  cursor:pointer;border:none;text-decoration:none;line-height:1.4;
-  transition:background 0.2s,color 0.2s,transform 0.15s,box-shadow 0.2s;
-}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;padding:0.75rem 1.8rem;border-radius:var(--radius);font-size:0.95rem;font-weight:600;cursor:pointer;border:none;text-decoration:none;line-height:1.4;transition:background 0.2s,color 0.2s,transform 0.15s,box-shadow 0.2s}
 .btn:active{transform:scale(0.97)}
-.btn-primary{background:var(--green-800);color:#fff}
-.btn-primary:hover{background:var(--green-900);color:#fff;box-shadow:0 4px 16px rgba(27,67,50,0.3)}
-.btn-outline{background:transparent;color:var(--green-800);border:2px solid var(--green-800)}
-.btn-outline:hover{background:var(--green-800);color:#fff}
-.btn-white{background:#fff;color:var(--green-900)}
-.btn-white:hover{background:var(--green-50);box-shadow:0 4px 16px rgba(0,0,0,0.1)}
-.btn-ghost{background:transparent;color:var(--green-800)}
-.btn-ghost:hover{background:rgba(45,106,79,0.08)}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-primary:hover{background:var(--primary-dark);color:#fff;box-shadow:0 4px 16px rgba(27,67,50,0.3)}
+.btn-outline{background:transparent;color:var(--primary);border:2px solid var(--primary)}
+.btn-outline:hover{background:var(--primary);color:#fff}
 
 /* ---- 卡片 ---- */
-.card{
-  background:var(--surface);border-radius:var(--radius-lg);
-  overflow:hidden;border:1px solid var(--border);
-  transition:transform 0.35s cubic-bezier(0.22,1,0.36,1),box-shadow 0.35s cubic-bezier(0.22,1,0.36,1);
-  display:flex;flex-direction:column;
-}
+.card{background:var(--surface);border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border);transition:transform 0.35s cubic-bezier(0.22,1,0.36,1),box-shadow 0.35s cubic-bezier(0.22,1,0.36,1);display:flex;flex-direction:column}
 .card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
 .card-img{width:100%;height:220px;object-fit:cover;transition:transform 0.5s cubic-bezier(0.22,1,0.36,1)}
 .card:hover .card-img{transform:scale(1.05)}
 .card-body{padding:1.5rem;flex:1;display:flex;flex-direction:column}
-.card-tag{display:inline-block;font-size:0.75rem;font-weight:600;color:var(--green-800);background:var(--green-100);padding:0.2rem 0.65rem;border-radius:999px;margin-bottom:0.65rem;align-self:flex-start}
+.card-tag{display:inline-block;font-size:0.75rem;font-weight:600;color:var(--primary);background:var(--green-100);padding:0.2rem 0.65rem;border-radius:999px;margin-bottom:0.65rem;align-self:flex-start}
 .card-title{font-size:1.15rem;font-weight:700;color:var(--ink);margin-bottom:0.5rem;line-height:1.35}
 .card-title a{color:inherit}
-.card-title a:hover{color:var(--green-800)}
+.card-title a:hover{color:var(--primary)}
 .card-text{font-size:0.9rem;color:var(--muted);line-height:1.65;margin-bottom:1rem;flex:1}
 .card-meta{display:flex;align-items:center;gap:1rem;font-size:0.8rem;color:var(--muted);margin-top:auto}
 
@@ -115,80 +106,124 @@ p{text-wrap:pretty}
 .article-item{display:flex;gap:2rem;padding:2rem 0;border-bottom:1px solid var(--border-light);transition:background 0.2s}
 .article-item:first-child{padding-top:0}
 .article-item:last-child{border-bottom:none}
-.article-item:hover{background:var(--bg-warm);margin:0 -1.5rem;padding-left:1.5rem;padding-right:1.5rem;border-radius:var(--radius)}
+.article-item:hover{background:var(--bg2);margin:0 -1.5rem;padding-left:1.5rem;padding-right:1.5rem;border-radius:var(--radius)}
 .article-thumb{width:220px;height:150px;object-fit:cover;border-radius:var(--radius);flex-shrink:0;transition:transform 0.3s}
 .article-item:hover .article-thumb{transform:scale(1.03)}
 .article-content{flex:1;min-width:0}
 .article-title{font-size:1.2rem;font-weight:700;color:var(--ink);margin-bottom:0.5rem;line-height:1.35}
 .article-title a{color:inherit}
-.article-title a:hover{color:var(--green-800)}
+.article-title a:hover{color:var(--primary)}
 .article-excerpt{font-size:0.9rem;color:var(--muted);line-height:1.65;margin-bottom:0.75rem}
 .article-meta{display:flex;align-items:center;gap:1rem;font-size:0.8rem;color:var(--muted)}
-
-/* ---- 植物百科卡片 ---- */
-.plant-card{
-  background:var(--surface);border-radius:var(--radius-lg);
-  overflow:hidden;border:1px solid var(--border);
-  transition:transform 0.3s,box-shadow 0.3s;
-}
-.plant-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
-.plant-card img{width:100%;height:240px;object-fit:cover}
-.plant-card-body{padding:1.25rem}
-.plant-card-name{font-size:1.1rem;font-weight:700;color:var(--ink);margin-bottom:0.3rem}
-.plant-card-latin{font-size:0.8rem;color:var(--muted);font-style:italic;margin-bottom:0.5rem}
-.plant-card-tags{display:flex;flex-wrap:wrap;gap:0.4rem;margin-top:0.5rem}
-.plant-tag{font-size:0.72rem;padding:0.15rem 0.55rem;border-radius:999px;background:var(--bg-warm);color:var(--muted)}
 
 /* ---- 表单 ---- */
 .form-group{margin-bottom:1.5rem}
 .form-label{display:block;font-size:0.9rem;font-weight:600;color:var(--ink-2);margin-bottom:0.5rem}
 .form-input,.form-textarea{width:100%;padding:0.85rem 1rem;border:1.5px solid var(--border);border-radius:var(--radius);font-size:0.95rem;font-family:inherit;color:var(--ink);background:var(--surface);transition:border-color 0.2s,box-shadow 0.2s}
-.form-input:focus,.form-textarea:focus{outline:none;border-color:var(--green-700);box-shadow:0 0 0 3px rgba(45,106,79,0.1)}
+.form-input:focus,.form-textarea:focus{outline:none;border-color:var(--primary-light);box-shadow:0 0 0 3px rgba(45,106,79,0.1)}
 .form-textarea{min-height:150px;resize:vertical}
 .form-status{display:none;padding:0.85rem 1rem;border-radius:var(--radius);font-size:0.9rem;font-weight:500;margin-top:1rem}
-.form-status.success{background:rgba(82,183,136,0.1);color:var(--green-800);border:1px solid rgba(82,183,136,0.2)}
+.form-status.success{background:rgba(82,183,136,0.1);color:var(--primary);border:1px solid rgba(82,183,136,0.2)}
 .form-status.error{background:rgba(220,53,69,0.06);color:#c92a2a;border:1px solid rgba(220,53,69,0.15)}
 
 /* ---- 页面标题 ---- */
-.page-header{
-  background:linear-gradient(180deg,var(--green-50) 0%,var(--bg) 100%);
-  padding:5rem 0 3rem;text-align:center;margin-bottom:2rem;
-}
-.page-header h1{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;color:var(--green-900);margin-bottom:0.75rem}
+.page-header{background:linear-gradient(180deg,var(--green-50) 0%,var(--bg) 100%);padding:5rem 0 3rem;text-align:center;margin-bottom:2rem}
+.page-header h1{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;color:var(--primary-dark);margin-bottom:0.75rem}
 .page-header p{color:var(--muted);font-size:1.05rem;max-width:540px;margin:0 auto}
 
 /* ---- 内容区 ---- */
 .content-section{padding:3rem 0}
-.content-section h2{font-size:1.6rem;font-weight:700;color:var(--green-900);margin-bottom:1rem}
+.content-section h2{font-size:1.6rem;font-weight:700;color:var(--primary-dark);margin-bottom:1rem}
 .content-section h3{font-size:1.2rem;font-weight:600;color:var(--ink-2);margin:1.5rem 0 0.75rem}
 .content-section p{margin-bottom:1rem;color:var(--ink-2);line-height:1.75;max-width:68ch}
 
 /* ---- 广告 ---- */
-.ad-container{max-width:100%;margin:0 auto;text-align:center;overflow:hidden;background:var(--bg-warm);border-radius:var(--radius);padding:0.75rem 0.5rem;border:1px solid var(--border)}
+.ad-container{max-width:100%;margin:0 auto;text-align:center;overflow:hidden;background:var(--bg2);border-radius:var(--radius);padding:0.75rem 0.5rem;border:1px solid var(--border)}
 .ad-container-inside{max-width:100%;margin:2.5rem auto;text-align:center;overflow:hidden;padding:0.5rem}
 .ad-label{font-size:0.7rem;color:var(--muted);margin-bottom:0.25rem}
 
 /* ---- 页脚 ---- */
-.footer{background:var(--green-900);color:#b7e4c7;padding:4rem 0 1.5rem;margin-top:6rem}
+.footer{background:var(--primary-dark);color:#b7e4c7;padding:4rem 0 1.5rem;margin-top:6rem}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3rem;margin-bottom:2.5rem}
-.footer-brand-name{font-size:1.15rem;font-weight:700;color:#fff;margin-bottom:0.75rem}
-.footer-desc{color:var(--green-300);font-size:0.9rem;line-height:1.7;max-width:32ch}
-.footer-col-title{font-size:0.85rem;font-weight:600;color:#fff;margin-bottom:1rem}
+.footer-brand,.footer-brand-name{font-size:1.15rem;font-weight:700;color:#fff;margin-bottom:0.75rem}
+.footer-desc{color:var(--accent-light);font-size:0.9rem;line-height:1.7;max-width:32ch}
+.footer-col-title,.footer-title{font-size:0.85rem;font-weight:600;color:#fff;margin-bottom:1rem}
 .footer-links{list-style:none}
 .footer-links li{margin-bottom:0.5rem}
-.footer-links a{color:var(--green-300);font-size:0.9rem;transition:color 0.2s}
+.footer-links a{color:var(--accent-light);font-size:0.9rem;transition:color 0.2s}
 .footer-links a:hover{color:#fff}
-.footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:1.5rem;text-align:center;font-size:0.85rem;color:var(--green-500)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:1.5rem;text-align:center;font-size:0.85rem;color:var(--accent)}
+
+/* ============================================
+   动画系统
+   ============================================ */
 
 /* ---- 滚动渐入 ---- */
 .reveal{opacity:0;transform:translateY(28px);transition:opacity 0.7s cubic-bezier(0.22,1,0.36,1),transform 0.7s cubic-bezier(0.22,1,0.36,1)}
 .reveal.visible{opacity:1;transform:translateY(0)}
 
-/* ---- 无障碍 ---- */
+/* 延迟渐入 */
+.reveal-d1{transition-delay:0.1s}
+.reveal-d2{transition-delay:0.2s}
+.reveal-d3{transition-delay:0.3s}
+.reveal-d4{transition-delay:0.4s}
+
+/* ---- Hero 标题入场动画 ---- */
+@keyframes heroFadeUp{
+  from{opacity:0;transform:translateY(40px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.animate-hero{animation:heroFadeUp 0.8s cubic-bezier(0.22,1,0.36,1) forwards;opacity:0}
+.animate-hero-d1{animation-delay:0.1s}
+.animate-hero-d2{animation-delay:0.3s}
+.animate-hero-d3{animation-delay:0.5s}
+
+/* ---- 脉冲呼吸 ---- */
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+.animate-pulse{animation:pulse 2s ease-in-out infinite}
+
+/* ---- 浮动 ---- */
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.animate-float{animation:float 3s ease-in-out infinite}
+
+/* ---- 从左滑入 ---- */
+@keyframes slideInLeft{from{opacity:0;transform:translateX(-40px)}to{opacity:1;transform:translateX(0)}}
+.animate-slide-left{animation:slideInLeft 0.6s cubic-bezier(0.22,1,0.36,1) forwards;opacity:0}
+
+/* ---- 从右滑入 ---- */
+@keyframes slideInRight{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:translateX(0)}}
+.animate-slide-right{animation:slideInRight 0.6s cubic-bezier(0.22,1,0.36,1) forwards;opacity:0}
+
+/* ---- 缩放弹入 ---- */
+@keyframes scaleIn{from{opacity:0;transform:scale(0.85)}to{opacity:1;transform:scale(1)}}
+.animate-scale-in{animation:scaleIn 0.5s cubic-bezier(0.22,1,0.36,1) forwards;opacity:0}
+
+/* ---- 旋转图标 ---- */
+@keyframes spin{to{transform:rotate(360deg)}}
+.animate-spin{animation:spin 1s linear infinite}
+
+/* ---- 边框光扫 ---- */
+@keyframes borderGlow{0%{border-color:var(--border)}50%{border-color:var(--primary);box-shadow:0 0 20px rgba(45,106,79,0.12)}100%{border-color:var(--border)}}
+.anim-border-glow{animation:borderGlow 2s ease-in-out infinite}
+
+/* ---- 卡片交错入场（用于 JS 触发）---- */
+.card-stagger{opacity:0;transform:translateY(30px)}
+.card-stagger.visible{animation:scaleIn 0.5s cubic-bezier(0.22,1,0.36,1) forwards}
+
+/* ---- 摇晃（用于错误提示）---- */
+@keyframes shake{0%,100%{transform:translateX(0)}20%{transform:translateX(-6px)}40%{transform:translateX(6px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
+.animate-shake{animation:shake 0.5s ease}
+
+/* ---- 涟漪效果（点击时）---- */
+@keyframes ripple{to{transform:scale(4);opacity:0}}
+.ripple{position:relative;overflow:hidden}
+.ripple-effect{position:absolute;border-radius:50%;background:rgba(255,255,255,0.4);transform:scale(0);animation:ripple 0.6s linear;pointer-events:none}
+
+/* ---- 无障碍：减少动画 ---- */
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important;scroll-behavior:auto!important}
   html{scroll-behavior:auto}
-  .reveal{opacity:1;transform:none;transition:none}
+  .reveal,.animate-hero,.animate-slide-left,.animate-slide-right,.animate-scale-in,.card-stagger{opacity:1;transform:none;animation:none;transition:none}
 }
 
 /* ---- 响应式 ---- */
@@ -210,6 +245,5 @@ p{text-wrap:pretty}
 @media(max-width:480px){
   html{font-size:15px}
   .card-img{height:180px}
-  .plant-card img{height:200px}
   .btn{padding:0.65rem 1.4rem;font-size:0.9rem}
 }
