@@ -203,6 +203,14 @@
   <!-- Google CMP (Funding Choices) -->
   <script async src="https://fundingchoicesmessages.google.com/i/pub-5813588344689679?ers=1" nonce=""></script>
   <script nonce="">(function(){function signalGooglefcPresent(){if(!window.__googlefc_initialized){window.__googlefc_initialized=true;window.addEventListener("load",function(){window.__googlefc_loaded=true;})}}})();</script>
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XRFTZZ4XBD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XRFTZZ4XBD');
+  </script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5813588344689679" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -537,5 +545,27 @@
   </footer>
 
   <script src="js/main.js"></script>
+
+  <script>
+  // 阅读追踪：滚动至67%或停留45秒计为一次阅读
+  (function(){
+    let readCounted = false;
+    let startTime = Date.now();
+    function countRead() {
+      if (readCounted) return;
+      readCounted = true;
+      gtag('event', 'article_read', {
+        'event_category': 'engagement',
+        'event_label': document.title,
+        'value': Math.round((Date.now() - startTime) / 1000)
+      });
+    }
+    window.addEventListener('scroll', function(){
+      let scrolled = (window.scrollY + window.innerHeight) / document.body.scrollHeight;
+      if (scrolled > 0.67) countRead();
+    });
+    setTimeout(function(){ countRead(); }, 45000);
+  })();
+  </script>
 </body>
 </html>
