@@ -2,596 +2,559 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>家庭养花常见病虫害识别与防治大全 - 绿植养护指南</title>
-  <meta name="description" content="白粉病、蚜虫、红蜘蛛、小黑飞、介壳虫、叶斑病——家庭养花最常见的六大病虫害，一文教你准确识别和高效防治。">
-  <link rel="stylesheet" href="css/style.css">
-  <style>
-    /* 文章详情页特有样式 */
-    .article-header {
-      padding: 3rem 0 2rem;
-      text-align: center;
-      border-bottom: 1px solid var(--rule);
-      margin-bottom: 2rem;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>家庭养花常见病虫害识别与防治大全 - 绿植养护指南</title>
+<meta name="description" content="白粉病、蚜虫、红蜘蛛、小黑飞、介壳虫、叶斑病——家庭养花最常见的六大病虫害，一文教你准确识别和高效防治。">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  /* ==== 病虫害页专属样式 ==== */
 
-    .article-header .container {
-      max-width: 800px;
-    }
+  /* 文章 Hero */
+  .pest-hero{
+    background:linear-gradient(135deg,var(--primary-dark) 0%,var(--primary) 60%,#1a5c3a 100%);
+    color:#fff;padding:5rem 0 3rem;text-align:center;position:relative;overflow:hidden;
+  }
+  .pest-hero::before{
+    content:'';position:absolute;width:600px;height:600px;
+    background:radial-gradient(circle,rgba(82,183,136,0.2) 0%,transparent 70%);
+    top:-200px;right:-100px;border-radius:50%;
+  }
+  .pest-hero::after{
+    content:'';position:absolute;width:400px;height:400px;
+    background:radial-gradient(circle,rgba(82,183,136,0.15) 0%,transparent 70%);
+    bottom:-150px;left:-50px;border-radius:50%;
+  }
+  .pest-hero .container{position:relative;z-index:2;max-width:800px}
+  .pest-hero .tag{display:inline-block;font-size:0.8rem;font-weight:600;color:var(--accent-light);background:rgba(255,255,255,0.12);padding:0.3rem 0.8rem;border-radius:999px;margin-bottom:1.2rem;backdrop-filter:blur(4px)}
+  .pest-hero h1{font-size:clamp(1.8rem,4vw,2.5rem);font-weight:800;line-height:1.25;margin-bottom:1rem;text-wrap:balance}
+  .pest-hero .subtitle{font-size:1.1rem;opacity:0.85;max-width:560px;margin:0 auto 1.5rem}
+  .pest-hero .hero-meta{display:flex;align-items:center;justify-content:center;gap:1.5rem;font-size:0.9rem;opacity:0.7}
 
-    .article-header .card-tag {
-      margin-bottom: 1rem;
-    }
+  /* 快速导航条 */
+  .quick-nav{
+    background:var(--surface);border-bottom:1px solid var(--border);padding:0.75rem 0;
+    position:sticky;top:68px;z-index:50;overflow-x:auto;
+  }
+  .quick-nav .scroll-row{display:flex;gap:0.5rem;flex-wrap:nowrap;white-space:nowrap}
+  .quick-nav a{
+    font-size:0.85rem;font-weight:500;color:var(--ink-2);padding:0.4rem 0.85rem;
+    border-radius:999px;transition:all 0.2s;flex-shrink:0;
+  }
+  .quick-nav a:hover{background:var(--green-100);color:var(--primary)}
+  .quick-nav a.active{background:var(--primary);color:#fff}
 
-    .article-header h1 {
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--primary-dark);
-      line-height: 1.3;
-      margin-bottom: 1rem;
-    }
+  /* 文章主体 */
+  .pest-body{padding:3rem 0}
+  .pest-body .container{max-width:800px}
+  .pest-body .intro{font-size:1.05rem;color:var(--ink-2);line-height:1.8;margin-bottom:3rem}
 
-    .article-header .article-meta {
-      justify-content: center;
-      font-size: 0.9rem;
-    }
+  .pest-body h2{
+    font-size:1.5rem;font-weight:800;color:var(--primary-dark);margin:3rem 0 1rem;
+    display:flex;align-items:center;gap:0.75rem;
+  }
+  .pest-body h2 .num{
+    display:inline-flex;width:36px;height:36px;border-radius:50%;
+    background:var(--primary);color:#fff;font-size:1rem;font-weight:700;
+    align-items:center;justify-content:center;flex-shrink:0;
+  }
 
-    .article-body {
-      padding-bottom: 3rem;
-    }
+  /* 病虫害诊断卡片 */
+  .pest-diagnosis{
+    display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin:1.5rem 0;
+  }
+  .pest-card-new{
+    background:var(--surface);border-radius:var(--radius-lg);padding:1.5rem;
+    border:1px solid var(--border);transition:transform 0.3s,box-shadow 0.3s;
+  }
+  .pest-card-new:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+  .pest-card-new .card-label{
+    display:inline-flex;align-items:center;gap:0.4rem;font-size:0.78rem;
+    font-weight:700;margin-bottom:0.8rem;padding:0.2rem 0.7rem;border-radius:999px;
+  }
+  .pest-card-new .card-label.warn{background:#fee2e2;color:#dc2626}
+  .pest-card-new .card-label.cure{background:#dbeafe;color:#2563eb}
+  .pest-card-new h4{font-size:1rem;font-weight:700;color:var(--ink);margin-bottom:0.6rem}
+  .pest-card-new ul{margin:0;padding-left:1.2rem;font-size:0.9rem;color:var(--ink-2);line-height:1.7}
+  .pest-card-new ul li{margin-bottom:0.35rem}
 
-    .article-body .container {
-      max-width: 800px;
-    }
+  /* 症状图标网格 */
+  .symptom-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin:1.5rem 0;
+  }
+  .symptom-item{
+    background:var(--bg2);border-radius:var(--radius);padding:1.25rem 0.75rem;
+    text-align:center;border:1px solid var(--border);transition:transform 0.3s,box-shadow 0.3s;
+  }
+  .symptom-item:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+  .symptom-item .s-icon{font-size:1.8rem;margin-bottom:0.5rem;display:block}
+  .symptom-item .s-label{font-size:0.82rem;font-weight:600;color:var(--ink-2)}
 
-    .article-body h2 {
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: var(--primary-dark);
-      margin: 2.5rem 0 1rem;
-    }
+  /* 防治步骤 */
+  .cure-step{
+    display:flex;gap:1rem;padding:1rem 1.25rem;margin:0.5rem 0;
+    background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);
+    transition:transform 0.25s,box-shadow 0.25s;
+  }
+  .cure-step:hover{transform:translateX(6px);box-shadow:var(--shadow)}
+  .cure-step .step-num{
+    width:32px;height:32px;border-radius:50%;background:var(--primary);
+    color:#fff;font-weight:700;font-size:0.85rem;display:flex;
+    align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;
+  }
+  .cure-step .step-content{flex:1}
+  .cure-step .step-title{font-size:0.9rem;font-weight:700;color:var(--ink);margin-bottom:0.2rem}
+  .cure-step .step-desc{font-size:0.85rem;color:var(--muted);line-height:1.5}
 
-    .article-body h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      color: var(--ink);
-      margin: 2rem 0 0.75rem;
-    }
+  /* 防治原则 - 大卡片 */
+  .principle-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin:2rem 0}
+  .principle-card{
+    background:var(--surface);border-radius:var(--radius-lg);padding:2rem 1.5rem;
+    text-align:center;border:1px solid var(--border);
+    transition:transform 0.35s,box-shadow 0.35s;
+  }
+  .principle-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+  .principle-card .p-icon{
+    width:64px;height:64px;border-radius:50%;display:flex;align-items:center;
+    justify-content:center;margin:0 auto 1.2rem;font-size:1.5rem;
+  }
+  .principle-card:nth-child(1) .p-icon{background:rgba(45,106,79,0.08);color:var(--primary)}
+  .principle-card:nth-child(2) .p-icon{background:rgba(82,183,136,0.12);color:var(--primary)}
+  .principle-card:nth-child(3) .p-icon{background:rgba(52,152,219,0.1);color:#2980b9}
+  .principle-card h3{font-size:1.1rem;font-weight:700;color:var(--primary-dark);margin-bottom:0.6rem}
+  .principle-card p{font-size:0.88rem;color:var(--muted);line-height:1.65}
 
-    .article-body p {
-      margin-bottom: 1.25rem;
-      color: var(--ink-secondary);
-      line-height: 1.8;
-    }
+  /* 相关推荐 */
+  .related{background:var(--bg2);padding:4rem 0}
+  .related h2{text-align:center;font-size:1.5rem;font-weight:800;color:var(--primary-dark);margin-bottom:2rem}
+  .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.5rem}
 
-    .article-body img {
-      width: 100%;
-      border-radius: var(--radius-lg);
-      margin: 1.5rem 0;
-    }
+  /* 滚动阅读进度条 */
+  .reading-progress{position:fixed;top:0;left:0;height:3px;background:var(--accent);z-index:300;transition:width 0.1s linear}
 
-    .article-body ul,
-    .article-body ol {
-      margin: 1rem 0 1.5rem 1.5rem;
-      color: var(--ink-secondary);
-    }
-
-    .article-body li {
-      margin-bottom: 0.5rem;
-      line-height: 1.7;
-    }
-
-    .article-body blockquote {
-      border-left: 4px solid var(--primary);
-      background-color: var(--bg2);
-      padding: 1rem 1.5rem;
-      margin: 1.5rem 0;
-      border-radius: 0 var(--radius) var(--radius) 0;
-      color: var(--ink-secondary);
-      font-style: italic;
-    }
-
-    .article-body strong {
-      color: var(--primary-dark);
-    }
-
-    /* 病虫害诊断卡片 —— 彩色左侧边框 */
-    .pest-card {
-      background-color: var(--bg);
-      border: 1px solid var(--rule);
-      border-left: 5px solid var(--primary);
-      border-radius: 0 var(--radius) var(--radius) 0;
-      padding: 1.25rem 1.5rem;
-      margin: 1.25rem 0;
-      box-shadow: var(--shadow);
-    }
-
-    .pest-card.pest-orange {
-      border-left-color: #e67e22;
-    }
-
-    .pest-card.pest-blue {
-      border-left-color: #2980b9;
-    }
-
-    .pest-card h4 {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--ink);
-      margin-bottom: 0.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .pest-card h4 .pest-icon {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      color: #fff;
-      font-size: 0.85rem;
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-
-    .pest-card .pest-icon.icon-warn {
-      background-color: #e74c3c;
-    }
-
-    .pest-card .pest-icon.icon-info {
-      background-color: #2980b9;
-    }
-
-    .pest-card p {
-      margin-bottom: 0.75rem;
-    }
-
-    .pest-card ul {
-      margin: 0.5rem 0 1rem 1.5rem;
-    }
-
-    .pest-card ul li {
-      margin-bottom: 0.4rem;
-      line-height: 1.6;
-      color: var(--ink-secondary);
-    }
-
-    /* 预防原则区块 */
-    .principle-list {
-      counter-reset: principle;
-      list-style: none;
-      padding-left: 0;
-      margin: 1.5rem 0 2rem;
-    }
-
-    .principle-list li {
-      counter-increment: principle;
-      background-color: var(--bg2);
-      border-radius: var(--radius-lg);
-      padding: 1.25rem 1.5rem 1.25rem 3.5rem;
-      margin-bottom: 1rem;
-      position: relative;
-      border: 1px solid var(--rule);
-    }
-
-    .principle-list li::before {
-      content: counter(principle);
-      position: absolute;
-      left: 1rem;
-      top: 1.25rem;
-      width: 32px;
-      height: 32px;
-      background-color: var(--primary);
-      color: #fff;
-      font-weight: 700;
-      font-size: 0.95rem;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .principle-list li strong {
-      display: block;
-      font-size: 1.05rem;
-      margin-bottom: 0.4rem;
-      color: var(--primary-dark);
-    }
-
-    .principle-list li p {
-      margin-bottom: 0;
-    }
-
-    /* 相关推荐 */
-    .related-articles {
-      background-color: var(--bg2);
-      padding: 3rem 0;
-    }
-
-    .related-articles h2 {
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: var(--primary-dark);
-      margin-bottom: 1.5rem;
-      text-align: center;
-    }
-
-    .related-articles .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 1.5rem;
-    }
-
-    @media (max-width: 768px) {
-      .article-header h1 {
-        font-size: 1.5rem;
-      }
-      .pest-card {
-        padding: 1rem;
-      }
-    }
-  </style>
-  <!-- Google AdSense -->
-  
-  <!-- Google CMP (Funding Choices) -->
-  <script async src="https://fundingchoicesmessages.google.com/i/pub-5813588344689679?ers=1" nonce=""></script>
-  <script nonce="">(function(){function signalGooglefcPresent(){if(!window.__googlefc_initialized){window.__googlefc_initialized=true;window.addEventListener("load",function(){window.__googlefc_loaded=true;})}}})();</script>
-  <!-- Google Analytics 4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XRFTZZ4XBD"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XRFTZZ4XBD');
-  </script>
+  @media(max-width:768px){
+    .pest-diagnosis{grid-template-columns:1fr}
+    .symptom-grid{grid-template-columns:repeat(2,1fr)}
+    .principle-grid{grid-template-columns:1fr}
+    .pest-hero{padding:3rem 0 2rem}
+    .quick-nav{top:60px}
+  }
+</style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5813588344689679" crossorigin="anonymous"></script>
+<script async src="https://fundingchoicesmessages.google.com/i/pub-5813588344689679?ers=1" nonce=""></script>
+<script nonce="">(function(){function signalGooglefcPresent(){if(!window.__googlefc_initialized){window.__googlefc_initialized=true;window.addEventListener("load",function(){window.__googlefc_loaded=true;})}}})();</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XRFTZZ4XBD"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XRFTZZ4XBD');</script>
 </head>
 <body>
 
-  <!-- 导航栏 -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="index.html" class="logo">
-        <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M16 2C12 2 8 6 8 10C8 14 12 18 16 18C20 18 24 14 24 10C24 6 20 2 16 2Z" fill="#2d6a4f"/>
-          <path d="M16 18V30" stroke="#2d6a4f" stroke-width="2.5" stroke-linecap="round"/>
-          <path d="M12 22C8 22 4 26 4 30H12" stroke="#40916c" stroke-width="2" stroke-linecap="round"/>
-          <path d="M20 22C24 22 28 26 28 30H20" stroke="#40916c" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-        绿植养护指南
-      </a>
-      <button class="menu-toggle" aria-label="打开菜单" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <ul class="nav-links">
-        <li><a href="index.html">首页</a></li>
-        <li><a href="articles.html">文章</a></li>
-        <li><a href="encyclopedia.html">植物百科</a></li>
-        <li><a href="pest-article.html" class="active">病虫害</a></li>
-        <li><a href="about.html">关于</a></li>
-      </ul>
-    </div>
-  </nav>
+<!-- 阅读进度条 -->
+<div class="reading-progress" id="progressBar"></div>
 
-  <!-- 文章头部 -->
-  <header class="article-header">
-    <div class="container">
-      <span class="card-tag">病虫害</span>
-      <h1>家庭养花常见病虫害识别与防治大全</h1>
-      <div class="article-meta">
-        <span>作者：小林</span>
-        <span>2026年6月6日</span>
-        <span>阅读 8 分钟</span>
-      </div>
-    </div>
-  </header>
-
-  <!-- 文章正文 -->
-  <article class="article-body">
-    <div class="container">
-      <img src="assets/card-pests.jpg" alt="常见病虫害防治指南">
-
-      <p>养花的路上，总免不了与病虫害打交道。很多花友一看到叶片发黄、长斑点就慌了手脚，甚至直接把植物扔掉——其实大可不必。绝大多数家庭植物遇到的病虫害都有规律可循，只要<strong>早发现、早诊断、早治疗</strong>，大多数问题都能轻松解决。</p>
-
-      <p>本文整理了家庭养花中最常遇到的六大病虫害，从识别特征到具体防治方法，手把手教你应对。无论你是新手还是老花友，这篇指南都值得收藏备用。</p>
-
-      <h2>一、白粉病</h2>
-      <p>白粉病是室内植物最常见的真菌病害之一，尤其在通风不良、空气湿度大的环境下高发。它发病快、传染性强，一旦发现必须立即处理。</p>
-
-      <!-- 识别特征卡片 -->
-      <div class="pest-card pest-orange">
-        <h4><span class="pest-icon icon-warn">!</span>识别特征</h4>
-        <ul>
-          <li>叶片正面出现<strong>白色粉末状斑点</strong>，像撒了一层面粉，用手指可以抹掉</li>
-          <li>初期为小圆斑，后期逐渐扩大连成片，覆盖整个叶面</li>
-          <li>受害叶片<strong>卷曲、皱缩、变形</strong>，严重时枯黄脱落</li>
-          <li>嫩叶和新梢最易感染，老叶相对抵抗力较强</li>
-          <li>多在<strong>春秋季高发</strong>，室内通风差时夏季也易发病</li>
-        </ul>
-      </div>
-
-      <!-- 防治方法卡片 -->
-      <div class="pest-card pest-blue">
-        <h4><span class="pest-icon icon-info">i</span>防治方法</h4>
-        <ul>
-          <li><strong>物理清除：</strong>发病初期用湿布轻轻擦拭叶片，清除表面白粉</li>
-          <li><strong>小苏打溶液：</strong>1升水中加入1茶匙小苏打 + 几滴洗洁精，喷洒叶片正反面，每3天一次</li>
-          <li><strong>牛奶喷雾：</strong>牛奶和水按1:9比例混合喷洒，牛奶中的蛋白质遇阳光产生杀菌作用</li>
-          <li><strong>专用药剂：</strong>严重时使用三唑酮（粉锈宁）、嘧菌酯等杀菌剂，按说明书稀释喷洒</li>
-          <li><strong>环境改善：</strong>增加通风，降低空气湿度，避免傍晚浇水</li>
-          <li><strong>修剪病叶：</strong>剪除严重感染的枝叶并销毁，工具用酒精消毒防止交叉感染</li>
-        </ul>
-      </div>
-
-      <h2>二、蚜虫</h2>
-      <p>蚜虫是家庭养花中遇到频率最高的害虫，它们繁殖速度惊人，一只蚜虫一周内就能繁殖出几十只后代。蚜虫喜欢聚集在嫩芽、嫩叶和花蕾上吸食汁液，导致植物生长停滞、叶片卷曲。</p>
-
-      <div class="pest-card pest-orange">
-        <h4><span class="pest-icon icon-warn">!</span>识别特征</h4>
-        <ul>
-          <li>成群聚集在<strong>嫩芽、嫩叶背面和花蕾</strong>处，肉眼清晰可见</li>
-          <li>体长约1-3毫米，常见<strong>绿色、黑色或黄色</strong>，体形呈梨状</li>
-          <li>受害叶片<strong>卷曲、发黄、畸形</strong>，新生枝条停止生长</li>
-          <li>蚜虫分泌蜜露，导致叶片表面黏腻，容易<strong>诱发煤污病</strong></li>
-          <li>周围常有蚂蚁活动，蚂蚁会"放牧"蚜虫以获取蜜露</li>
-        </ul>
-      </div>
-
-      <div class="pest-card pest-blue">
-        <h4><span class="pest-icon icon-info">i</span>防治方法</h4>
-        <ul>
-          <li><strong>物理清除：</strong>少量时直接用手或棉签捻死，或用强力水流冲洗植株</li>
-          <li><strong>肥皂水喷洒：</strong>1升水加5毫升中性洗洁精，喷洒蚜虫聚集处，隔天一次连续三次</li>
-          <li><strong>自制辣椒水：</strong>辣椒切碎泡水24小时后过滤喷洒，刺激性气味驱赶蚜虫</li>
-          <li><strong>天敌引入：</strong>购买瓢虫卵或草蛉卵投放，它们是最有效的蚜虫天敌</li>
-          <li><strong>黄色粘虫板：</strong>利用蚜虫趋黄特性，悬挂黄色粘板诱捕</li>
-          <li><strong>药剂防治：</strong>严重时使用吡虫啉、啶虫脒等，严格按照说明书使用</li>
-          <li><strong>预防隔离：</strong>新买植物先隔离观察一周再混养，防止带入蚜虫</li>
-        </ul>
-      </div>
-
-      <h2>三、红蜘蛛（叶螨）</h2>
-      <p>红蜘蛛其实不是蜘蛛，而是一种微小的叶螨。它们体型极小，往往等到植物受害严重时才被发现。红蜘蛛喜欢干燥炎热的环境，冬季室内供暖时尤其容易爆发。</p>
-
-      <div class="pest-card pest-orange">
-        <h4><span class="pest-icon icon-warn">!</span>识别特征</h4>
-        <ul>
-          <li>叶片正面出现<strong>密集的黄白色小斑点</strong>（刺吸痕），严重时叶片呈灰白色</li>
-          <li>叶片背面可见<strong>极细的丝网</strong>，用手触摸有沙粒感</li>
-          <li>翻开叶片背面仔细看，可见针尖大小的<strong>红色、黄绿色小点在移动</strong></li>
-          <li>受害叶片<strong>干枯、变脆、提前脱落</strong>，严重时整株枯死</li>
-          <li>可用白纸放在叶片下轻拍，若有细微移动小点落在纸上即为红蜘蛛</li>
-        </ul>
-      </div>
-
-      <div class="pest-card pest-blue">
-        <h4><span class="pest-icon icon-info">i</span>防治方法</h4>
-        <ul>
-          <li><strong>提高湿度：</strong>经常叶面喷雾增加空气湿度，红蜘蛛在湿度60%以上繁殖受抑制</li>
-          <li><strong>清水冲洗：</strong>将植株搬到浴室用花洒冲淋叶片正反面，每周一次</li>
-          <li><strong>酒精擦拭：</strong>用稀释酒精（70%酒精兑等量水）棉签擦拭叶片背面</li>
-          <li><strong>自制大蒜液：</strong>大蒜捣碎泡水过滤后喷洒，对红蜘蛛有驱避作用</li>
-          <li><strong>专用杀螨剂：</strong>使用阿维菌素、哒螨灵或联苯肼酯，注意红蜘蛛易产生抗药性需交替用药</li>
-          <li><strong>间隔用药：</strong>每隔5-7天喷一次，连续3-4次，确保杀灭虫卵孵化出的幼虫</li>
-          <li><strong>严重处理：</strong>大量感染时剪除严重受害枝叶并销毁，减少虫口基数</li>
-        </ul>
-      </div>
-
-      <h2>四、小黑飞（蕈蚊）</h2>
-      <p>小黑飞是室内养花最常见的"烦恼虫"，它们在花盆周围飞来飞去，虽然对植物的直接危害不大，但幼虫会啃食根系，影响植物健康。小黑飞爆发通常意味着盆土长期过湿或使用了未腐熟的有机肥。</p>
-
-      <div class="pest-card pest-orange">
-        <h4><span class="pest-icon icon-warn">!</span>识别特征</h4>
-        <ul>
-          <li>花盆周围有<strong>黑色小飞虫</strong>飞动，体长约2-4毫米，外形似小蚊子但不叮人</li>
-          <li>浇水或触碰盆土时大量飞虫从土面飞出</li>
-          <li>盆土表面可见<strong>细小的白色半透明幼虫</strong>，头部黑色，长约4-6毫米</li>
-          <li>幼虫在土中取食<strong>腐殖质和植物幼根</strong>，导致植株生长缓慢</li>
-          <li>多发于<strong>盆土长期潮湿、通风不良</strong>的环境，使用未腐熟有机肥时尤为严重</li>
-        </ul>
-      </div>
-
-      <div class="pest-card pest-blue">
-        <h4><span class="pest-icon icon-info">i</span>防治方法</h4>
-        <ul>
-          <li><strong>控制浇水：</strong>这是最根本的办法，让盆土表层2-3厘米干透后再浇水</li>
-          <li><strong>盆土覆盖：</strong>在盆土表面铺一层1-2厘米厚的粗砂、珍珠岩或陶粒，阻断成虫产卵</li>
-          <li><strong>黄色粘虫板：</strong>插在花盆边缘，大量诱捕成虫，减少产卵量</li>
-          <li><strong>肉桂粉撒施：</strong>在盆土表面薄撒一层肉桂粉，天然抑菌驱虫</li>
-          <li><strong>蚊香/电蚊拍：</strong>成虫较多时点蚊香或使用电蚊拍直接灭杀</li>
-          <li><strong>生物防治：</strong>使用苏云金芽孢杆菌以色列亚种（Bti）浇灌盆土，杀灭幼虫</li>
-          <li><strong>换土处理：</strong>严重时彻底换土，旧土暴晒或微波消毒后再使用</li>
-        </ul>
-      </div>
-
-      <h2>五、介壳虫</h2>
-      <p>介壳虫是家庭养花中最顽固的害虫之一。它们体表覆盖蜡质壳，一般农药难以渗透，防治难度较大。常见的有盾蚧、粉蚧等种类，尤其喜欢危害多肉植物、龟背竹、橡皮树等。</p>
-
-      <div class="pest-card pest-orange">
-        <h4><span class="pest-icon icon-warn">!</span>识别特征</h4>
-        <ul>
-          <li>叶片、茎干上出现<strong>褐色或白色小突起</strong>，呈圆形或椭圆形，形似小壳</li>
-          <li>粉蚧（白色绵状物）常藏在<strong>叶腋、叶背和茎节处</strong>，像一小团棉花</li>
-          <li>受害处出现<strong>黄斑或褪色</strong>，叶片逐渐枯黄脱落</li>
-          <li>介壳虫分泌蜜露导致<strong>煤污病</strong>，叶片表面覆盖黑色霉层</li>
-          <li>用手按压有汁液流出说明虫体存活，干瘪空壳则为死虫</li>
-        </ul>
-      </div>
-
-      <div class="pest-card pest-blue">
-        <h4><span class="pest-icon icon-info">i</span>防治方法</h4>
-        <ul>
-          <li><strong>人工刮除：</strong>数量少时用旧牙刷蘸肥皂水刷洗，或用指甲轻轻刮下</li>
-          <li><strong>酒精擦拭：</strong>用棉签蘸75%医用酒精直接涂抹介壳虫，酒精能溶解蜡质壳</li>
-          <li><strong>食醋擦拭：</strong>白醋兑水1:3比例，用棉签蘸取涂抹虫体，软化蜡壳</li>
-          <li><strong>矿物油喷洒：</strong>使用园艺专用矿物油（如苦参碱-矿物油），覆盖虫体使其窒息</li>
-          <li><strong>化学药剂：</strong>严重时使用噻嗪酮、吡虫啉等内吸性杀虫剂，或蚧必治等专用药剂</li>
-          <li><strong>修剪重灾区：</strong>严重感染的枝条直接剪除销毁，防止扩散</li>
-          <li><strong>持续检查：</strong>清除后每周仔细检查一次，发现有遗漏立即补治</li>
-        </ul>
-      </div>
-
-      <h2>六、叶斑病</h2>
-      <p>叶斑病是一个统称，包括炭疽病、褐斑病、黑斑病等多种由真菌或细菌引起的叶片病害。它们虽然病原不同，但症状和防治思路相近。叶斑病严重影响植物的观赏价值，严重时导致大量落叶。</p>
-
-      <div class="pest-card pest-orange">
-        <h4><span class="pest-icon icon-warn">!</span>识别特征</h4>
-        <ul>
-          <li>叶片上出现<strong>圆形或不规则形状的斑点</strong>，颜色为褐色、黑色或红褐色</li>
-          <li>斑点边缘清晰，中央常有<strong>轮纹状或灰白色</strong>，严重时斑块穿孔</li>
-          <li>湿度大时斑点表面可见<strong>黑色小颗粒</strong>（病菌分生孢子）或霉层</li>
-          <li>病斑逐渐<strong>扩大融合</strong>，最终整个叶片枯黄脱落</li>
-          <li>多从<strong>下部老叶</strong>开始发病，逐渐向上蔓延，新叶也可能被侵染</li>
-        </ul>
-      </div>
-
-      <div class="pest-card pest-blue">
-        <h4><span class="pest-icon icon-info">i</span>防治方法</h4>
-        <ul>
-          <li><strong>立即剪除：</strong>发现带病斑的叶片第一时间剪除并销毁，不要留作堆肥</li>
-          <li><strong>避免叶面浇水：</strong>浇水尽量浇在盆土中，避免水溅到叶片上传播病菌</li>
-          <li><strong>波尔多液防治：</strong>经典杀菌剂，硫酸铜石灰配制的保护性杀菌剂，预防效果好</li>
-          <li><strong>多菌灵喷雾：</strong>50%多菌灵可湿性粉剂稀释800-1000倍液喷洒，每7-10天一次</li>
-          <li><strong>代森锰锌：</strong>广谱保护性杀菌剂，发病前或发病初期使用效果佳</li>
-          <li><strong>增加通风：</strong>改善摆放密度，确保植株间有足够间距让空气流通</li>
-          <li><strong>增强抗性：</strong>合理施肥增强植株抵抗力，避免偏施氮肥导致叶片过于柔嫩</li>
-        </ul>
-      </div>
-
-      <h2>病虫害防治三大原则</h2>
-      <p>掌握了以上六大病虫害的识别与防治方法后，更重要的是建立正确的防治理念。记住以下三大原则，让你面对病虫害时不再慌张：</p>
-
-      <ol class="principle-list">
-        <li>
-          <strong>预防为主，防重于治</strong>
-          <p>良好的养护习惯是最好的"农药"。保持适度通风、控制浇水频率、合理施肥、定期检查植物状态，这些看似简单的事情，能避免80%以上的病虫害发生。买新植物先隔离观察，土壤使用前先消毒，工具用后及时清洁。</p>
-        </li>
-        <li>
-          <strong>早发现早治疗，治小治了</strong>
-          <p>病虫害初期往往只有零星几处症状，此时处理事半功倍。养成每周至少一次仔细检查植物的习惯，重点关注叶片背面、嫩芽和茎节处。一旦发现异常，立即判断并采取对应措施，不要拖延等待。</p>
-        </li>
-        <li>
-          <strong>优先物理和生物方法，谨慎使用化学药剂</strong>
-          <p>家庭环境不同于田间，使用化学农药要格外谨慎。优先采用人工清除、清水冲洗、提高湿度、引入天敌等安全方法。必须用药时，选择低毒专用药剂，严格按照说明书浓度使用，并在通风良好的地方操作，避免对家人和宠物造成影响。</p>
-        </li>
-      </ol>
-
-      <p>植物生病就像人感冒一样正常，不要因为几片黄叶就灰心。每一次成功治愈病虫害，都会让你对植物有更深的了解。希望这篇指南能成为你养花路上的得力助手。</p>
-    </div>
-  </article>
-
-  <!-- 广告位 -->
-  <div class="ad-container-inside">
-    <div class="ad-label">广告</div>
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-5813588344689679"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+<!-- 导航栏 -->
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="logo">
+      <svg viewBox="0 0 34 34" fill="none"><path d="M17 2C12 2 8 6 8 10C8 14 12 18 17 18C22 18 26 14 26 10C26 6 22 2 17 2Z" fill="#2d6a4f"/><path d="M17 18V32" stroke="#2d6a4f" stroke-width="2.5" stroke-linecap="round"/><path d="M12 24C8 24 4 28 4 32H12" stroke="#40916c" stroke-width="2" stroke-linecap="round"/><path d="M22 24C26 24 30 28 30 32H22" stroke="#40916c" stroke-width="2" stroke-linecap="round"/></svg>
+      绿植养护指南
+    </a>
+    <button class="menu-toggle" aria-label="打开菜单" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="index.html">首页</a></li>
+      <li><a href="articles.html">文章</a></li>
+      <li><a href="encyclopedia.html">植物百科</a></li>
+      <li><a href="pest-article.html" class="active">病虫害</a></li>
+      <li><a href="about.html">关于</a></li>
+    </ul>
   </div>
+</nav>
 
-  <!-- 相关推荐 -->
-  <section class="related-articles">
-    <div class="container">
-      <h2>相关推荐</h2>
-      <div class="card-grid">
-        <article class="card">
-          <a href="watering-guide.html">
-            <img src="assets/card-watering.jpg" alt="浇水技巧" class="card-img">
-          </a>
-          <div class="card-body">
-            <span class="card-tag">浇水技巧</span>
-            <h3 class="card-title"><a href="watering-guide.html">浇水不烂根的3个技巧</a></h3>
-            <p class="card-text">学会判断土壤干湿、掌握正确的浇水频率，从根源减少病虫害。</p>
-          </div>
-        </article>
+<!-- Hero -->
+<section class="pest-hero">
+  <div class="container">
+    <span class="tag animate-hero">病虫害防治</span>
+    <h1 class="animate-hero animate-hero-d1">家庭养花常见病虫害识别与防治大全</h1>
+    <p class="subtitle animate-hero animate-hero-d2">白粉病、蚜虫、红蜘蛛、小黑飞、介壳虫、叶斑病——一文教你准确识别和高效防治</p>
+    <div class="hero-meta animate-hero animate-hero-d3">
+      <span>作者：小林</span><span>2026年6月6日</span><span>阅读 8 分钟</span>
+    </div>
+  </div>
+</section>
 
-        <article class="card">
-          <a href="fertilizer-guide.html">
-            <img src="assets/card-fertilizer.jpg" alt="施肥指南" class="card-img">
-          </a>
-          <div class="card-body">
-            <span class="card-tag">施肥指南</span>
-            <h3 class="card-title"><a href="fertilizer-guide.html">家庭养花施肥完全攻略</a></h3>
-            <p class="card-text">合理施肥增强植物抵抗力，健壮的植物自然少生病。</p>
-          </div>
-        </article>
+<!-- 快速导航 -->
+<nav class="quick-nav" id="quickNav">
+  <div class="container">
+    <div class="scroll-row">
+      <a href="#intro">概述</a>
+      <a href="#pest1">白粉病</a>
+      <a href="#pest2">蚜虫</a>
+      <a href="#pest3">红蜘蛛</a>
+      <a href="#pest4">小黑飞</a>
+      <a href="#pest5">介壳虫</a>
+      <a href="#pest6">叶斑病</a>
+      <a href="#principles">防治原则</a>
+    </div>
+  </div>
+</nav>
 
-        <article class="card">
-          <a href="repotting-guide.html">
-            <img src="assets/card-repot.jpg" alt="换盆与土壤" class="card-img">
-          </a>
-          <div class="card-body">
-            <span class="card-tag">换盆技巧</span>
-            <h3 class="card-title"><a href="repotting-guide.html">换盆与土壤选择全攻略</a></h3>
-            <p class="card-text">选对土壤是预防病虫害的第一道防线。</p>
-          </div>
-        </article>
+<article class="pest-body">
+  <div class="container">
+
+    <!-- 概述 -->
+    <div class="intro reveal" id="intro">
+      <p>养花的路上，总免不了与病虫害打交道。很多花友一看到叶片发黄、长斑点就慌了手脚，甚至直接把植物扔掉——其实大可不必。绝大多数家庭植物遇到的病虫害都有规律可循，只要<strong>早发现、早诊断、早治疗</strong>，大多数问题都能轻松解决。</p>
+      <p>本文整理了家庭养花中最常遇到的六大病虫害，从识别特征到具体防治方法，手把手教你应对。</p>
+    </div>
+
+    <!-- 1. 白粉病 -->
+    <h2 class="reveal" id="pest1"><span class="num">1</span>白粉病</h2>
+    <p class="reveal">白粉病是室内植物最常见的真菌病害之一，尤其在通风不良、空气湿度大的环境下高发。它发病快、传染性强，一旦发现必须立即处理。</p>
+
+    <div class="symptom-grid reveal">
+      <div class="symptom-item"><span class="s-icon">&#127807;</span><span class="s-label">白色粉末斑点</span></div>
+      <div class="symptom-item"><span class="s-icon">&#128260;</span><span class="s-label">叶片卷曲变形</span></div>
+      <div class="symptom-item"><span class="s-icon">&#127788;</span><span class="s-label">春秋季高发</span></div>
+      <div class="symptom-item"><span class="s-icon">&#128168;</span><span class="s-label">通风不良加重</span></div>
+    </div>
+
+    <div class="pest-diagnosis reveal">
+      <div class="pest-card-new">
+        <span class="card-label warn">&#9888; 识别特征</span>
+        <ul>
+          <li>叶片正面出现<b>白色粉末状斑点</b>，像撒了一层面粉</li>
+          <li>初期为小圆斑，后期逐渐扩大连成片</li>
+          <li>受害叶片<b>卷曲、皱缩、变形</b>，严重时枯黄脱落</li>
+          <li>嫩叶和新梢最易感染</li>
+          <li>多在<b>春秋季高发</b></li>
+        </ul>
+      </div>
+      <div class="pest-card-new">
+        <span class="card-label cure">&#128736; 防治方法</span>
+        <ul>
+          <li><b>物理清除：</b>湿布擦拭叶片白粉</li>
+          <li><b>小苏打溶液：</b>1L水+1茶匙小苏打+几滴洗洁精</li>
+          <li><b>牛奶喷雾：</b>牛奶和水1:9混合</li>
+          <li><b>专用药剂：</b>三唑酮、嘧菌酯等</li>
+          <li><b>增加通风：</b>降低湿度，避免傍晚浇水</li>
+          <li><b>修剪病叶：</b>剪除严重感染枝叶并销毁</li>
+        </ul>
       </div>
     </div>
-  </section>
 
-  <!-- 页脚 -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div class="footer-brand">绿植养护指南</div>
-          <p class="footer-desc">帮助每一位植物新手轻松上手，让绿色生活触手可及。我们相信，每个人都能成为优秀的植物守护者。</p>
-        </div>
-        <div>
-          <div class="footer-title">快速链接</div>
-          <ul class="footer-links">
-            <li><a href="index.html">首页</a></li>
-            <li><a href="articles.html">文章列表</a></li>
-            <li><a href="encyclopedia.html">植物百科</a></li>
-            <li><a href="pest-article.html">病虫害</a></li>
-            <li><a href="about.html">关于我们</a></li>
-            <li><a href="contact.html">联系我们</a></li>
-          </ul>
-        </div>
-        <div>
-          <div class="footer-title">法律信息</div>
-          <ul class="footer-links">
-            <li><a href="privacy.html">隐私政策</a></li>
-          </ul>
-        </div>
+    <!-- 2. 蚜虫 -->
+    <h2 class="reveal" id="pest2"><span class="num">2</span>蚜虫</h2>
+    <p class="reveal">蚜虫是家庭养花中遇到频率最高的害虫，繁殖速度惊人。它们喜欢聚集在嫩芽、嫩叶和花蕾上吸食汁液，导致植物生长停滞、叶片卷曲。</p>
+
+    <div class="symptom-grid reveal">
+      <div class="symptom-item"><span class="s-icon">&#128027;</span><span class="s-label">嫩芽嫩叶背面</span></div>
+      <div class="symptom-item"><span class="s-icon">&#127807;</span><span class="s-label">叶片卷曲发黄</span></div>
+      <div class="symptom-item"><span class="s-icon">&#128293;</span><span class="s-label">诱发煤污病</span></div>
+      <div class="symptom-item"><span class="s-icon">&#128028;</span><span class="s-label">蚂蚁伴随活动</span></div>
+    </div>
+
+    <div class="pest-diagnosis reveal">
+      <div class="pest-card-new">
+        <span class="card-label warn">&#9888; 识别特征</span>
+        <ul>
+          <li>成群聚集在<b>嫩芽、嫩叶背面和花蕾</b>处</li>
+          <li>体长约1-3mm，常见<b>绿/黑/黄色</b>，梨形</li>
+          <li>受害叶片<b>卷曲、发黄、畸形</b></li>
+          <li>分泌蜜露导致叶片黏腻，<b>诱发煤污病</b></li>
+          <li>周围常有蚂蚁"放牧"蚜虫</li>
+        </ul>
       </div>
-      <div class="footer-bottom">
-        <p> 2026 绿植养护指南. 保留所有权利.</p>
+      <div class="pest-card-new">
+        <span class="card-label cure">&#128736; 防治方法</span>
+        <ul>
+          <li><b>物理清除：</b>强力水流冲洗或棉签捻死</li>
+          <li><b>肥皂水：</b>1L水+5ml中性洗洁精，隔天一次</li>
+          <li><b>辣椒水：</b>辣椒泡水24h过滤喷洒</li>
+          <li><b>天敌：</b>瓢虫卵、草蛉卵投放</li>
+          <li><b>黄色粘虫板</b>诱捕</li>
+          <li><b>药剂：</b>吡虫啉、啶虫脒</li>
+          <li><b>新植物隔离</b>观察一周再混养</li>
+        </ul>
       </div>
     </div>
-  </footer>
 
-  <script src="js/main.js"></script>
+    <!-- 3. 红蜘蛛 -->
+    <h2 class="reveal" id="pest3"><span class="num">3</span>红蜘蛛（叶螨）</h2>
+    <p class="reveal">红蜘蛛其实不是蜘蛛，而是一种微小的叶螨。它们体型极小，往往等到植物受害严重时才被发现。喜欢干燥炎热的环境，冬季室内供暖时尤其容易爆发。</p>
 
-  <script>
-  // 阅读追踪：滚动至67%或停留45秒计为一次阅读
-  (function(){
-    let readCounted = false;
-    let startTime = Date.now();
-    function countRead() {
-      if (readCounted) return;
-      readCounted = true;
-      gtag('event', 'article_read', {
-        'event_category': 'engagement',
-        'event_label': document.title,
-        'value': Math.round((Date.now() - startTime) / 1000)
-      });
-    }
-    window.addEventListener('scroll', function(){
-      let scrolled = (window.scrollY + window.innerHeight) / document.body.scrollHeight;
-      if (scrolled > 0.67) countRead();
+    <div class="symptom-grid reveal">
+      <div class="symptom-item"><span class="s-icon">&#128065;</span><span class="s-label">黄白色小斑点</span></div>
+      <div class="symptom-item"><span class="s-icon">&#129714;</span><span class="s-label">叶片背面丝网</span></div>
+      <div class="symptom-item"><span class="s-icon">&#127777;</span><span class="s-label">干燥炎热高发</span></div>
+      <div class="symptom-item"><span class="s-icon">&#128196;</span><span class="s-label">白纸轻拍检测</span></div>
+    </div>
+
+    <div class="pest-diagnosis reveal">
+      <div class="pest-card-new">
+        <span class="card-label warn">&#9888; 识别特征</span>
+        <ul>
+          <li>叶片正面出现<b>密集黄白色小斑点</b>（刺吸痕）</li>
+          <li>叶片背面可见<b>极细丝网</b>，有沙粒感</li>
+          <li>叶背可见针尖大小<b>红色/黄绿色小点移动</b></li>
+          <li>受害叶片<b>干枯、变脆、提前脱落</b></li>
+          <li>白纸放叶下轻拍检测</li>
+        </ul>
+      </div>
+      <div class="pest-card-new">
+        <span class="card-label cure">&#128736; 防治方法</span>
+        <ul>
+          <li><b>提高湿度：</b>经常叶面喷雾（湿度>60%抑制繁殖）</li>
+          <li><b>清水冲洗：</b>花洒冲淋叶正反面，每周一次</li>
+          <li><b>酒精擦拭：</b>70%酒精兑等量水棉签擦拭</li>
+          <li><b>大蒜液：</b>大蒜捣碎泡水过滤喷洒</li>
+          <li><b>杀螨剂：</b>阿维菌素、哒螨灵、联苯肼酯</li>
+          <li><b>交替用药：</b>5-7天一次，连续3-4次</li>
+          <li><b>修剪重灾区</b>减少虫口基数</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 4. 小黑飞 -->
+    <h2 class="reveal" id="pest4"><span class="num">4</span>小黑飞（蕈蚊）</h2>
+    <p class="reveal">小黑飞是室内养花最常见的"烦恼虫"，在花盆周围飞来飞去。幼虫会啃食根系，影响植物健康。爆发通常意味着盆土长期过湿或使用了未腐熟的有机肥。</p>
+
+    <div class="symptom-grid reveal">
+      <div class="symptom-item"><span class="s-icon">&#129439;</span><span class="s-label">花盆周围飞虫</span></div>
+      <div class="symptom-item"><span class="s-icon">&#128167;</span><span class="s-label">浇水时大量飞出</span></div>
+      <div class="symptom-item"><span class="s-icon">&#128260;</span><span class="s-label">白色透明幼虫</span></div>
+      <div class="symptom-item"><span class="s-icon">&#127793;</span><span class="s-label">盆土长期潮湿</span></div>
+    </div>
+
+    <div class="pest-diagnosis reveal">
+      <div class="pest-card-new">
+        <span class="card-label warn">&#9888; 识别特征</span>
+        <ul>
+          <li>花盆周围有<b>黑色小飞虫</b>飞动，体长约2-4mm</li>
+          <li>浇水或触碰盆土时大量飞出</li>
+          <li>盆土表面可见<b>白色半透明幼虫</b>，头部黑色</li>
+          <li>幼虫取食<b>腐殖质和植物幼根</b></li>
+          <li>多发于<b>盆土长期潮湿、通风不良</b>环境</li>
+        </ul>
+      </div>
+      <div class="pest-card-new">
+        <span class="card-label cure">&#128736; 防治方法</span>
+        <ul>
+          <li><b>控制浇水：</b>最根本办法，表土2-3cm干透再浇</li>
+          <li><b>盆土覆盖：</b>粗砂/珍珠岩/陶粒1-2cm覆盖</li>
+          <li><b>黄色粘虫板</b>插在花盆边缘</li>
+          <li><b>肉桂粉</b>薄撒盆土表面</li>
+          <li><b>蚊香/电蚊拍</b>灭杀成虫</li>
+          <li><b>Bti浇灌：</b>苏云金芽孢杆菌以色列亚种</li>
+          <li><b>换土处理：</b>严重时彻底换土</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 5. 介壳虫 -->
+    <h2 class="reveal" id="pest5"><span class="num">5</span>介壳虫</h2>
+    <p class="reveal">介壳虫是家庭养花中最顽固的害虫之一。体表覆盖蜡质壳，一般农药难以渗透，防治难度较大。常见有盾蚧、粉蚧等，尤其喜欢危害多肉植物、龟背竹、橡皮树等。</p>
+
+    <div class="symptom-grid reveal">
+      <div class="symptom-item"><span class="s-icon">&#128308;</span><span class="s-label">褐色白色突起</span></div>
+      <div class="symptom-item"><span class="s-icon">&#129518;</span><span class="s-label">白色绵状物</span></div>
+      <div class="symptom-item"><span class="s-icon">&#127807;</span><span class="s-label">叶片黄斑褪色</span></div>
+      <div class="symptom-item"><span class="s-icon">&#9899;</span><span class="s-label">诱发煤污病</span></div>
+    </div>
+
+    <div class="pest-diagnosis reveal">
+      <div class="pest-card-new">
+        <span class="card-label warn">&#9888; 识别特征</span>
+        <ul>
+          <li>叶片、茎干上出现<b>褐色或白色小突起</b>，形似小壳</li>
+          <li>粉蚧（白色绵状物）藏在<b>叶腋、叶背和茎节</b></li>
+          <li>受害处出现<b>黄斑或褪色</b>，叶片枯黄脱落</li>
+          <li>分泌蜜露导致<b>煤污病</b></li>
+          <li>按压有汁液流出为活虫，干瘪为死虫</li>
+        </ul>
+      </div>
+      <div class="pest-card-new">
+        <span class="card-label cure">&#128736; 防治方法</span>
+        <ul>
+          <li><b>人工刮除：</b>旧牙刷蘸肥皂水刷洗</li>
+          <li><b>酒精擦拭：</b>75%酒精棉签涂抹（溶解蜡壳）</li>
+          <li><b>食醋擦拭：</b>白醋兑水1:3涂抹</li>
+          <li><b>矿物油：</b>园艺专用矿物油覆盖窒息</li>
+          <li><b>药剂：</b>噻嗪酮、吡虫啉、蚧必治</li>
+          <li><b>修剪重灾区</b>剪除销毁</li>
+          <li><b>持续检查：</b>每周复查，发现立即补治</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 6. 叶斑病 -->
+    <h2 class="reveal" id="pest6"><span class="num">6</span>叶斑病</h2>
+    <p class="reveal">叶斑病是统称，包括炭疽病、褐斑病、黑斑病等多种由真菌或细菌引起的叶片病害。虽然病原不同，但症状和防治思路相近，严重影响植物观赏价值。</p>
+
+    <div class="symptom-grid reveal">
+      <div class="symptom-item"><span class="s-icon">&#11093;</span><span class="s-label">圆形不规则斑点</span></div>
+      <div class="symptom-item"><span class="s-icon">&#127912;</span><span class="s-label">褐色黑色红褐色</span></div>
+      <div class="symptom-item"><span class="s-icon">&#128167;</span><span class="s-label">湿度大现霉层</span></div>
+      <div class="symptom-item"><span class="s-icon">&#128201;</span><span class="s-label">下部老叶先发病</span></div>
+    </div>
+
+    <div class="pest-diagnosis reveal">
+      <div class="pest-card-new">
+        <span class="card-label warn">&#9888; 识别特征</span>
+        <ul>
+          <li>叶片上出现<b>圆形或不规则形状斑点</b></li>
+          <li>斑点边缘清晰，中央常有<b>轮纹状或灰白色</b></li>
+          <li>湿度大时斑点表面可见<b>黑色小颗粒</b>或霉层</li>
+          <li>病斑逐渐<b>扩大融合</b>，最终叶片枯黄脱落</li>
+          <li>多从<b>下部老叶</b>开始发病，逐渐向上蔓延</li>
+        </ul>
+      </div>
+      <div class="pest-card-new">
+        <span class="card-label cure">&#128736; 防治方法</span>
+        <ul>
+          <li><b>立即剪除：</b>发现带病斑叶片第一时间剪除销毁</li>
+          <li><b>避免叶面浇水：</b>浇在盆土中，防止水溅传播</li>
+          <li><b>波尔多液：</b>经典保护性杀菌剂</li>
+          <li><b>多菌灵：</b>50%可湿性粉剂800-1000倍液</li>
+          <li><b>代森锰锌：</b>广谱保护性杀菌剂</li>
+          <li><b>增加通风：</b>确保植株间足够间距</li>
+          <li><b>增强抗性：</b>合理施肥，避免偏施氮肥</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 防治原则 -->
+    <h2 class="reveal" id="principles"><span class="num">&#9733;</span>病虫害防治三大原则</h2>
+    <p class="reveal">掌握了以上六大病虫害的识别与防治方法后，更重要的是建立正确的防治理念。</p>
+
+    <div class="principle-grid reveal">
+      <div class="principle-card">
+        <div class="p-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>预防为主，防重于治</h3>
+        <p>良好的养护习惯是最好的"农药"。保持通风、控制浇水、合理施肥、定期检查，能避免80%以上的病虫害。</p>
+      </div>
+      <div class="principle-card">
+        <div class="p-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>早发现早治疗，治小治了</h3>
+        <p>病虫害初期往往只有零星几处症状，此时处理事半功倍。每周至少仔细检查一次植物，重点关注叶背和嫩芽。</p>
+      </div>
+      <div class="principle-card">
+        <div class="p-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3>优先物理和生物方法</h3>
+        <p>家庭环境优先采用人工清除、清水冲洗、提高湿度、天敌引入等安全方法。必须用药时选择低毒专用药剂。</p>
+      </div>
+    </div>
+
+    <p class="reveal" style="text-align:center;font-size:1.05rem;color:var(--muted);margin-top:2rem">植物生病就像人感冒一样正常，不要因为几片黄叶就灰心。每一次成功治愈病虫害，都会让你对植物有更深的了解。</p>
+
+  </div>
+</article>
+
+<!-- 广告 -->
+<div class="container">
+  <div class="ad-container" style="margin:2rem auto">
+    <div class="ad-label">广告</div>
+    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5813588344689679" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+  </div>
+</div>
+
+<!-- 相关推荐 -->
+<section class="related">
+  <div class="container">
+    <h2 class="reveal">相关推荐</h2>
+    <div class="related-grid">
+      <article class="card reveal">
+        <a href="watering-guide.html"><img src="assets/card-watering.jpg" alt="浇水技巧" class="card-img" loading="lazy"></a>
+        <div class="card-body">
+          <span class="card-tag">浇水技巧</span>
+          <h3 class="card-title"><a href="watering-guide.html">浇水不烂根的3个技巧</a></h3>
+          <p class="card-text">学会判断土壤干湿、掌握正确的浇水频率，从根源减少病虫害。</p>
+        </div>
+      </article>
+      <article class="card reveal">
+        <a href="fertilizer-guide.html"><img src="assets/card-fertilizer.jpg" alt="施肥指南" class="card-img" loading="lazy"></a>
+        <div class="card-body">
+          <span class="card-tag">施肥指南</span>
+          <h3 class="card-title"><a href="fertilizer-guide.html">家庭养花施肥完全攻略</a></h3>
+          <p class="card-text">合理施肥增强植物抵抗力，健壮的植物自然少生病。</p>
+        </div>
+      </article>
+      <article class="card reveal">
+        <a href="repotting-guide.html"><img src="assets/card-repot.jpg" alt="换盆与土壤" class="card-img" loading="lazy"></a>
+        <div class="card-body">
+          <span class="card-tag">换盆技巧</span>
+          <h3 class="card-title"><a href="repotting-guide.html">换盆与土壤选择全攻略</a></h3>
+          <p class="card-text">选对土壤是预防病虫害的第一道防线。</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">绿植养护指南</div>
+        <p class="footer-desc">帮助每一位植物新手轻松上手，让绿色生活触手可及。</p>
+      </div>
+      <div>
+        <div class="footer-title">快速链接</div>
+        <ul class="footer-links">
+          <li><a href="index.html">首页</a></li>
+          <li><a href="articles.html">文章列表</a></li>
+          <li><a href="encyclopedia.html">植物百科</a></li>
+          <li><a href="pest-article.html">病虫害</a></li>
+          <li><a href="about.html">关于我们</a></li>
+          <li><a href="contact.html">联系我们</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-title">法律信息</div>
+        <ul class="footer-links"><li><a href="privacy.html">隐私政策</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>2026 绿植养护指南. 保留所有权利.</p></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+// 阅读进度条
+(function(){
+  var bar=document.getElementById('progressBar');
+  window.addEventListener('scroll',function(){
+    var h=document.documentElement.scrollHeight-window.innerHeight;
+    var p=Math.min((window.scrollY/h)*100,100);
+    bar.style.width=p+'%';
+  },{passive:true});
+
+  // 快速导航高亮
+  var sections=document.querySelectorAll('.pest-body h2[id]');
+  var navLinks=document.querySelectorAll('#quickNav a');
+  window.addEventListener('scroll',function(){
+    var current='';
+    sections.forEach(function(s){
+      if(window.scrollY>=s.offsetTop-200)current=s.id;
     });
-    setTimeout(function(){ countRead(); }, 45000);
-  })();
-  </script>
+    navLinks.forEach(function(a){
+      a.classList.toggle('active',a.getAttribute('href')==='#'+current);
+    });
+  },{passive:true});
+})();
+
+// 阅读追踪
+(function(){
+  let counted=false,t0=Date.now();
+  function c(){if(counted)return;counted=true;gtag('event','article_read',{event_category:'engagement',event_label:document.title,value:Math.round((Date.now()-t0)/1000)});}
+  window.addEventListener('scroll',function(){if((window.scrollY+window.innerHeight)/document.body.scrollHeight>0.67)c();});
+  setTimeout(c,45000);
+})();
+</script>
 </body>
 </html>
