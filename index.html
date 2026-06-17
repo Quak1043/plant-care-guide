@@ -8,14 +8,14 @@
   <meta name="description" content="面向新手的家庭室内植物养护指南，提供简单实用的浇水、施肥、光照等养护知识和技巧。">
   <link rel="stylesheet" href="css/style.css">
   <style>
-    /* 首页特有样式 */
+    /* 首页 Hero */
     .hero {
       position: relative;
-      height: 480px;
+      min-height: 520px;
       display: flex;
       align-items: center;
-      justify-content: center;
       overflow: hidden;
+      background-color: var(--primary-dark);
     }
 
     .hero-bg {
@@ -26,6 +26,7 @@
       height: 100%;
       object-fit: cover;
       z-index: 1;
+      opacity: 0.55;
     }
 
     .hero-overlay {
@@ -34,37 +35,37 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(135deg, rgba(27, 67, 50, 0.75) 0%, rgba(45, 106, 79, 0.6) 100%);
+      background: linear-gradient(135deg, rgba(27, 67, 50, 0.82) 0%, rgba(27, 67, 50, 0.4) 60%, rgba(45, 106, 79, 0.3) 100%);
       z-index: 2;
     }
 
     .hero-content {
       position: relative;
       z-index: 3;
-      text-align: center;
       color: #fff;
-      max-width: 700px;
-      padding: 0 1.5rem;
+      max-width: 620px;
+      padding: 3rem 1.5rem;
     }
 
     .hero-content h1 {
-      font-size: 2.8rem;
+      font-size: clamp(2rem, 4.5vw, 3rem);
       font-weight: 700;
       margin-bottom: 1rem;
       line-height: 1.2;
+      letter-spacing: -0.02em;
     }
 
     .hero-content p {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       margin-bottom: 2rem;
-      opacity: 0.9;
+      opacity: 0.88;
       line-height: 1.7;
+      max-width: 48ch;
     }
 
     .hero-btns {
       display: flex;
       gap: 1rem;
-      justify-content: center;
       flex-wrap: wrap;
     }
 
@@ -74,69 +75,79 @@
     }
 
     .hero-btns .btn-outline {
-      border-color: #fff;
+      border-color: rgba(255,255,255,0.7);
       color: #fff;
     }
 
     .hero-btns .btn-outline:hover {
       background-color: #fff;
       color: var(--primary-dark);
+      border-color: #fff;
     }
 
     /* 精选内容区 */
     .featured {
-      padding: 4rem 0;
+      padding: 5rem 0;
     }
 
     .section-header {
-      text-align: center;
-      margin-bottom: 2.5rem;
+      max-width: 600px;
+      margin-bottom: 3rem;
     }
 
     .section-header h2 {
-      font-size: 1.8rem;
+      font-size: clamp(1.5rem, 3vw, 2rem);
       font-weight: 700;
       color: var(--primary-dark);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
     }
 
     .section-header p {
       color: var(--muted);
       font-size: 1rem;
+      line-height: 1.6;
     }
 
     .card-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.75rem;
     }
 
     /* 快速提示区 */
     .tips {
       background-color: var(--bg2);
-      padding: 4rem 0;
+      padding: 5rem 0;
     }
 
     .tips-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 2rem;
     }
 
     .tip-item {
-      text-align: center;
-      padding: 1.5rem;
+      padding: 1.75rem;
+      background-color: var(--bg);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--rule);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .tip-item:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-hover);
     }
 
     .tip-icon {
-      width: 56px;
-      height: 56px;
-      background-color: rgba(45, 106, 79, 0.1);
+      width: 52px;
+      height: 52px;
+      background-color: rgba(45, 106, 79, 0.08);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 1rem;
+      margin-bottom: 1rem;
       color: var(--primary);
     }
 
@@ -150,21 +161,33 @@
     .tip-item p {
       font-size: 0.9rem;
       color: var(--muted);
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     /* 响应式 */
     @media (max-width: 768px) {
       .hero {
-        height: 380px;
+        min-height: 420px;
+      }
+
+      .hero-content {
+        padding: 2.5rem 1rem;
       }
 
       .hero-content h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
 
       .hero-content p {
         font-size: 1rem;
+      }
+
+      .featured {
+        padding: 3rem 0;
+      }
+
+      .tips {
+        padding: 3rem 0;
       }
 
       .section-header h2 {
@@ -220,39 +243,40 @@
   <section class="hero">
     <img src="assets/hero-v2.jpg" alt="温馨的室内植物空间" class="hero-bg">
     <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <h1>让每一株植物都茁壮成长</h1>
-      <p>专为新手打造的室内植物养护指南，从选植物到日常养护，手把手教你打造属于自己的绿色家园。</p>
-      <div class="hero-btns">
-        <a href="articles.html" class="btn btn-primary">开始学习</a>
-        <a href="about.html" class="btn btn-outline">了解更多</a>
+    <div class="container" style="position:relative;z-index:3;">
+      <div class="hero-content">
+        <h1>让每一株植物都茁壮成长</h1>
+        <p>专为新手打造的室内植物养护指南。从选植物到日常养护，手把手教你打造属于自己的绿色家园。</p>
+        <div class="hero-btns">
+          <a href="articles.html" class="btn btn-primary">开始学习</a>
+          <a href="about.html" class="btn btn-outline">了解更多</a>
+        </div>
       </div>
     </div>
   </section>
 
-      <!-- 广告位 -->
-      <div class="ad-container">
-        <div class="ad-label">广告</div>
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-5813588344689679"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-      </div>
+  <!-- 广告位 -->
+  <div class="ad-container">
+    <div class="ad-label">广告</div>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-5813588344689679"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
 
   <!-- 精选内容 -->
   <section class="featured">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <h2>精选养护指南</h2>
         <p>最受欢迎的入门文章，帮你快速上手植物养护</p>
       </div>
       <div class="card-grid">
-        <!-- 卡片 1 -->
-        <article class="card">
+        <article class="card reveal">
           <a href="article-detail.html">
-            <img src="assets/card-beginner-v2.jpg" alt="新手入门选对第一盆植物" class="card-img">
+            <img src="assets/card-beginner-v2.jpg" alt="新手入门选对第一盆植物" class="card-img" loading="lazy">
           </a>
           <div class="card-body">
             <span class="card-tag">新手入门</span>
@@ -265,10 +289,9 @@
           </div>
         </article>
 
-        <!-- 卡片 2 -->
-        <article class="card">
+        <article class="card reveal">
           <a href="watering-guide.html">
-            <img src="assets/card-watering.jpg" alt="浇水不烂根的技巧" class="card-img">
+            <img src="assets/card-watering.jpg" alt="浇水不烂根的技巧" class="card-img" loading="lazy">
           </a>
           <div class="card-body">
             <span class="card-tag">浇水技巧</span>
@@ -281,10 +304,9 @@
           </div>
         </article>
 
-        <!-- 卡片 3 -->
-        <article class="card">
+        <article class="card reveal">
           <a href="lighting-guide.html">
-            <img src="assets/card-light.jpg" alt="室内光照指南" class="card-img">
+            <img src="assets/card-light.jpg" alt="室内光照指南" class="card-img" loading="lazy">
           </a>
           <div class="card-body">
             <span class="card-tag">光照环境</span>
@@ -297,10 +319,9 @@
           </div>
         </article>
 
-        <!-- 卡片 4 -->
-        <article class="card">
+        <article class="card reveal">
           <a href="repotting-guide.html">
-            <img src="assets/card-repot.jpg" alt="换盆与土壤选择" class="card-img">
+            <img src="assets/card-repot.jpg" alt="换盆与土壤选择" class="card-img" loading="lazy">
           </a>
           <div class="card-body">
             <span class="card-tag">换盆技巧</span>
@@ -319,12 +340,12 @@
   <!-- 快速提示 -->
   <section class="tips">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal">
         <h2>养护小贴士</h2>
         <p>记住这几个要点，养植物其实很简单</p>
       </div>
       <div class="tips-grid">
-        <div class="tip-item">
+        <div class="tip-item reveal">
           <div class="tip-icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 2.69l5.74 5.88-5.74 5.88-5.74-5.88z"/>
@@ -334,7 +355,7 @@
           <h3>宁干勿湿</h3>
           <p>大多数室内植物死于浇水过多。不确定时，宁可少浇也不要多浇。</p>
         </div>
-        <div class="tip-item">
+        <div class="tip-item reveal">
           <div class="tip-icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="5"/>
@@ -351,7 +372,7 @@
           <h3>观察光照</h3>
           <p>把植物放在合适的光照位置。朝南窗户光照最强，朝北最弱。</p>
         </div>
-        <div class="tip-item">
+        <div class="tip-item reveal">
           <div class="tip-icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
@@ -360,7 +381,7 @@
           <h3>定期观察</h3>
           <p>每天花一分钟看看你的植物。叶子发黄、下垂都是它在向你求救。</p>
         </div>
-        <div class="tip-item">
+        <div class="tip-item reveal">
           <div class="tip-icon">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
