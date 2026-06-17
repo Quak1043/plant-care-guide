@@ -1,76 +1,140 @@
 /**
- * 绿植养护指南 v3 - 交互脚本
- * 移动端菜单、导航阴影、滚动渐入、表单
+ * 绿植养护指南 - 全局 JavaScript v4
+ * 动画系统 + 移动端菜单 + 表单验证
  */
-(function(){
+
+(function() {
   'use strict';
 
-  // 移动端菜单
-  var toggle=document.querySelector('.menu-toggle');
-  var nav=document.querySelector('.nav-links');
-  if(toggle&&nav){
-    toggle.addEventListener('click',function(){
-      nav.classList.toggle('active');
-      toggle.setAttribute('aria-expanded',nav.classList.contains('active'));
+  // ==================== 滚动渐入动画 ====================
+  var observerOptions = { threshold: 0.15, rootMargin: '0px 0px -40px 0px' };
+
+  var revealObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
     });
-    nav.querySelectorAll('a').forEach(function(l){
-      l.addEventListener('click',function(){
-        nav.classList.remove('active');
-        toggle.setAttribute('aria-expanded','false');
+  }, observerOptions);
+
+  // 观察所有 .reveal 元素
+  document.querySelectorAll('.reveal').forEach(function(el) {
+    revealObserver.observe(el);
+  });
+
+  // 卡片交错入场（支持动态添加）
+  var cardObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var cards = entry.target.querySelectorAll('.card-stagger, .card:not(.no-stagger)');
+        cards.forEach(function(card, idx) {
+          setTimeout(function() {
+            card.classList.add('visible');
+          }, idx * 80);
+        });
+        var children = entry.target.children;
+        for (var c = 0; c < children.length; c++) {
+          if (children[c].classList.contains('card-stagger') || (children[c].classList.contains('card') && !children[c].classList.contains('no-stagger'))) {
+            setTimeout(function(child) {
+              return function() { child.classList.add('visible'); };
+            }(children[c]), c * 80);
+          }
+        }
+        cardObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.card-stagger-container, .card-grid').forEach(function(el) {
+    cardObserver.observe(el);
+  });
+
+  // ==================== 移动端菜单 ====================
+  var menuToggle = document.querySelector('.menu-toggle');
+  var navLinks = document.querySelector('.nav-links');
+
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', function() {
+      navLinks.classList.toggle('active');
+      menuToggle.setAttribute('aria-expanded', navLinks.classList.contains('active'));
+    });
+
+    navLinks.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        navLinks.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
       });
     });
-    document.addEventListener('click',function(e){
-      if(!nav.contains(e.target)&&!toggle.contains(e.target)){
-        nav.classList.remove('active');
-        toggle.setAttribute('aria-expanded','false');
+  }
+
+  // ==================== 导航栏滚动阴影 ====================
+  var navbar = document.querySelector('.navbar');
+  if (navbar) {
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 10) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
       }
+    }, { passive: true });
+  }
+
+  // ==================== 点击涟漪效果 ====================
+  document.addEventListener('click', function(e) {
+    var rippleEl = e.target.closest('.ripple');
+    if (!rippleEl) return;
+
+    var ripple = document.createElement('span');
+    ripple.className = 'ripple-effect';
+
+    var rect = rippleEl.getBoundingClientRect();
+    var size = Math.max(rect.width, rect.height);
+    ripple.style.width = ripple.style.height = size + 'px';
+    ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+    ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+
+    rippleEl.appendChild(ripple);
+    ripple.addEventListener('animationend', function() {
+      ripple.remove();
     });
-  }
+  });
 
-  // 导航栏滚动阴影
-  var navbar=document.querySelector('.navbar');
-  if(navbar){
-    var scrollTimer;
-    window.addEventListener('scroll',function(){
-      if(!scrollTimer){
-        scrollTimer=setTimeout(function(){
-          navbar.classList.toggle('scrolled',window.scrollY>10);
-          scrollTimer=null;
-        },50);
-      }
-    },{passive:true});
-  }
-
-  // 联系表单
-  var form=document.getElementById('contactForm');
-  if(form){
-    form.addEventListener('submit',function(e){
+  // ==================== 联系表单验证 ====================
+  var contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
-      var name=document.getElementById('name').value.trim();
-      var email=document.getElementById('email').value.trim();
-      var msg=document.getElementById('message').value.trim();
-      if(!name||!email||!msg){showStatus('请填写所有必填字段','error');return;}
-      if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){showStatus('请输入有效的邮箱地址','error');return;}
-      showStatus('感谢您的留言！我们会尽快回复您。','success');
-      form.reset();
+
+      var name = document.getElementById('name').value.trim();
+      var email = document.getElementById('email').value.trim();
+      var message = document.getElementById('message').value.trim();
+
+      if (!name || !email || !message) {
+        showFormStatus('请填写所有必填字段', 'error');
+        return;
+      }
+
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        showFormStatus('请输入有效的邮箱地址', 'error');
+        return;
+      }
+
+      showFormStatus('感谢您的留言！我们会尽快回复您。', 'success');
+      contactForm.reset();
     });
   }
-  function showStatus(text,type){
-    var el=document.getElementById('formStatus');
-    if(!el)return;
-    el.textContent=text;el.className='form-status '+type;el.style.display='block';
-    setTimeout(function(){el.style.display='none';},5000);
+
+  function showFormStatus(text, type) {
+    var formStatus = document.getElementById('formStatus');
+    if (!formStatus) return;
+    formStatus.textContent = text;
+    formStatus.className = 'form-status ' + type;
+    formStatus.style.display = 'block';
+    setTimeout(function() {
+      formStatus.style.display = 'none';
+    }, 5000);
   }
 
-  // 滚动渐入
-  if('IntersectionObserver' in window){
-    var obs=new IntersectionObserver(function(entries){
-      entries.forEach(function(e){
-        if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}
-      });
-    },{rootMargin:'0px 0px -40px 0px',threshold:0.1});
-    document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el);});
-  }else{
-    document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('visible');});
-  }
 })();
