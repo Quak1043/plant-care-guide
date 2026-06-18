@@ -69,8 +69,13 @@
     .tips-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 2rem; }
     .tip-item { text-align: center; padding: 1.5rem; }
     .tip-icon { width: 56px; height: 56px; background-color: rgba(45, 106, 79, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; color: var(--primary); }
+    .tip-icon svg { width: 28px; height: 28px; }
     .tip-item h3 { font-size: 1.1rem; font-weight: 600; color: var(--ink); margin-bottom: 0.5rem; }
     .tip-item p { font-size: 0.9rem; color: var(--muted); line-height: 1.6; }
+
+    /* 症状检查器标题 */
+    .symptom-checker .sc-header-icon { width: 32px; height: 32px; display: inline-block; vertical-align: middle; margin-right: 0.5rem; color: #fff; }
+    .symptom-checker .sc-header-icon svg { width: 100%; height: 100%; }
 
     /* 响应式 */
     @media (max-width: 768px) {
@@ -118,8 +123,8 @@
         <li><a href="pest-article.html">病虫害</a></li>
         <li><a href="about.html">关于</a></li>
         <li><button class="theme-toggle" id="themeToggle" aria-label="切换暗色模式">
-          <span class="icon-sun">☀️</span>
-          <span class="icon-moon">🌙</span>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button></li>
       </ul>
     </div>
@@ -157,7 +162,9 @@
   <section class="daily-tip-section">
     <div class="container">
       <div class="daily-tip-card reveal">
-        <div class="dt-icon" id="dailyTipIcon">💧</div>
+        <div class="dt-icon" id="dailyTipIcon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.74 5.88-5.74 5.88-5.74-5.88z"/><path d="M12 14.45l5.74 5.88-5.74 5.88-5.74-5.88z"/></svg>
+        </div>
         <div class="dt-content">
           <div class="dt-label">今日养护小贴士</div>
           <div class="dt-text" id="dailyTipText">浇水前用手指插入土壤2-3cm，如果感觉湿润就暂缓浇水。</div>
@@ -220,7 +227,12 @@
   <!-- 植物症状自查器 -->
   <section class="symptom-checker">
     <div class="container">
-      <h2>🔍 植物生病了？快速自查</h2>
+      <h2>
+        <span class="sc-header-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </span>
+        植物生病了？快速自查
+      </h2>
       <p class="sc-subtitle">不确定植物出了什么问题？回答几个简单问题，帮你找到原因和解决方案</p>
       <div class="sc-widget" id="symptomCheckerWidget"></div>
     </div>
@@ -236,36 +248,28 @@
       <div class="tips-grid">
         <div class="tip-item reveal">
           <div class="tip-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2.69l5.74 5.88-5.74 5.88-5.74-5.88z"/><path d="M12 14.45l5.74 5.88-5.74 5.88-5.74-5.88z"/>
-            </svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.74 5.88-5.74 5.88-5.74-5.88z"/><path d="M12 14.45l5.74 5.88-5.74 5.88-5.74-5.88z"/></svg>
           </div>
           <h3>宁干勿湿</h3>
           <p>大多数室内植物死于浇水过多。不确定时，宁可少浇也不要多浇。</p>
         </div>
         <div class="tip-item reveal">
           <div class="tip-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-            </svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
           </div>
           <h3>观察光照</h3>
           <p>把植物放在合适的光照位置。朝南窗户光照最强，朝北最弱。</p>
         </div>
         <div class="tip-item reveal">
           <div class="tip-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-            </svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
           </div>
           <h3>定期观察</h3>
           <p>每天花一分钟看看你的植物。叶子发黄、下垂都是它在向你求救。</p>
         </div>
         <div class="tip-item reveal">
           <div class="tip-icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
           <h3>耐心最重要</h3>
           <p>植物生长需要时间。不要频繁移动它或过度干预，给它时间适应环境。</p>
