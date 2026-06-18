@@ -1,6 +1,6 @@
 /* ============================================
-   绿植养护指南 - 全局样式表 v5
-   主题：绿色 + 白色 + 暗色模式 + 互动组件
+   绿植养护指南 - 全局样式表 v6
+   主题：绿色 + 白色 + 暗色模式 + SVG 图标
    ============================================ */
 
 /* ---------- CSS 变量（亮色）---------- */
@@ -51,9 +51,7 @@
 [data-theme="dark"] .hero-overlay {
   background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.5) 100%) !important;
 }
-[data-theme="dark"] img {
-  opacity: 0.9;
-}
+[data-theme="dark"] img { opacity: 0.9; }
 
 /* ---------- 基础重置 ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -79,10 +77,10 @@ a:hover { color: var(--primary-dark); }
   box-shadow: 0 1px 4px rgba(0,0,0,0.04); transition: background-color 0.3s;
 }
 .navbar .container { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-.logo { font-size: 1.35rem; font-weight: 700; color: var(--primary); display: flex; align-items: center; gap: 0.5rem; }
-.logo-icon { width: 32px; height: 32px; }
-.nav-links { display: flex; list-style: none; gap: 2rem; align-items: center; }
-.nav-links a { color: var(--ink-secondary); font-weight: 500; font-size: 0.95rem; padding: 0.25rem 0; position: relative; }
+.logo { font-size: 1.35rem; font-weight: 700; color: var(--primary); display: flex; align-items: center; gap: 0.5rem; white-space: nowrap; }
+.logo-icon { width: 32px; height: 32px; flex-shrink: 0; }
+.nav-links { display: flex; list-style: none; gap: 1.6rem; align-items: center; }
+.nav-links a { color: var(--ink-secondary); font-weight: 500; font-size: 0.95rem; padding: 0.25rem 0; position: relative; white-space: nowrap; }
 .nav-links a::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background-color: var(--primary); transition: var(--transition); }
 .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
 .nav-links a:hover, .nav-links a.active { color: var(--primary); }
@@ -91,18 +89,18 @@ a:hover { color: var(--primary-dark); }
 .theme-toggle {
   background: none; border: 1.5px solid var(--rule); cursor: pointer; width: 38px; height: 38px;
   border-radius: 50%; display: flex; align-items: center; justify-content: center;
-  font-size: 1.1rem; transition: var(--transition); margin-left: 0.5rem; color: var(--ink-secondary);
-  position: relative; overflow: hidden;
+  transition: var(--transition); margin-left: 0.5rem; color: var(--ink-secondary);
+  position: relative; overflow: hidden; flex-shrink: 0;
 }
 .theme-toggle:hover { border-color: var(--primary); color: var(--primary); background: rgba(45,106,79,0.06); }
-.theme-toggle .icon-sun, .theme-toggle .icon-moon { position: absolute; transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), opacity 0.3s; }
+.theme-toggle svg { width: 18px; height: 18px; position: absolute; transition: transform 0.4s cubic-bezier(0.22,1,0.36,1), opacity 0.3s; }
 .theme-toggle .icon-sun { opacity: 1; transform: translateY(0) rotate(0); }
 .theme-toggle .icon-moon { opacity: 0; transform: translateY(20px) rotate(90deg); }
 [data-theme="dark"] .theme-toggle .icon-sun { opacity: 0; transform: translateY(-20px) rotate(-90deg); }
 [data-theme="dark"] .theme-toggle .icon-moon { opacity: 1; transform: translateY(0) rotate(0); }
 
 /* 移动端菜单按钮 */
-.menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+.menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; flex-shrink: 0; }
 .menu-toggle span { display: block; width: 24px; height: 2px; background-color: var(--ink); margin: 5px 0; transition: var(--transition); }
 
 /* ============================================
@@ -133,7 +131,8 @@ a:hover { color: var(--primary-dark); }
 }
 .search-result-item:last-child { border-bottom: none; }
 .search-result-item:hover, .search-result-item.active { background: var(--bg2); }
-.search-result-item .sri-icon { font-size: 1.1rem; flex-shrink: 0; }
+.search-result-item .sri-icon { width: 22px; height: 22px; flex-shrink: 0; color: var(--primary); }
+.search-result-item .sri-icon svg { width: 100%; height: 100%; }
 .search-result-item .sri-info { flex: 1; min-width: 0; }
 .search-result-item .sri-title { font-size: 0.9rem; font-weight: 600; color: var(--ink); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .search-result-item .sri-sub { font-size: 0.78rem; color: var(--muted); }
@@ -153,10 +152,8 @@ a:hover { color: var(--primary-dark); }
 }
 .back-to-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
 .back-to-top:hover { background: var(--primary-dark); transform: translateY(-3px); }
-.back-to-top svg { width: 20px; height: 20px; transition: transform 0.3s; }
-.back-to-top:hover svg { transform: translateY(-2px); }
-
-/* 进度环 */
+.back-to-top > svg { width: 20px; height: 20px; transition: transform 0.3s; }
+.back-to-top:hover > svg { transform: translateY(-2px); }
 .back-to-top .progress-ring { position: absolute; top: -3px; left: -3px; width: 54px; height: 54px; transform: rotate(-90deg); }
 .back-to-top .progress-ring circle { fill: none; stroke: var(--accent); stroke-width: 3; stroke-linecap: round; transition: stroke-dashoffset 0.1s linear; }
 
@@ -180,11 +177,13 @@ a:hover { color: var(--primary-dark); }
   text-align: left; width: 100%; font-family: inherit;
 }
 .sc-option:hover { border-color: var(--primary); background: rgba(45,106,79,0.04); color: var(--ink); }
-.sc-option .sc-emoji { font-size: 1.4rem; flex-shrink: 0; }
+.sc-option .sc-icon { width: 28px; height: 28px; flex-shrink: 0; color: var(--primary); }
+.sc-option .sc-icon svg { width: 100%; height: 100%; }
 .sc-back { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.85rem; color: var(--muted); cursor: pointer; margin-bottom: 1rem; background: none; border: none; font-family: inherit; }
 .sc-back:hover { color: var(--primary); }
 .sc-result { text-align: center; }
-.sc-result .sc-result-icon { font-size: 3rem; margin-bottom: 0.75rem; }
+.sc-result .sc-result-icon { width: 64px; height: 64px; margin: 0 auto 0.75rem; color: var(--primary); }
+.sc-result .sc-result-icon svg { width: 100%; height: 100%; }
 .sc-result h3 { font-size: 1.25rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 0.5rem; }
 .sc-result p { font-size: 0.95rem; color: var(--ink-secondary); line-height: 1.7; margin-bottom: 1.25rem; }
 .sc-result .sc-actions { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
@@ -207,8 +206,9 @@ a:hover { color: var(--primary-dark); }
 .daily-tip-card .dt-icon {
   width: 64px; height: 64px; border-radius: 50%; background: var(--primary);
   color: #fff; display: flex; align-items: center; justify-content: center;
-  font-size: 1.6rem; flex-shrink: 0;
+  flex-shrink: 0;
 }
+.daily-tip-card .dt-icon svg { width: 28px; height: 28px; }
 .daily-tip-card .dt-content { flex: 1; }
 .daily-tip-card .dt-label { font-size: 0.75rem; font-weight: 600; color: var(--primary); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.3rem; }
 .daily-tip-card .dt-text { font-size: 1.05rem; font-weight: 600; color: var(--ink); line-height: 1.5; }
