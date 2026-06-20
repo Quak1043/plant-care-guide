@@ -77,6 +77,23 @@
     .symptom-checker .sc-header-icon { width: 32px; height: 32px; display: inline-block; vertical-align: middle; margin-right: 0.5rem; color: #fff; }
     .symptom-checker .sc-header-icon svg { width: 100%; height: 100%; }
 
+    /* 为什么选择我们 */
+    .why-us { padding: 4rem 0; text-align: center; }
+    .why-us .container { max-width: 800px; }
+    .why-us h2 { font-size: 1.8rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 1.5rem; }
+    .why-us p { color: var(--ink-secondary); line-height: 1.85; font-size: 1.05rem; margin-bottom: 0; }
+
+    /* 新手常见错误 */
+    .common-mistakes { padding: 4rem 0; }
+    .common-mistakes .container { max-width: 800px; }
+    .common-mistakes h2 { font-size: 1.8rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 0.5rem; text-align: center; }
+    .common-mistakes .cm-subtitle { text-align: center; color: var(--muted); font-size: 1rem; margin-bottom: 2.5rem; }
+    .mistake-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 1.5rem; }
+    .mistake-list li { display: flex; gap: 1.25rem; padding: 1.5rem; background-color: var(--bg); border-radius: var(--radius-lg); border: 1px solid var(--rule); align-items: flex-start; }
+    .mistake-num { flex-shrink: 0; width: 36px; height: 36px; background-color: var(--primary); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 1rem; }
+    .mistake-body h3 { font-size: 1.1rem; font-weight: 600; color: var(--ink); margin-bottom: 0.35rem; }
+    .mistake-body p { font-size: 0.95rem; color: var(--ink-secondary); line-height: 1.7; margin-bottom: 0; }
+
     /* 响应式 */
     @media (max-width: 768px) {
       .hero { height: auto; min-height: 460px; padding: 3rem 0; }
@@ -148,6 +165,14 @@
           <input type="text" class="search-input" id="globalSearch" placeholder="搜索文章、植物...（如"浇水"、"绿萝"）" autocomplete="off">
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- 为什么选择我们 -->
+  <section class="why-us">
+    <div class="container">
+      <h2>为什么选择我们</h2>
+      <p>在信息爆炸的时代，网上关于植物养护的内容多如牛毛，但真正适合新手、系统全面且易于实践的却少之又少。绿植养护指南正是为了解决这一痛点而生。我们坚持用最通俗易懂的语言，把专业养护知识转化为每个人都能立刻动手操作的实用方法。从浇水频率的判断到光照位置的安排，从土壤的选择到病虫害的防治，每一个知识点都经过我们亲身验证，确保可靠有效。我们的内容覆盖了室内常见植物品类，无论你养的是绿萝、龟背竹、多肉还是琴叶榕，都能在这里找到针对性的养护方案。更重要的是，我们不是高高在上的专家，而是和你一样的植物爱好者，所以更懂你的困惑和需求。选择绿植养护指南，就是选择了一条少走弯路的养护之路。</p>
     </div>
   </section>
 
@@ -275,6 +300,51 @@
           <p>植物生长需要时间。不要频繁移动它或过度干预，给它时间适应环境。</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- 新手常犯的5个错误 -->
+  <section class="common-mistakes">
+    <div class="container">
+      <h2>新手常犯的5个错误</h2>
+      <p class="cm-subtitle">养植物并不难，但很多新手都会不自觉地踩进这些坑。避开它们，你的养护之路会顺畅很多。</p>
+      <ol class="mistake-list">
+        <li>
+          <div class="mistake-num">1</div>
+          <div class="mistake-body">
+            <h3>浇水太多——这是最常见的"植物杀手"</h3>
+            <p>大多数室内植物死于浇水过多而非过少。新手往往看到土表干了就浇水，但实际上花盆深处的土壤可能还很湿润。正确的做法是：每次浇水前用手指插入土壤两到三厘米，或者用筷子插入土中检查湿度。如果内部仍然湿润，就再等几天。记住一个原则——宁干勿湿。大多数植物在轻微干旱时只会表现出暂时的萎蔫，但根部一旦腐烂，就很难挽救了。</p>
+          </div>
+        </li>
+        <li>
+          <div class="mistake-num">2</div>
+          <div class="mistake-body">
+            <h3>把植物放在光照不对的地方</h3>
+            <p>光照是植物进行光合作用、制造养分的能量来源。很多新手把植物放在完全照不到阳光的角落，或者直接放在烈日暴晒的窗台上，这两种极端都不利于植物生长。即使是标榜"耐阴"的植物，也需要一定的散射光才能健康生长。建议你花几分钟观察家中不同位置的光照情况——朝南的窗户光线最强，适合仙人掌、多肉等喜光植物；朝东和朝西的窗户光线适中，适合大多数观叶植物；朝北的窗户光线最弱，只适合少数耐阴品种。</p>
+          </div>
+        </li>
+        <li>
+          <div class="mistake-num">3</div>
+          <div class="mistake-body">
+            <h3>从不给植物换盆换土</h3>
+            <p>植物在花盆里生长一到两年后，根系会逐渐占满整个花盆，土壤中的养分也会被消耗殆尽。如果长期不换盆，植物的生长速度会明显变慢，叶片可能变小、发黄，甚至出现根部从排水孔钻出来的情况。一般来说，生长快速的植物每年换一次盆，生长较慢的植物每两年换一次。换盆时选择比原盆大一号的新盆，同时更换新鲜的营养土，这能让植物重新焕发活力。</p>
+          </div>
+        </li>
+        <li>
+          <div class="mistake-num">4</div>
+          <div class="mistake-body">
+            <h3>频繁移动植物的位置</h3>
+            <p>植物对环境变化非常敏感，它们需要时间来适应光照、温度、湿度等环境条件。有些新手看到植物状态不好就频繁换位置，今天搬到窗边，明天搬到茶几上，后天又搬到书架上，结果植物需要不断重新适应新环境，反而越来越虚弱。建议你为植物选定一个合适的位置后，就让它安顿下来。如果确实需要移动，也要给植物至少一到两周的适应期，不要短期内反复挪动。</p>
+          </div>
+        </li>
+        <li>
+          <div class="mistake-num">5</div>
+          <div class="mistake-body">
+            <h3>忽视病虫害的早期信号</h3>
+            <p>很多病虫害在早期都有明显的迹象，但新手往往因为缺乏经验而忽略。比如叶片上出现细小的白色斑点可能是红蜘蛛的迹象，叶片背面有黏腻物质可能是蚧壳虫，根部发黑变软则是烂根的前兆。一旦发现这些异常，越早处理效果越好，成本也越低。建议每次浇水时顺便检查一下叶片的正反面和茎部，养成这个习惯能帮你及时发现并解决大部分问题。如果等到植物大面积枯萎才行动，往往已经错过了最佳救治时机。</p>
+          </div>
+        </li>
+      </ol>
     </div>
   </section>
 
