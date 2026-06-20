@@ -105,6 +105,81 @@
       border: 1px solid #fecaca;
     }
 
+    /* FAQ 区域 */
+    .faq-section {
+      padding: 3rem 0 4rem;
+      background-color: var(--bg);
+    }
+
+    .faq-section h2 {
+      text-align: center;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 2rem;
+    }
+
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--rule);
+      padding: 0;
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.25rem 0;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--ink);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+      line-height: 1.5;
+      transition: color 0.2s;
+    }
+
+    .faq-question:hover {
+      color: var(--primary);
+    }
+
+    .faq-question .faq-arrow {
+      flex-shrink: 0;
+      margin-left: 1rem;
+      transition: transform 0.3s ease;
+      color: var(--muted);
+    }
+
+    .faq-item.open .faq-arrow {
+      transform: rotate(180deg);
+      color: var(--primary);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 400px;
+      padding-bottom: 1.25rem;
+    }
+
+    .faq-answer p {
+      color: var(--ink-secondary);
+      line-height: 1.8;
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
     @media (max-width: 768px) {
       .contact-grid {
         grid-template-columns: 1fr;
@@ -233,7 +308,7 @@
         <div class="contact-form-wrapper">
           <h2>发送留言</h2>
           <div id="formStatus" class="form-status"></div>
-          <form id="contactForm">
+          <form id="contactForm" action="https://formspree.io/f/your-form-id" method="POST">
             <div class="form-group">
               <label for="name" class="form-label">姓名 *</label>
               <input type="text" id="name" name="name" class="form-input" placeholder="请输入您的姓名" required>
@@ -252,6 +327,86 @@
             </div>
             <button type="submit" class="btn btn-primary" style="width: 100%;">提交留言</button>
           </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ 常见问题 -->
+  <section class="faq-section">
+    <div class="container">
+      <h2>常见问题</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            我的植物叶子发黄了，该怎么挽救？
+            <span class="faq-arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <p>叶子发黄是植物最常见的求救信号，原因可能有多种：浇水过多是最常见的原因，表现为老叶先黄、叶片发软，此时需要立即停止浇水并检查盆底是否有积水；浇水过少则表现为叶片干枯卷曲、从叶尖开始发黄；光照不足会导致整株植物颜色变淡、新叶发黄；缺肥主要表现为老叶均匀变黄。建议先检查土壤湿度，用手指插入土中2-3厘米，如果感觉湿润就不要再浇水。把植物移到通风良好、散射光充足的地方，通常一周左右就能看到改善。</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            我是新手，推荐养什么植物不容易死？
+            <span class="faq-arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <p>对于新手来说，我们最推荐以下几种"懒人植物"：绿萝是当之无愧的新手之王，水培土培都可以，耐阴又耐旱，即使一周忘记浇水也能活得好好的；虎皮兰被誉为"卧室制氧机"，一个月浇一次水就够了，几乎不需要任何打理；金钱树和巴西铁树极度耐阴，适合放在办公室或光线不足的角落；吊兰生长速度快，还会长出小吊兰可以繁殖，非常有成就感。这些植物都有共同特点：耐旱、耐阴、对土壤要求不高，即使偶尔照顾不周也不会轻易死掉。</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            植物应该多久浇一次水？
+            <span class="faq-arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <p>浇水没有固定的时间表，因为浇水频率取决于植物种类、季节、花盆大小、土壤类型和环境湿度等多种因素。一般来说，春夏生长季需要多浇水，秋冬休眠期要减少浇水。判断是否需要浇水的最好方法是"手指测试法"：将手指插入土壤中约2-3厘米，如果感觉干燥就可以浇水，如果还湿润就再等等。记住一个黄金法则：宁干勿湿。大多数室内植物死于浇水过多导致的烂根，而不是干旱。浇水时要浇透，直到水从盆底排水孔流出，然后倒掉托盘中的积水，不要让根部长时间泡在水里。</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            植物叶子上有白色小虫子怎么办？
+            <span class="faq-arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <p>白色小虫子通常是蚧壳虫或粉虱。发现虫害后，第一步是立即将受感染的植物与其他植物隔离，防止虫害扩散。对于少量虫害，可以用棉签蘸取75%的酒精轻轻擦拭叶片正反面，酒精能有效杀死蚧壳虫且不伤植物。也可以用稀释的肥皂水（1升水加几滴洗洁精）喷洒叶片，喷后静置30分钟再用清水冲洗。如果虫害严重，建议使用专门的植物杀虫剂，按照说明书稀释后喷洒。预防胜于治疗，保持通风良好、定期检查叶片背面、新植物买回家先隔离观察一周，可以有效避免虫害的发生。</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            植物需要施肥吗？用什么肥料好？
+            <span class="faq-arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <p>植物确实需要施肥，但新手最容易犯的错误就是施肥过多导致"烧根"。室内植物推荐使用缓释肥或液体肥，按照说明书上的推荐浓度再减半使用，薄肥勤施比一次施浓肥安全得多。春夏生长旺季可以每2-4周施一次肥，秋冬季节植物进入休眠期后应停止施肥。对于观叶植物，选择氮含量较高的肥料可以促进叶片生长；对于开花植物，在花芽分化期使用磷钾含量较高的肥料有助于开花。新手推荐使用通用型缓释颗粒肥，撒在土表即可，肥效持续3-6个月，省心又安全。如果植物刚换盆不到两个月，土壤中的养分还足够，暂时不需要施肥。</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            为什么我的多肉植物越长越"徒"？
+            <span class="faq-arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </button>
+          <div class="faq-answer">
+            <p>多肉"徒长"表现为茎节拉长、叶片稀疏、株型松散，看起来像一棵"豆芽菜"，这是光照不足的典型表现。多肉植物原产于阳光充足的干旱地区，在室内养护时需要放在光线最好的位置，比如朝南的窗台。如果光照实在不足，可以考虑使用植物补光灯，每天补充8-12小时光照。除了光照，浇水过多也会加剧徒长，多肉植物遵循"干透浇透"的原则，等土壤完全干透后再浇水。已经徒长的部分无法恢复原状，但你可以通过"砍头"来重新塑形：将徒长部分剪掉，把顶部健康的莲座放在干燥的土面上，等待生根后再种下，原来的茎干也会长出新的侧芽。</p>
+          </div>
         </div>
       </div>
     </div>
@@ -290,5 +445,29 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    /* FAQ 手风琴效果 */
+    (function(){
+      var faqItems = document.querySelectorAll('.faq-item');
+      for (var i = 0; i < faqItems.length; i++) {
+        (function(item){
+          var btn = item.querySelector('.faq-question');
+          btn.addEventListener('click', function(){
+            var isOpen = item.classList.contains('open');
+            // 关闭所有
+            for (var j = 0; j < faqItems.length; j++) {
+              faqItems[j].classList.remove('open');
+              faqItems[j].querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+            }
+            // 打开当前
+            if (!isOpen) {
+              item.classList.add('open');
+              btn.setAttribute('aria-expanded', 'true');
+            }
+          });
+        })(faqItems[i]);
+      }
+    })();
+  </script>
 </body>
 </html>
