@@ -228,6 +228,10 @@
       font-weight: 600;
       color: var(--primary);
       text-decoration: none;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
       transition: color 0.2s;
     }
 
@@ -237,6 +241,58 @@
 
     .plant-link::after {
       content: ' →';
+    }
+
+    /* 植物详情展开面板 */
+    .plant-detail {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease, margin 0.4s ease;
+      border-top: 0px solid var(--rule);
+      margin-top: 0;
+    }
+
+    .plant-card.expanded .plant-detail {
+      max-height: 600px;
+      padding-top: 1rem;
+      margin-top: 0.75rem;
+      border-top-width: 1px;
+    }
+
+    .plant-detail h4 {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+      margin-top: 0.75rem;
+    }
+
+    .plant-detail h4:first-child {
+      margin-top: 0;
+    }
+
+    .plant-detail p {
+      font-size: 0.83rem;
+      color: var(--ink-secondary);
+      line-height: 1.7;
+      margin-bottom: 0.5rem;
+    }
+
+    .plant-detail .detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.35rem 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .plant-detail .detail-item {
+      font-size: 0.82rem;
+      color: var(--ink-secondary);
+      line-height: 1.6;
+    }
+
+    .plant-detail .detail-item strong {
+      color: var(--ink);
     }
 
     /* ===== 无结果提示 ===== */
@@ -433,7 +489,19 @@
               <span class="tag-func">净化空气</span>
             </div>
             <p class="plant-desc">最受欢迎的室内植物之一，生命力极强，水培土培均可，能有效吸收甲醛等有害物质。</p>
-            <a href="article-detail.html" class="plant-link">查看养护指南</a>
+            <button class="plant-link" onclick="togglePlantDetail(this)">查看养护指南</button>
+            <div class="plant-detail">
+              <div class="detail-grid">
+                <div class="detail-item"><strong>光照：</strong>耐阴，散射光最佳</div>
+                <div class="detail-item"><strong>温度：</strong>15-28°C，不低于10°C</div>
+                <div class="detail-item"><strong>浇水：</strong>土干2cm再浇，约每周1次</div>
+                <div class="detail-item"><strong>土壤：</strong>通用营养土，排水良好</div>
+              </div>
+              <h4>常见问题</h4>
+              <p>叶片发黄通常是浇水过多，需停止浇水并检查根部。叶尖发黑是空气太干，可向叶片喷水增加湿度。绿萝汁液微毒，需放在宠物和儿童接触不到的地方。</p>
+              <h4>养护小贴士</h4>
+              <p>水培绿萝每周换水一次，加入几滴营养液叶片会更油亮。定期修剪过长的藤蔓可以促进分枝，剪下的枝条插入水中即可生根繁殖。</p>
+            </div>
           </div>
         </article>
 
@@ -451,7 +519,19 @@
               <span class="tag-func">净化空气</span>
             </div>
             <p class="plant-desc">植物界的"不死小强"，极度耐旱耐阴，一个月浇一次水即可，被誉为"卧室制氧机"。</p>
-            <a href="article-detail.html" class="plant-link">查看养护指南</a>
+            <button class="plant-link" onclick="togglePlantDetail(this)">查看养护指南</button>
+            <div class="plant-detail">
+              <div class="detail-grid">
+                <div class="detail-item"><strong>光照：</strong>耐阴到强光均可</div>
+                <div class="detail-item"><strong>温度：</strong>15-30°C，不低于10°C</div>
+                <div class="detail-item"><strong>浇水：</strong>干透再浇，约2-4周1次</div>
+                <div class="detail-item"><strong>土壤：</strong>沙质土，排水好</div>
+              </div>
+              <h4>常见问题</h4>
+              <p>浇水过多导致根腐是虎皮兰最常见的死亡原因，冬季需严格控水。叶片发软倒伏是水多或光照不足的征兆。虎皮兰极少有病虫害，但盆土长期潮湿会招致根粉蚧。</p>
+              <h4>养护小贴士</h4>
+              <p>虎皮兰夜间释放氧气，适合放在卧室。用浅盆栽种比深盆更好，因为其根系分布较浅。春秋季节可施少量仙人掌专用肥。</p>
+            </div>
           </div>
         </article>
 
@@ -469,7 +549,19 @@
               <span class="tag-func">观赏</span>
             </div>
             <p class="plant-desc">网红植物代表，叶片宽大带天然孔洞，北欧风家居必备，养护简单颜值高。</p>
-            <a href="article-detail.html" class="plant-link">查看养护指南</a>
+            <button class="plant-link" onclick="togglePlantDetail(this)">查看养护指南</button>
+            <div class="plant-detail">
+              <div class="detail-grid">
+                <div class="detail-item"><strong>光照：</strong>散射光，忌暴晒</div>
+                <div class="detail-item"><strong>温度：</strong>18-30°C，不低于12°C</div>
+                <div class="detail-item"><strong>浇水：</strong>土干3cm再浇，约每周1次</div>
+                <div class="detail-item"><strong>土壤：</strong>疏松肥沃腐殖土</div>
+              </div>
+              <h4>常见问题</h4>
+              <p>叶片不开裂是光照不足或植株太幼小的表现，增加散射光照射可促进裂叶。叶缘发黑通常是浇水过多或温度过低。龟背竹会长出气生根，这是正常现象，可以引导气生根扎入土中吸收养分。</p>
+              <h4>养护小贴士</h4>
+              <p>定期用湿布擦拭叶片保持光泽，擦拭时可加入少量啤酒稀释液。龟背竹生长较快，建议每年春季换一次盆，换盆时可在土中埋入少量缓释肥。</p>
+            </div>
           </div>
         </article>
 
@@ -487,7 +579,19 @@
               <span class="tag-func">净化空气</span>
             </div>
             <p class="plant-desc">空气净化能手，会从母株长出小吊兰，轻松繁殖，悬挂摆放极具装饰感。</p>
-            <a href="article-detail.html" class="plant-link">查看养护指南</a>
+            <button class="plant-link" onclick="togglePlantDetail(this)">查看养护指南</button>
+            <div class="plant-detail">
+              <div class="detail-grid">
+                <div class="detail-item"><strong>光照：</strong>散射光，避免暴晒</div>
+                <div class="detail-item"><strong>温度：</strong>15-25°C，不低于5°C</div>
+                <div class="detail-item"><strong>浇水：</strong>土干再浇，约每周1-2次</div>
+                <div class="detail-item"><strong>土壤：</strong>通用营养土，排水良好</div>
+              </div>
+              <h4>常见问题</h4>
+              <p>叶尖发黑干枯通常是空气干燥或水中含氯，建议用晾晒过的自来水浇灌。叶片发黄是浇水过多或光照不足，应调整到散射光充足的位置并控制浇水频率。</p>
+              <h4>养护小贴士</h4>
+              <p>走茎上长出的小吊兰剪下即可水培或土培繁殖，成活率极高。每月施一次稀释液肥，叶片会更加翠绿有光泽。</p>
+            </div>
           </div>
         </article>
 
@@ -505,7 +609,19 @@
               <span class="tag-func">观赏</span>
             </div>
             <p class="plant-desc">叶片形似小提琴，是室内大型观叶植物的颜值担当。需要充足光照和稳定环境，适合有一定经验的养护者。</p>
-            <a href="article-detail.html" class="plant-link">查看养护指南</a>
+            <button class="plant-link" onclick="togglePlantDetail(this)">查看养护指南</button>
+            <div class="plant-detail">
+              <div class="detail-grid">
+                <div class="detail-item"><strong>光照：</strong>充足明亮散射光，忌暴晒</div>
+                <div class="detail-item"><strong>温度：</strong>18-30°C，不低于15°C</div>
+                <div class="detail-item"><strong>浇水：</strong>土干3-4cm再浇，约每周1次</div>
+                <div class="detail-item"><strong>土壤：</strong>疏松肥沃，排水良好</div>
+              </div>
+              <h4>常见问题</h4>
+              <p>叶片出现褐色斑点通常是浇水过多或通风不良，需减少浇水频率并加强通风。落叶是环境变化过大引起的应激反应，琴叶榕不喜欢频繁移动位置，选定位置后尽量固定。</p>
+              <h4>养护小贴士</h4>
+              <p>定期转动花盆让植株均匀受光，避免向一侧倾斜生长。叶片需经常用湿布擦拭保持清洁，有利于光合作用，也能及时发现病虫害。</p>
+            </div>
           </div>
         </article>
 
@@ -523,7 +639,19 @@
               <span class="tag-func">观赏</span>
             </div>
             <p class="plant-desc">品种丰富，造型呆萌可爱，极耐干旱，阳光越足颜色越美，是桌面的最佳伴侣。</p>
-            <a href="article-detail.html" class="plant-link">查看养护指南</a>
+            <button class="plant-link" onclick="togglePlantDetail(this)">查看养护指南</button>
+            <div class="plant-detail">
+              <div class="detail-grid">
+                <div class="detail-item"><strong>光照：</strong>充足阳光，至少4小时直射</div>
+                <div class="detail-item"><strong>温度：</strong>10-30°C，部分品种耐-5°C</div>
+                <div class="detail-item"><strong>浇水：</strong>干透浇透，约2-4周1次</div>
+                <div class="detail-item"><strong>土壤：</strong>多肉专用颗粒土，排水快</div>
+              </div>
+              <h4>常见问题</h4>
+              <p>徒长（茎节拉长、叶片稀疏）是光照不足的典型表现，需立即移至阳光充足处。化水（叶片透明软烂）是浇水过多或闷热不通风所致，需立即停止浇水并脱土晾根。</p>
+              <h4>养护小贴士</h4>
+              <p>夏季高温时严格控水遮阴，冬季低温时断水休眠。用麦饭石或赤玉土铺面既美观又能防止底部叶片接触湿土腐烂。</p>
+            </div>
           </div>
         </article>
 
@@ -541,7 +669,19 @@
               <span class="tag-func">招财</span>
             </div>
             <p class="plant-desc">水培植物首选，寓意富贵吉祥，干净整洁不需土壤，只需定期换水即可茁壮成长。</p>
-            <a href="article-detail.html" class="plant-link">查看养护指南</a>
+            <button class="plant-link" onclick="togglePlantDetail(this)">查看养护指南</button>
+            <div class="plant-detail">
+              <div class="detail-grid">
+                <div class="detail-item"><strong>光照：</strong>散射光，忌暴晒</div>
+                <div class="detail-item"><strong>温度：</strong>18-28°C，不低于10°C</div>
+                <div class="detail-item"><strong>浇水：</strong>水位保持3-5cm，每周换水</div>
+                <div class="detail-item"><strong>土壤：</strong>水培为主，也可土培</div>
+              </div>
+              <h4>常见问题</h4>
+              <p>叶片发黄是水质问题，用纯净水或晾晒过的自来水养护可有效避免。茎干发软腐烂是细菌感染，需立即剪掉腐烂部分并换水，容器需彻底消毒。</p>
+              <h4>养护小贴士</h4>
+              <p>水中放一颗铁钉可补充铁元素，有效防止黄叶。富贵竹怕风吹，应远离空调出风口和门窗，保持环境稳定。</p>
+            </div>
           </div>
         </article>
 
@@ -559,7 +699,19 @@
               <span class="tag-func">净化空气</span>
             </div>
             <p class="plant-desc">高大挺拔的室内观叶植物，耐阴性极强，适合办公室和光线不足的角落，能有效净化空气。</p>
-            <a href="article-detail.html" class="plant-link">查看养护指南</a>
+            <button class="plant-link" onclick="togglePlantDetail(this)">查看养护指南</button>
+            <div class="plant-detail">
+              <div class="detail-grid">
+                <div class="detail-item"><strong>光照：</strong>耐阴，散射光生长更好</div>
+                <div class="detail-item"><strong>温度：</strong>16-28°C，不低于10°C</div>
+                <div class="detail-item"><strong>浇水：</strong>土干2-3cm再浇，约1-2周1次</div>
+                <div class="detail-item"><strong>土壤：</strong>疏松沙质土，排水好</div>
+              </div>
+              <h4>常见问题</h4>
+              <p>叶尖干枯是空气干燥或氟中毒的典型表现，建议用雨水或纯净水浇灌。叶片出现褐色斑块多为低温冻伤，冬季需远离窗户放置。</p>
+              <h4>养护小贴士</h4>
+              <p>巴西铁树生长缓慢，无需频繁施肥，每年春季施一次缓释肥即可满足全年需求。偶尔用湿布擦叶可保持叶片光泽，提升观赏价值。</p>
+            </div>
           </div>
         </article>
 
@@ -577,7 +729,19 @@
               <span class="tag-func">净化空气</span>
             </div>
             <p class="plant-desc">攀援垂吊两相宜，生长速度快，能吸收苯和甲醛，挂在窗边或书架上都十分雅致。</p>
-            <a href="article-detail.html" class="plant-link">查看养护指南</a>
+            <button class="plant-link" onclick="togglePlantDetail(this)">查看养护指南</button>
+            <div class="plant-detail">
+              <div class="detail-grid">
+                <div class="detail-item"><strong>光照：</strong>散射光，耐半阴</div>
+                <div class="detail-item"><strong>温度：</strong>15-25°C，不低于5°C</div>
+                <div class="detail-item"><strong>浇水：</strong>保持湿润但不积水，约2-3天1次</div>
+                <div class="detail-item"><strong>土壤：</strong>疏松肥沃腐殖土</div>
+              </div>
+              <h4>常见问题</h4>
+              <p>叶片干枯卷曲通常是空气湿度过低，需经常向叶片喷水增加湿度。红蜘蛛是常春藤最常见的虫害，叶片出现黄白斑点时需及时用肥皂水喷洒叶片正反面。</p>
+              <h4>养护小贴士</h4>
+              <p>常春藤生长迅速，可随时修剪过长的枝条保持株型，剪下的枝条插入水中即可生根。悬挂种植最有利于通风，能有效减少病虫害。</p>
+            </div>
           </div>
         </article>
 
@@ -595,7 +759,19 @@
               <span class="tag-func">观赏</span>
             </div>
             <p class="plant-desc">花朵形如仙鹤，叶片宽大呈芭蕉状，热带风情十足，需要充足光照才能开花。</p>
-            <a href="article-detail.html" class="plant-link">查看养护指南</a>
+            <button class="plant-link" onclick="togglePlantDetail(this)">查看养护指南</button>
+            <div class="plant-detail">
+              <div class="detail-grid">
+                <div class="detail-item"><strong>光照：</strong>充足阳光，至少4小时直射</div>
+                <div class="detail-item"><strong>温度：</strong>18-30°C，不低于10°C</div>
+                <div class="detail-item"><strong>浇水：</strong>土干3cm再浇，约每周1次</div>
+                <div class="detail-item"><strong>土壤：</strong>肥沃疏松，排水良好</div>
+              </div>
+              <h4>常见问题</h4>
+              <p>叶片卷曲发黄是光照过强或缺水，需调整位置避免暴晒并增加浇水频率。不开花通常是光照不足或植株不够成熟，天堂鸟需要3-5年的生长期才能开花。</p>
+              <h4>养护小贴士</h4>
+              <p>生长季节每月施一次磷钾肥，可有效促进开花。叶片容易积灰，定期用湿布擦拭保持叶片呼吸顺畅，也能让植株更美观。</p>
+            </div>
           </div>
         </article>
 
@@ -613,7 +789,19 @@
               <span class="tag-func">招财</span>
             </div>
             <p class="plant-desc">叶片厚实油亮犹如串串铜钱，寓意招财进宝。极度耐阴耐旱，是办公室和商场最常见的植物之一。</p>
-            <a href="article-detail.html" class="plant-link">查看养护指南</a>
+            <button class="plant-link" onclick="togglePlantDetail(this)">查看养护指南</button>
+            <div class="plant-detail">
+              <div class="detail-grid">
+                <div class="detail-item"><strong>光照：</strong>耐阴，避免直射光</div>
+                <div class="detail-item"><strong>温度：</strong>18-28°C，不低于10°C</div>
+                <div class="detail-item"><strong>浇水：</strong>干透再浇，约2-3周1次</div>
+                <div class="detail-item"><strong>土壤：</strong>排水良好的沙质土</div>
+              </div>
+              <h4>常见问题</h4>
+              <p>叶片变黄是浇水过多的典型表现，金钱树地下块茎储水能力强，一定要干透再浇。茎干发软倒伏是烂根的前兆，需立即停止浇水并检查根部，剪除腐烂部分。</p>
+              <h4>养护小贴士</h4>
+              <p>金钱树非常耐旱，忘记浇水比浇水过多更安全，是出差族的理想选择。叶片油亮是健康的表现，可偶尔用稀释的啤酒擦拭叶片增加光泽。</p>
+            </div>
           </div>
         </article>
 
@@ -631,7 +819,19 @@
               <span class="tag-func">观赏</span>
             </div>
             <p class="plant-desc">叶片宽大带美丽斑纹，四季常青，生命力旺盛，是中式家居的传统绿植之选。</p>
-            <a href="article-detail.html" class="plant-link">查看养护指南</a>
+            <button class="plant-link" onclick="togglePlantDetail(this)">查看养护指南</button>
+            <div class="plant-detail">
+              <div class="detail-grid">
+                <div class="detail-item"><strong>光照：</strong>散射光，耐半阴</div>
+                <div class="detail-item"><strong>温度：</strong>18-28°C，不低于10°C</div>
+                <div class="detail-item"><strong>浇水：</strong>土干2cm再浇，约每周1-2次</div>
+                <div class="detail-item"><strong>土壤：</strong>疏松肥沃营养土</div>
+              </div>
+              <h4>常见问题</h4>
+              <p>下部叶片发黄脱落是正常老化现象，但若大量叶片同时发黄则可能是浇水过多。万年青汁液有毒，修剪或换盆时建议戴手套，并放置在儿童和宠物接触不到的地方。</p>
+              <h4>养护小贴士</h4>
+              <p>春季换盆时可在底部加入少量有机肥作为底肥，促进新叶生长。万年青喜欢温暖湿润环境，可经常向叶面喷水增加湿度，保持叶片鲜亮。</p>
+            </div>
           </div>
         </article>
 
@@ -649,7 +849,19 @@
               <span class="tag-func">观赏</span>
             </div>
             <p class="plant-desc">花中君子，姿态优雅，花香清幽。需要通风良好和较高的空气湿度，开花期观赏价值极高。</p>
-            <a href="article-detail.html" class="plant-link">查看养护指南</a>
+            <button class="plant-link" onclick="togglePlantDetail(this)">查看养护指南</button>
+            <div class="plant-detail">
+              <div class="detail-grid">
+                <div class="detail-item"><strong>光照：</strong>散射光，忌暴晒</div>
+                <div class="detail-item"><strong>温度：</strong>15-28°C，昼夜温差8-10°C</div>
+                <div class="detail-item"><strong>浇水：</strong>基质干透再浇，约5-7天1次</div>
+                <div class="detail-item"><strong>土壤：</strong>兰花专用水苔或树皮</div>
+              </div>
+              <h4>常见问题</h4>
+              <p>花苞掉落是环境变化过大或浇水过多，兰花在花苞期间需保持环境稳定，避免移动花盆。叶片发黑腐烂是软腐病，需立即剪除病叶并喷洒杀菌剂，同时加强通风。</p>
+              <h4>养护小贴士</h4>
+              <p>兰花需要通风良好的环境，但忌强风直吹，保持空气流通即可。花谢后及时剪掉花茎，能节省养分促进来年复花，修剪时刀具需消毒。</p>
+            </div>
           </div>
         </article>
 
@@ -667,7 +879,19 @@
               <span class="tag-func">净化空气</span>
             </div>
             <p class="plant-desc">叶片细密如羽毛，喜欢湿润阴凉环境，加湿效果显著，浴室和北向房间的完美选择。</p>
-            <a href="article-detail.html" class="plant-link">查看养护指南</a>
+            <button class="plant-link" onclick="togglePlantDetail(this)">查看养护指南</button>
+            <div class="plant-detail">
+              <div class="detail-grid">
+                <div class="detail-item"><strong>光照：</strong>耐阴，散射光即可</div>
+                <div class="detail-item"><strong>温度：</strong>15-25°C，不低于8°C</div>
+                <div class="detail-item"><strong>浇水：</strong>保持土壤湿润，约2-3天1次</div>
+                <div class="detail-item"><strong>土壤：</strong>疏松保水腐殖土</div>
+              </div>
+              <h4>常见问题</h4>
+              <p>叶片干枯卷曲是空气湿度过低，蕨类需要较高的空气湿度，可经常喷水或使用加湿器。叶片发黄脱落是浇水过多导致根部缺氧，需减少浇水频率并检查排水。</p>
+              <h4>养护小贴士</h4>
+              <p>蕨类最适合放在浴室，利用洗澡时的蒸汽自然增加湿度，养护轻松又省心。每年春季换盆时修剪过密的根系，可促进新叶萌发，保持植株活力。</p>
+            </div>
           </div>
         </article>
 
@@ -685,7 +909,19 @@
               <span class="tag-func">招财</span>
             </div>
             <p class="plant-desc">中国人最爱的招财植物，树形优美，寓意财源广进。养护简单，注意不要浇水过多。</p>
-            <a href="article-detail.html" class="plant-link">查看养护指南</a>
+            <button class="plant-link" onclick="togglePlantDetail(this)">查看养护指南</button>
+            <div class="plant-detail">
+              <div class="detail-grid">
+                <div class="detail-item"><strong>光照：</strong>散射光，耐半阴</div>
+                <div class="detail-item"><strong>温度：</strong>18-30°C，不低于10°C</div>
+                <div class="detail-item"><strong>浇水：</strong>土干透再浇，约1-2周1次</div>
+                <div class="detail-item"><strong>土壤：</strong>疏松排水沙质土</div>
+              </div>
+              <h4>常见问题</h4>
+              <p>叶片发黄脱落是浇水过多的典型表现，发财树怕涝，浇水遵循"宁干勿湿"原则。树干变软发空是烂根的严重信号，需立即脱盆修剪烂根，晾干后重新上盆。</p>
+              <h4>养护小贴士</h4>
+              <p>发财树喜欢温暖环境，冬季需特别注意保暖，低于10°C容易落叶。春季可适当修剪过长枝条，促进侧枝萌发使株型更丰满圆润。</p>
+            </div>
           </div>
         </article>
 
@@ -842,6 +1078,16 @@
       // 启动
       initFilters();
     })();
+
+    /**
+     * 切换植物详情面板的展开/收起
+     */
+    function togglePlantDetail(btn) {
+      var card = btn.closest('.plant-card');
+      if (card) {
+        card.classList.toggle('expanded');
+      }
+    }
   </script>
 
   <!-- 导航栏移动端菜单 -->
