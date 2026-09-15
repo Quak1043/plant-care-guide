@@ -1,0 +1,557 @@
+{
+  "hero": {
+    "base": "hero",
+    "intrinsic": {
+      "width": 1368,
+      "height": 724
+    },
+    "ratio": 1.8895,
+    "source": "hero-v2.jpg",
+    "avif": {
+      "640": "assets/hero-640.avif",
+      "960": "assets/hero-960.avif",
+      "1368": "assets/hero-1368.avif"
+    },
+    "webp": {
+      "640": "assets/hero-640.webp",
+      "960": "assets/hero-960.webp",
+      "1368": "assets/hero-1368.webp"
+    },
+    "jpeg": {
+      "640": "assets/hero-640.jpg",
+      "960": "assets/hero-960.jpg",
+      "1368": "assets/hero-1368.jpg"
+    }
+  },
+  "propagation-methods": {
+    "base": "propagation-methods",
+    "intrinsic": {
+      "width": 1368,
+      "height": 724
+    },
+    "ratio": 1.8895,
+    "source": "propagation-methods.jpg",
+    "avif": {
+      "400": "assets/propagation-methods-400.avif",
+      "800": "assets/propagation-methods-800.avif",
+      "1216": "assets/propagation-methods-1216.avif"
+    },
+    "webp": {
+      "400": "assets/propagation-methods-400.webp",
+      "800": "assets/propagation-methods-800.webp",
+      "1216": "assets/propagation-methods-1216.webp"
+    },
+    "jpeg": {
+      "400": "assets/propagation-methods-400.jpg",
+      "800": "assets/propagation-methods-800.jpg",
+      "1216": "assets/propagation-methods-1216.jpg"
+    }
+  },
+  "card-beginner": {
+    "base": "card-beginner",
+    "intrinsic": {
+      "width": 1216,
+      "height": 868
+    },
+    "ratio": 1.4009,
+    "source": "card-beginner-v2.jpg",
+    "avif": {
+      "400": "assets/card-beginner-400.avif",
+      "800": "assets/card-beginner-800.avif",
+      "1216": "assets/card-beginner-1216.avif"
+    },
+    "webp": {
+      "400": "assets/card-beginner-400.webp",
+      "800": "assets/card-beginner-800.webp",
+      "1216": "assets/card-beginner-1216.webp"
+    },
+    "jpeg": {
+      "400": "assets/card-beginner-400.jpg",
+      "800": "assets/card-beginner-800.jpg",
+      "1216": "assets/card-beginner-1216.jpg"
+    }
+  },
+  "card-fertilizer": {
+    "base": "card-fertilizer",
+    "intrinsic": {
+      "width": 1216,
+      "height": 868
+    },
+    "ratio": 1.4009,
+    "source": "card-fertilizer.jpg",
+    "avif": {
+      "400": "assets/card-fertilizer-400.avif",
+      "800": "assets/card-fertilizer-800.avif",
+      "1216": "assets/card-fertilizer-1216.avif"
+    },
+    "webp": {
+      "400": "assets/card-fertilizer-400.webp",
+      "800": "assets/card-fertilizer-800.webp",
+      "1216": "assets/card-fertilizer-1216.webp"
+    },
+    "jpeg": {
+      "400": "assets/card-fertilizer-400.jpg",
+      "800": "assets/card-fertilizer-800.jpg",
+      "1216": "assets/card-fertilizer-1216.jpg"
+    }
+  },
+  "card-light": {
+    "base": "card-light",
+    "intrinsic": {
+      "width": 1216,
+      "height": 868
+    },
+    "ratio": 1.4009,
+    "source": "card-light.jpg",
+    "avif": {
+      "400": "assets/card-light-400.avif",
+      "800": "assets/card-light-800.avif",
+      "1216": "assets/card-light-1216.avif"
+    },
+    "webp": {
+      "400": "assets/card-light-400.webp",
+      "800": "assets/card-light-800.webp",
+      "1216": "assets/card-light-1216.webp"
+    },
+    "jpeg": {
+      "400": "assets/card-light-400.jpg",
+      "800": "assets/card-light-800.jpg",
+      "1216": "assets/card-light-1216.jpg"
+    }
+  },
+  "card-monstera": {
+    "base": "card-monstera",
+    "intrinsic": {
+      "width": 1216,
+      "height": 868
+    },
+    "ratio": 1.4009,
+    "source": "card-monstera-v2.jpg",
+    "avif": {
+      "400": "assets/card-monstera-400.avif",
+      "800": "assets/card-monstera-800.avif",
+      "1216": "assets/card-monstera-1216.avif"
+    },
+    "webp": {
+      "400": "assets/card-monstera-400.webp",
+      "800": "assets/card-monstera-800.webp",
+      "1216": "assets/card-monstera-1216.webp"
+    },
+    "jpeg": {
+      "400": "assets/card-monstera-400.jpg",
+      "800": "assets/card-monstera-800.jpg",
+      "1216": "assets/card-monstera-1216.jpg"
+    }
+  },
+  "card-pests": {
+    "base": "card-pests",
+    "intrinsic": {
+      "width": 1216,
+      "height": 868
+    },
+    "ratio": 1.4009,
+    "source": "card-pests.jpg",
+    "avif": {
+      "400": "assets/card-pests-400.avif",
+      "800": "assets/card-pests-800.avif",
+      "1216": "assets/card-pests-1216.avif"
+    },
+    "webp": {
+      "400": "assets/card-pests-400.webp",
+      "800": "assets/card-pests-800.webp",
+      "1216": "assets/card-pests-1216.webp"
+    },
+    "jpeg": {
+      "400": "assets/card-pests-400.jpg",
+      "800": "assets/card-pests-800.jpg",
+      "1216": "assets/card-pests-1216.jpg"
+    }
+  },
+  "card-propagation": {
+    "base": "card-propagation",
+    "intrinsic": {
+      "width": 1368,
+      "height": 724
+    },
+    "ratio": 1.8895,
+    "source": "card-propagation.jpg",
+    "avif": {
+      "400": "assets/card-propagation-400.avif",
+      "800": "assets/card-propagation-800.avif",
+      "1368": "assets/card-propagation-1368.avif"
+    },
+    "webp": {
+      "400": "assets/card-propagation-400.webp",
+      "800": "assets/card-propagation-800.webp",
+      "1368": "assets/card-propagation-1368.webp"
+    },
+    "jpeg": {
+      "400": "assets/card-propagation-400.jpg",
+      "800": "assets/card-propagation-800.jpg",
+      "1368": "assets/card-propagation-1368.jpg"
+    }
+  },
+  "card-repot": {
+    "base": "card-repot",
+    "intrinsic": {
+      "width": 1216,
+      "height": 868
+    },
+    "ratio": 1.4009,
+    "source": "card-repot.jpg",
+    "avif": {
+      "400": "assets/card-repot-400.avif",
+      "800": "assets/card-repot-800.avif",
+      "1216": "assets/card-repot-1216.avif"
+    },
+    "webp": {
+      "400": "assets/card-repot-400.webp",
+      "800": "assets/card-repot-800.webp",
+      "1216": "assets/card-repot-1216.webp"
+    },
+    "jpeg": {
+      "400": "assets/card-repot-400.jpg",
+      "800": "assets/card-repot-800.jpg",
+      "1216": "assets/card-repot-1216.jpg"
+    }
+  },
+  "card-watering": {
+    "base": "card-watering",
+    "intrinsic": {
+      "width": 1216,
+      "height": 868
+    },
+    "ratio": 1.4009,
+    "source": "card-watering.jpg",
+    "avif": {
+      "400": "assets/card-watering-400.avif",
+      "800": "assets/card-watering-800.avif",
+      "1216": "assets/card-watering-1216.avif"
+    },
+    "webp": {
+      "400": "assets/card-watering-400.webp",
+      "800": "assets/card-watering-800.webp",
+      "1216": "assets/card-watering-1216.webp"
+    },
+    "jpeg": {
+      "400": "assets/card-watering-400.jpg",
+      "800": "assets/card-watering-800.jpg",
+      "1216": "assets/card-watering-1216.jpg"
+    }
+  },
+  "encyclopedia/plant-bird-of-paradise": {
+    "base": "plant-bird-of-paradise",
+    "intrinsic": {
+      "width": 1216,
+      "height": 868
+    },
+    "ratio": 1.4009,
+    "source": "plant-bird-of-paradise.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-bird-of-paradise-320.avif",
+      "640": "assets/encyclopedia/plant-bird-of-paradise-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-bird-of-paradise-320.webp",
+      "640": "assets/encyclopedia/plant-bird-of-paradise-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-bird-of-paradise-320.jpg",
+      "640": "assets/encyclopedia/plant-bird-of-paradise-640.jpg"
+    }
+  },
+  "encyclopedia/plant-dracaena": {
+    "base": "plant-dracaena",
+    "intrinsic": {
+      "width": 1216,
+      "height": 868
+    },
+    "ratio": 1.4009,
+    "source": "plant-dracaena.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-dracaena-320.avif",
+      "640": "assets/encyclopedia/plant-dracaena-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-dracaena-320.webp",
+      "640": "assets/encyclopedia/plant-dracaena-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-dracaena-320.jpg",
+      "640": "assets/encyclopedia/plant-dracaena-640.jpg"
+    }
+  },
+  "encyclopedia/plant-english-ivy": {
+    "base": "plant-english-ivy",
+    "intrinsic": {
+      "width": 1216,
+      "height": 868
+    },
+    "ratio": 1.4009,
+    "source": "plant-english-ivy.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-english-ivy-320.avif",
+      "640": "assets/encyclopedia/plant-english-ivy-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-english-ivy-320.webp",
+      "640": "assets/encyclopedia/plant-english-ivy-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-english-ivy-320.jpg",
+      "640": "assets/encyclopedia/plant-english-ivy-640.jpg"
+    }
+  },
+  "encyclopedia/plant-evergreen": {
+    "base": "plant-evergreen",
+    "intrinsic": {
+      "width": 1216,
+      "height": 868
+    },
+    "ratio": 1.4009,
+    "source": "plant-evergreen.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-evergreen-320.avif",
+      "640": "assets/encyclopedia/plant-evergreen-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-evergreen-320.webp",
+      "640": "assets/encyclopedia/plant-evergreen-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-evergreen-320.jpg",
+      "640": "assets/encyclopedia/plant-evergreen-640.jpg"
+    }
+  },
+  "encyclopedia/plant-fern": {
+    "base": "plant-fern",
+    "intrinsic": {
+      "width": 1216,
+      "height": 868
+    },
+    "ratio": 1.4009,
+    "source": "plant-fern.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-fern-320.avif",
+      "640": "assets/encyclopedia/plant-fern-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-fern-320.webp",
+      "640": "assets/encyclopedia/plant-fern-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-fern-320.jpg",
+      "640": "assets/encyclopedia/plant-fern-640.jpg"
+    }
+  },
+  "encyclopedia/plant-fiddle": {
+    "base": "plant-fiddle",
+    "intrinsic": {
+      "width": 1216,
+      "height": 868
+    },
+    "ratio": 1.4009,
+    "source": "plant-fiddle.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-fiddle-320.avif",
+      "640": "assets/encyclopedia/plant-fiddle-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-fiddle-320.webp",
+      "640": "assets/encyclopedia/plant-fiddle-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-fiddle-320.jpg",
+      "640": "assets/encyclopedia/plant-fiddle-640.jpg"
+    }
+  },
+  "encyclopedia/plant-fortune": {
+    "base": "plant-fortune",
+    "intrinsic": {
+      "width": 1216,
+      "height": 868
+    },
+    "ratio": 1.4009,
+    "source": "plant-fortune.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-fortune-320.avif",
+      "640": "assets/encyclopedia/plant-fortune-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-fortune-320.webp",
+      "640": "assets/encyclopedia/plant-fortune-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-fortune-320.jpg",
+      "640": "assets/encyclopedia/plant-fortune-640.jpg"
+    }
+  },
+  "encyclopedia/plant-lucky-bamboo": {
+    "base": "plant-lucky-bamboo",
+    "intrinsic": {
+      "width": 1216,
+      "height": 868
+    },
+    "ratio": 1.4009,
+    "source": "plant-lucky-bamboo.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-lucky-bamboo-320.avif",
+      "640": "assets/encyclopedia/plant-lucky-bamboo-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-lucky-bamboo-320.webp",
+      "640": "assets/encyclopedia/plant-lucky-bamboo-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-lucky-bamboo-320.jpg",
+      "640": "assets/encyclopedia/plant-lucky-bamboo-640.jpg"
+    }
+  },
+  "encyclopedia/plant-monstera": {
+    "base": "plant-monstera",
+    "intrinsic": {
+      "width": 1216,
+      "height": 868
+    },
+    "ratio": 1.4009,
+    "source": "plant-monstera.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-monstera-320.avif",
+      "640": "assets/encyclopedia/plant-monstera-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-monstera-320.webp",
+      "640": "assets/encyclopedia/plant-monstera-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-monstera-320.jpg",
+      "640": "assets/encyclopedia/plant-monstera-640.jpg"
+    }
+  },
+  "encyclopedia/plant-orchid": {
+    "base": "plant-orchid",
+    "intrinsic": {
+      "width": 1216,
+      "height": 868
+    },
+    "ratio": 1.4009,
+    "source": "plant-orchid.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-orchid-320.avif",
+      "640": "assets/encyclopedia/plant-orchid-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-orchid-320.webp",
+      "640": "assets/encyclopedia/plant-orchid-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-orchid-320.jpg",
+      "640": "assets/encyclopedia/plant-orchid-640.jpg"
+    }
+  },
+  "encyclopedia/plant-pothos": {
+    "base": "plant-pothos",
+    "intrinsic": {
+      "width": 1216,
+      "height": 868
+    },
+    "ratio": 1.4009,
+    "source": "plant-pothos.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-pothos-320.avif",
+      "640": "assets/encyclopedia/plant-pothos-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-pothos-320.webp",
+      "640": "assets/encyclopedia/plant-pothos-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-pothos-320.jpg",
+      "640": "assets/encyclopedia/plant-pothos-640.jpg"
+    }
+  },
+  "encyclopedia/plant-snake": {
+    "base": "plant-snake",
+    "intrinsic": {
+      "width": 1216,
+      "height": 868
+    },
+    "ratio": 1.4009,
+    "source": "plant-snake.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-snake-320.avif",
+      "640": "assets/encyclopedia/plant-snake-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-snake-320.webp",
+      "640": "assets/encyclopedia/plant-snake-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-snake-320.jpg",
+      "640": "assets/encyclopedia/plant-snake-640.jpg"
+    }
+  },
+  "encyclopedia/plant-spider": {
+    "base": "plant-spider",
+    "intrinsic": {
+      "width": 1216,
+      "height": 868
+    },
+    "ratio": 1.4009,
+    "source": "plant-spider.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-spider-320.avif",
+      "640": "assets/encyclopedia/plant-spider-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-spider-320.webp",
+      "640": "assets/encyclopedia/plant-spider-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-spider-320.jpg",
+      "640": "assets/encyclopedia/plant-spider-640.jpg"
+    }
+  },
+  "encyclopedia/plant-succulent": {
+    "base": "plant-succulent",
+    "intrinsic": {
+      "width": 1216,
+      "height": 868
+    },
+    "ratio": 1.4009,
+    "source": "plant-succulent.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-succulent-320.avif",
+      "640": "assets/encyclopedia/plant-succulent-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-succulent-320.webp",
+      "640": "assets/encyclopedia/plant-succulent-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-succulent-320.jpg",
+      "640": "assets/encyclopedia/plant-succulent-640.jpg"
+    }
+  },
+  "encyclopedia/plant-zz": {
+    "base": "plant-zz",
+    "intrinsic": {
+      "width": 1216,
+      "height": 868
+    },
+    "ratio": 1.4009,
+    "source": "plant-zz.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-zz-320.avif",
+      "640": "assets/encyclopedia/plant-zz-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-zz-320.webp",
+      "640": "assets/encyclopedia/plant-zz-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-zz-320.jpg",
+      "640": "assets/encyclopedia/plant-zz-640.jpg"
+    }
+  }
+}

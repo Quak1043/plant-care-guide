@@ -1,0 +1,42 @@
+<!-- @meta
+kind: index
+active: encyclopedia
+-->
+
+<header class="page-header">
+  <div class="container">
+    <h1>植物百科</h1>
+    <p>按光照、难度、功能筛选最适合你的室内植物</p>
+  </div>
+</header>
+
+<!-- 筛选栏：按钮由 build.mjs 从 plants.json 的取值生成，
+     不会出现「数据里加了新功能但按钮忘了加」的情况。
+     无 JS 时全部卡片保持可见，只是筛选按钮不生效。 -->
+<section class="filter-section" aria-label="植物筛选">
+  <div class="container">
+    {{filters}}
+
+    <div class="results-info" role="status" aria-live="polite">
+      当前显示 <strong id="resultCount">{{PLANT_COUNT}}</strong> 种植物
+    </div>
+
+    <!-- 「净化空气」是植物市场上沿用已久的分类标签，容易被读成效果承诺。
+         这里如实说明一次，避免读者按标签预期去买植物。 -->
+    <p class="tag-disclaimer">关于「净化空气」标签：这是园艺市场上沿用已久的分类方式，指该植物常被归入这一类。<strong>室内植物对空气的实际净化量很小</strong>——相关实验多是在密闭实验舱、高浓度的条件下做的，换算到住宅环境后作用有限。这些植物值得养，是因为耐阴好养、叶片好看；想改善室内空气，开窗通风比摆几十盆植物有效得多。</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="plant-grid" id="plantGrid">
+{{plants}}
+    </div>
+
+    <noscript>
+      <p class="form-note">筛选需要启用 JavaScript。上面已列出全部 {{PLANT_COUNT}} 种植物，每张卡片都可以直接展开查看养护指南、常见问题和小贴士。</p>
+    </noscript>
+  </div>
+</section>
+
+{{ad}}

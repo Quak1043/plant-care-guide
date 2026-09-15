@@ -1,0 +1,18 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <p class="footer__brand">{{SITE_NAME}}</p>
+        <p class="footer__desc">{{FOOTER_DESC}}</p>
+      </div>
+{{FOOTER_COLUMNS}}
+    </div>
+    <div class="footer__bottom">
+      <p>&copy; {{YEAR}} {{SITE_NAME}}. 保留所有权利.</p>
+      <!-- Google 官方 CMP（Funding Choices）要求站点提供撤回同意的入口。
+           按钮默认 hidden：只有检测到 window.googlefc 才由 js/consent.js 显出来，
+           避免在 CMP 不可达的地区留下一个点了没反应的死按钮。 -->
+      <button type="button" class="footer__privacy" id="privacySettings" hidden>隐私设置</button>
+    </div>
+  </div>
+</footer>

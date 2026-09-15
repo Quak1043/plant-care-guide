@@ -1,0 +1,8 @@
+# 派生缓存与验证产物：可由脚本重新生成，不纳入版本管理
+_build/fonts-raw/
+_build/shots/
+_build/build.log
+
+# Python 缓存
+__pycache__/
+*.pyc

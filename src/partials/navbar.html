@@ -1,0 +1,22 @@
+<header class="navbar">
+  <div class="container navbar__inner">
+    <a class="logo" href="index.html">
+      <svg class="logo__mark" viewBox="0 0 32 32" aria-hidden="true"><use href="#i-logo"></use></svg>
+      <span>{{SITE_NAME}}</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks" aria-label="主导航">
+{{NAV_LINKS}}
+    </nav>
+
+    <div class="nav-actions">
+      <button type="button" class="theme-toggle" id="themeToggle" aria-label="切换深色模式" aria-pressed="false">
+        <svg class="icon icon--sun" aria-hidden="true"><use href="#i-sun"></use></svg>
+        <svg class="icon icon--moon" aria-hidden="true"><use href="#i-moon"></use></svg>
+      </button>
+      <button type="button" class="menu-toggle" id="menuToggle" aria-label="打开导航菜单" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>

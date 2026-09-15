@@ -1,0 +1,45 @@
+{
+  "name": "绿植养护指南",
+  "tagline": "让每一株植物都茁壮成长",
+  "description": "面向新手的家庭室内植物养护指南，提供简单实用的浇水、施肥、光照等养护知识和技巧。",
+  "url": "https://plant-care-guide.xyz",
+  "lang": "zh-CN",
+  "author": "本站运营者",
+  "favicon": "assets/favicon.svg",
+  "themeColor": "#2d6a4f",
+  "twitter": "summary_large_image",
+  "email": "zhiyuzheng72@gmail.com",
+  "contactEndpoint": "",
+  "adsense": "ca-pub-5813588344689679",
+  "ga4": "G-XRFTZZ4XBD",
+  "nav": [
+    { "id": "home", "label": "首页", "href": "index.html" },
+    { "id": "articles", "label": "文章", "href": "articles.html" },
+    { "id": "encyclopedia", "label": "植物百科", "href": "encyclopedia.html" },
+    { "id": "pests", "label": "病虫害", "href": "pest-article.html" },
+    { "id": "about", "label": "关于", "href": "about.html" }
+  ],
+  "footer": {
+    "brandDesc": "帮助每一位植物新手轻松上手，让绿色生活触手可及。我们相信，每个人都能成为优秀的植物守护者。",
+    "columns": [
+      {
+        "title": "快速链接",
+        "links": [
+          { "label": "首页", "href": "index.html" },
+          { "label": "文章列表", "href": "articles.html" },
+          { "label": "植物百科", "href": "encyclopedia.html" },
+          { "label": "病虫害", "href": "pest-article.html" },
+          { "label": "关于我们", "href": "about.html" },
+          { "label": "联系我们", "href": "contact.html" }
+        ]
+      },
+      {
+        "title": "法律信息",
+        "links": [
+          { "label": "隐私政策", "href": "privacy.html" },
+          { "label": "图片来源与版权", "href": "credits.html" }
+        ]
+      }
+    ]
+  }
+}

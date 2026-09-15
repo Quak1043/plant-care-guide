@@ -1,0 +1,99 @@
+<!-- @meta
+kind: page
+active: 
+-->
+
+<header class="page-header">
+  <div class="container">
+    <h1>联系我们</h1>
+    <p>有任何问题或建议？我很乐意听到你的声音</p>
+  </div>
+</header>
+
+{{ad}}
+
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>与这个站点取得联系</h2>
+        <p>无论你是遇到了植物养护难题，还是想分享自己的养植物心得，或者对网站有任何建议，都欢迎联系我们。本站由运营者维护，回复可能不是即时的，但每一封邮件都会被看到。</p>
+
+        <div class="contact-methods">
+          <div class="contact-method">
+            <div class="contact-method-icon">{{icon:mail}}</div>
+            <div>
+              <h3>电子邮件</h3>
+              <p><a href="mailto:{{SITE_EMAIL}}" id="contactEmail">{{SITE_EMAIL}}</a></p>
+            </div>
+          </div>
+
+          <div class="contact-method">
+            <div class="contact-method-icon">{{icon:shield}}</div>
+            <div>
+              <h3>版权与内容投诉</h3>
+              <p><a href="#ip-report">图片 / 文字侵权或内容纠错</a></p>
+            </div>
+          </div>
+
+          <div class="contact-method">
+            <div class="contact-method-icon">{{icon:clock}}</div>
+            <div>
+              <h3>回复时间</h3>
+              <p>收到邮件后我们会尽快回复</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form-wrapper">
+        <h2>发送留言</h2>
+
+        <!-- 表单真实接收地址来自 src/data/site.json 的 contactEndpoint。
+             v7 这里是未替换的 formspree 占位符，JS 却弹「感谢您的留言」，
+             留言全部丢失。现在没配置就如实降级成邮件引导（见 js/tools.js）。 -->
+        <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+
+        <form id="contactForm" action="{{CONTACT_ENDPOINT}}" method="POST" data-endpoint="{{CONTACT_ENDPOINT}}">
+          <div class="form-group">
+            <label for="name" class="form-label">姓名 *</label>
+            <input type="text" id="name" name="name" class="form-input" placeholder="请输入您的姓名" required autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">邮箱 *</label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="请输入您的邮箱地址" required autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="subject" class="form-label">主题</label>
+            <input type="text" id="subject" name="subject" class="form-input" placeholder="请简要描述您的问题">
+          </div>
+          <div class="form-group">
+            <label for="message" class="form-label">留言内容 *</label>
+            <textarea id="message" name="message" class="form-textarea" placeholder="请详细描述您的问题或建议..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">提交留言</button>
+          <noscript>
+            <p class="form-note">在线表单需要启用 JavaScript。你也可以直接发邮件到 <a href="mailto:{{SITE_EMAIL}}">{{SITE_EMAIL}}</a>。</p>
+          </noscript>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--sunken" id="ip-report">
+  <div class="container container--prose prose">
+    <h2>版权与内容投诉渠道</h2>
+    <p>本站尊重他人的知识产权，也重视内容的准确。如果你在浏览时发现以下任一情况，欢迎直接反馈，我们会尽快处理：</p>
+    <ul>
+      <li><strong>图片或文字侵权</strong>：你认为本站某张配图或某段文字侵犯了你的著作权，请告知具体页面地址与权属证明，核实后我们会尽快移除或替换。</li>
+      <li><strong>内容有误</strong>：某条养护建议与你的实际经验或权威资料不符，请指出页面与所在段落，我们会复核并修正，必要时在文中标注修订。</li>
+      <li><strong>失效链接或异常页面</strong>：发现死链、排版错乱、内容显示不完整，也请一并告知。</li>
+    </ul>
+    <p>投诉请发送至 <a href="mailto:{{SITE_EMAIL}}">{{SITE_EMAIL}}</a>，邮件标题建议注明「版权投诉」或「内容纠错」。为便于处理，请附上：涉及的页面网址、具体位置（图片文件名或段落首句）、你的联系方式，以及权属或事实依据。</p>
+    <p>本站文字与配图的来源、授权范围，已经汇总在<a href="credits.html">图片来源与版权</a>页，可以先对照查看。</p>
+    <p class="form-note">本站页面中出现的第三方名称、品牌与商品，其权利归各自所有者所有，仅用于说明或评论目的，不表示任何形式的关联或背书。</p>
+  </div>
+</section>
+
+{{faq:contact}}

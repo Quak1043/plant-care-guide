@@ -1,0 +1,198 @@
+[
+  {
+    "title": "绿萝",
+    "sub": "植物 · 耐阴 · 新手 · 净化空气",
+    "url": "encyclopedia.html#plant-pothos",
+    "icon": "leaf",
+    "keywords": "绿萝 Epipremnum aureum 绿萝 魔鬼藤 黄金葛"
+  },
+  {
+    "title": "虎皮兰",
+    "sub": "植物 · 耐阴 · 新手 · 净化空气",
+    "url": "encyclopedia.html#plant-snake",
+    "icon": "cactus",
+    "keywords": "虎皮兰 Sansevieria trifasciata 虎皮兰 虎尾兰 千岁兰"
+  },
+  {
+    "title": "龟背竹",
+    "sub": "植物 · 散射光 · 新手 · 观赏",
+    "url": "encyclopedia.html#plant-monstera",
+    "icon": "herb",
+    "keywords": "龟背竹 Monstera deliciosa 龟背竹 蓬莱蕉"
+  },
+  {
+    "title": "吊兰",
+    "sub": "植物 · 散射光 · 新手 · 净化空气",
+    "url": "encyclopedia.html#plant-spider",
+    "icon": "seedling",
+    "keywords": "吊兰 Chlorophytum comosum 吊兰 挂兰 钓兰"
+  },
+  {
+    "title": "琴叶榕",
+    "sub": "植物 · 强光 · 进阶 · 观赏",
+    "url": "encyclopedia.html#plant-fiddle",
+    "icon": "tree",
+    "keywords": "琴叶榕 Ficus lyrata 琴叶榕 大琴叶榕"
+  },
+  {
+    "title": "多肉",
+    "sub": "植物 · 强光 · 新手 · 观赏",
+    "url": "encyclopedia.html#plant-succulent",
+    "icon": "flower",
+    "keywords": "多肉 Succulent 多肉植物 多肉 景天科"
+  },
+  {
+    "title": "富贵竹",
+    "sub": "植物 · 散射光 · 新手 · 招财",
+    "url": "encyclopedia.html#plant-lucky-bamboo",
+    "icon": "bamboo",
+    "keywords": "富贵竹 Dracaena sanderiana 富贵竹 转运竹 开运竹"
+  },
+  {
+    "title": "巴西铁树",
+    "sub": "植物 · 耐阴 · 新手 · 净化空气",
+    "url": "encyclopedia.html#plant-dracaena",
+    "icon": "tree",
+    "keywords": "巴西铁树 Dracaena fragrans 巴西铁树 香龙血树 巴西木"
+  },
+  {
+    "title": "常春藤",
+    "sub": "植物 · 散射光 · 新手 · 净化空气",
+    "url": "encyclopedia.html#plant-english-ivy",
+    "icon": "clover",
+    "keywords": "常春藤 Hedera helix 常春藤 洋常春藤"
+  },
+  {
+    "title": "天堂鸟",
+    "sub": "植物 · 强光 · 进阶 · 观赏",
+    "url": "encyclopedia.html#plant-bird-of-paradise",
+    "icon": "flower",
+    "keywords": "天堂鸟 Strelitzia reginae 天堂鸟 鹤望兰"
+  },
+  {
+    "title": "金钱树",
+    "sub": "植物 · 耐阴 · 新手 · 招财",
+    "url": "encyclopedia.html#plant-zz",
+    "icon": "money",
+    "keywords": "金钱树 Zamioculcas zamiifolia 金钱树 雪铁芋 泽米芋"
+  },
+  {
+    "title": "万年青",
+    "sub": "植物 · 散射光 · 新手 · 观赏",
+    "url": "encyclopedia.html#plant-evergreen",
+    "icon": "leaf",
+    "keywords": "万年青 Dieffenbachia 万年青 粉黛万年青"
+  },
+  {
+    "title": "兰花",
+    "sub": "植物 · 散射光 · 进阶 · 观赏",
+    "url": "encyclopedia.html#plant-orchid",
+    "icon": "butterfly",
+    "keywords": "兰花 Orchidaceae 兰花 蝴蝶兰 国兰"
+  },
+  {
+    "title": "蕨类",
+    "sub": "植物 · 耐阴 · 新手 · 净化空气",
+    "url": "encyclopedia.html#plant-fern",
+    "icon": "feather",
+    "keywords": "蕨类 Fern 蕨类 铁线蕨 波士顿蕨"
+  },
+  {
+    "title": "发财树",
+    "sub": "植物 · 散射光 · 新手 · 招财",
+    "url": "encyclopedia.html#plant-fortune",
+    "icon": "money",
+    "keywords": "发财树 Pachira aquatica 发财树 瓜栗 马拉巴栗"
+  },
+  {
+    "title": "首页",
+    "sub": "页面 · 绿植养护指南",
+    "url": "index.html",
+    "icon": "home",
+    "keywords": "首页 绿植养护 室内植物 新手入门 植物养护"
+  },
+  {
+    "title": "全部文章",
+    "sub": "页面 · 全部养护文章",
+    "url": "articles.html",
+    "icon": "list",
+    "keywords": "文章 文章列表 养护文章 教程"
+  },
+  {
+    "title": "90%的花都是浇死的：新手浇水完全指南",
+    "sub": "文章 · 浇水技巧",
+    "url": "watering-guide.html",
+    "icon": "water",
+    "keywords": "浇水 见干见湿 烂根 浇水频率 浸盆法 浇水方法 浇透"
+  },
+  {
+    "title": "2026年最适合新手的10种室内绿植推荐",
+    "sub": "文章 · 植物推荐",
+    "url": "top10-plants.html",
+    "icon": "trophy",
+    "keywords": "推荐 排名 榜单 好养植物 新手植物 室内绿植推荐"
+  },
+  {
+    "title": "植物繁殖入门指南：扦插与分株，一盆变十盆",
+    "sub": "文章 · 繁殖技巧",
+    "url": "propagation-guide.html",
+    "icon": "seedling",
+    "keywords": "繁殖 扦插 分株 水插 叶插 一盆变十盆"
+  },
+  {
+    "title": "植物百科",
+    "sub": "页面 · 15种植物详解",
+    "url": "encyclopedia.html",
+    "icon": "grid",
+    "keywords": "植物百科 室内植物 植物图鉴 筛选 养护信息"
+  },
+  {
+    "title": "新手入门：选对第一盆植物",
+    "sub": "文章 · 新手入门",
+    "url": "article-detail.html",
+    "icon": "book",
+    "keywords": "新手入门 第一盆植物 选植物 入门 怎么选"
+  },
+  {
+    "title": "室内光照完全指南：不同光照适合养什么植物",
+    "sub": "文章 · 光照环境",
+    "url": "lighting-guide.html",
+    "icon": "sun",
+    "keywords": "光照 散射光 直射光 耐阴 窗户朝向 手影法 摆放位置"
+  },
+  {
+    "title": "换盆与土壤选择全攻略：手把手教你正确换盆",
+    "sub": "文章 · 换盆技巧",
+    "url": "repotting-guide.html",
+    "icon": "pot",
+    "keywords": "换盆 土壤 配土 选盆 缓苗 根系 何时换盆"
+  },
+  {
+    "title": "植物施肥入门指南：薄肥勤施，越长越好",
+    "sub": "文章 · 施肥指南",
+    "url": "fertilizer-guide.html",
+    "icon": "flask",
+    "keywords": "施肥 肥料 薄肥勤施 缺肥 氮磷钾 缓释肥 施肥频率"
+  },
+  {
+    "title": "家庭养花常见病虫害识别与防治大全",
+    "sub": "文章 · 病虫害",
+    "url": "pest-article.html",
+    "icon": "bug",
+    "keywords": "病虫害 蚜虫 红蜘蛛 小黑飞 介壳虫 白粉病 叶斑病 防治"
+  },
+  {
+    "title": "关于我们",
+    "sub": "页面 · 关于本站",
+    "url": "about.html",
+    "icon": "info",
+    "keywords": "关于 关于我们 团队 网站介绍"
+  },
+  {
+    "title": "联系我们",
+    "sub": "页面 · 联系与反馈",
+    "url": "contact.html",
+    "icon": "mail",
+    "keywords": "联系 联系表单 反馈 提问 合作"
+  }
+]

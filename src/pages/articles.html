@@ -1,0 +1,47 @@
+<!-- @meta
+kind: index
+active: articles
+-->
+
+<header class="page-header">
+  <div class="container">
+    <h1>全部文章</h1>
+    <p>系统学习室内植物养护知识，从入门到进阶</p>
+  </div>
+</header>
+
+{{ad}}
+
+<section class="section">
+  <div class="container prose-intro">
+    <h2>全套植物养护知识体系</h2>
+    <p>室内植物养护其实不复杂，只要掌握浇水、光照、土壤、施肥、病虫害防治、繁殖这六大核心要素，就能让任何一盆植物健康生长。我们把这些知识点拆解成一组独立文章，每篇专注讲透一个主题，配有真实照片和实用表格。</p>
+    <p>以下是完整文章目录，按发布时间从新到旧排列。建议按这个顺序读：先看新手入门打底，再学浇水这个最容易出错的环节，然后依次了解光照、换盆、施肥、繁殖与病虫害。每篇 5-8 分钟，碎片时间就能看完。</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container--list">
+    <div class="section-head">
+      <h2>最新发布</h2>
+      <p>共 {{ARTICLE_COUNT}} 篇文章</p>
+    </div>
+
+    <!-- 列表由 build.mjs 从 src/data/pages.json 生成，不再手写副本：
+         v7 的这份清单是手抄的，10 条里有 2 条指向了错误的页面。 -->
+    <div class="article-list">
+{{articles}}
+    </div>
+  </div>
+</section>
+
+<section class="section section--sunken">
+  <div class="container prose-intro">
+    <h2>还没想好从哪开始？</h2>
+    <p>如果你刚买了第一盆植物，建议先去「植物百科」按光照和养护难度筛一遍，确认它适合放在你家的哪个位置；如果你手上的植物已经出了问题，可以直接用首页的「植物生病了？快速自查」按症状定位原因。</p>
+    <div class="action-row">
+      <a class="btn btn-primary" href="encyclopedia.html">浏览植物百科</a>
+      <a class="btn btn-outline" href="index.html#checker">用症状自查</a>
+    </div>
+  </div>
+</section>
