@@ -135,6 +135,17 @@ def main() -> int:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     (OUT_DIR / "encyclopedia").mkdir(exist_ok=True)
 
+    # 先清掉上一轮遗留的派生图。源图被移入 DEAD 清单后，旧派生图仍留在目录里，
+    # 就会变成没人引用的死文件，还会被一起提交、一起发布。
+    stale_removed = 0
+    for folder in (OUT_DIR, OUT_DIR / "encyclopedia"):
+        for pattern in ("*.avif", "*.webp", "*.jpg"):
+            for stale in folder.glob(pattern):
+                stale.unlink()
+                stale_removed += 1
+    if stale_removed:
+        print(f"清理上一轮遗留的派生图 {stale_removed} 个（源图已不在清单里）\n")
+
     manifest: dict[str, dict] = {}
     total_out = 0
 
