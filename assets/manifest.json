@@ -1,52 +1,4 @@
 {
-  "hero": {
-    "base": "hero",
-    "intrinsic": {
-      "width": 1368,
-      "height": 724
-    },
-    "ratio": 1.8895,
-    "source": "hero-v2.jpg",
-    "avif": {
-      "640": "assets/hero-640.avif",
-      "960": "assets/hero-960.avif",
-      "1368": "assets/hero-1368.avif"
-    },
-    "webp": {
-      "640": "assets/hero-640.webp",
-      "960": "assets/hero-960.webp",
-      "1368": "assets/hero-1368.webp"
-    },
-    "jpeg": {
-      "640": "assets/hero-640.jpg",
-      "960": "assets/hero-960.jpg",
-      "1368": "assets/hero-1368.jpg"
-    }
-  },
-  "propagation-methods": {
-    "base": "propagation-methods",
-    "intrinsic": {
-      "width": 1368,
-      "height": 724
-    },
-    "ratio": 1.8895,
-    "source": "propagation-methods.jpg",
-    "avif": {
-      "400": "assets/propagation-methods-400.avif",
-      "800": "assets/propagation-methods-800.avif",
-      "1216": "assets/propagation-methods-1216.avif"
-    },
-    "webp": {
-      "400": "assets/propagation-methods-400.webp",
-      "800": "assets/propagation-methods-800.webp",
-      "1216": "assets/propagation-methods-1216.webp"
-    },
-    "jpeg": {
-      "400": "assets/propagation-methods-400.jpg",
-      "800": "assets/propagation-methods-800.jpg",
-      "1216": "assets/propagation-methods-1216.jpg"
-    }
-  },
   "card-beginner": {
     "base": "card-beginner",
     "intrinsic": {
@@ -239,6 +191,90 @@
       "1216": "assets/card-watering-1216.jpg"
     }
   },
+  "encyclopedia/plant-air-plant": {
+    "base": "plant-air-plant",
+    "intrinsic": {
+      "width": 2560,
+      "height": 1440
+    },
+    "ratio": 1.7778,
+    "source": "plant-air-plant.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-air-plant-320.avif",
+      "640": "assets/encyclopedia/plant-air-plant-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-air-plant-320.webp",
+      "640": "assets/encyclopedia/plant-air-plant-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-air-plant-320.jpg",
+      "640": "assets/encyclopedia/plant-air-plant-640.jpg"
+    }
+  },
+  "encyclopedia/plant-aloe": {
+    "base": "plant-aloe",
+    "intrinsic": {
+      "width": 2560,
+      "height": 1440
+    },
+    "ratio": 1.7778,
+    "source": "plant-aloe.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-aloe-320.avif",
+      "640": "assets/encyclopedia/plant-aloe-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-aloe-320.webp",
+      "640": "assets/encyclopedia/plant-aloe-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-aloe-320.jpg",
+      "640": "assets/encyclopedia/plant-aloe-640.jpg"
+    }
+  },
+  "encyclopedia/plant-areca-palm": {
+    "base": "plant-areca-palm",
+    "intrinsic": {
+      "width": 2560,
+      "height": 1440
+    },
+    "ratio": 1.7778,
+    "source": "plant-areca-palm.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-areca-palm-320.avif",
+      "640": "assets/encyclopedia/plant-areca-palm-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-areca-palm-320.webp",
+      "640": "assets/encyclopedia/plant-areca-palm-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-areca-palm-320.jpg",
+      "640": "assets/encyclopedia/plant-areca-palm-640.jpg"
+    }
+  },
+  "encyclopedia/plant-bear-paw": {
+    "base": "plant-bear-paw",
+    "intrinsic": {
+      "width": 2560,
+      "height": 1440
+    },
+    "ratio": 1.7778,
+    "source": "plant-bear-paw.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-bear-paw-320.avif",
+      "640": "assets/encyclopedia/plant-bear-paw-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-bear-paw-320.webp",
+      "640": "assets/encyclopedia/plant-bear-paw-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-bear-paw-320.jpg",
+      "640": "assets/encyclopedia/plant-bear-paw-640.jpg"
+    }
+  },
   "encyclopedia/plant-bird-of-paradise": {
     "base": "plant-bird-of-paradise",
     "intrinsic": {
@@ -260,6 +296,48 @@
       "640": "assets/encyclopedia/plant-bird-of-paradise-640.jpg"
     }
   },
+  "encyclopedia/plant-calathea": {
+    "base": "plant-calathea",
+    "intrinsic": {
+      "width": 2560,
+      "height": 1440
+    },
+    "ratio": 1.7778,
+    "source": "plant-calathea.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-calathea-320.avif",
+      "640": "assets/encyclopedia/plant-calathea-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-calathea-320.webp",
+      "640": "assets/encyclopedia/plant-calathea-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-calathea-320.jpg",
+      "640": "assets/encyclopedia/plant-calathea-640.jpg"
+    }
+  },
+  "encyclopedia/plant-dendrobium": {
+    "base": "plant-dendrobium",
+    "intrinsic": {
+      "width": 2560,
+      "height": 1440
+    },
+    "ratio": 1.7778,
+    "source": "plant-dendrobium.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-dendrobium-320.avif",
+      "640": "assets/encyclopedia/plant-dendrobium-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-dendrobium-320.webp",
+      "640": "assets/encyclopedia/plant-dendrobium-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-dendrobium-320.jpg",
+      "640": "assets/encyclopedia/plant-dendrobium-640.jpg"
+    }
+  },
   "encyclopedia/plant-dracaena": {
     "base": "plant-dracaena",
     "intrinsic": {
@@ -279,6 +357,27 @@
     "jpeg": {
       "320": "assets/encyclopedia/plant-dracaena-320.jpg",
       "640": "assets/encyclopedia/plant-dracaena-640.jpg"
+    }
+  },
+  "encyclopedia/plant-dragon-bone": {
+    "base": "plant-dragon-bone",
+    "intrinsic": {
+      "width": 2560,
+      "height": 1440
+    },
+    "ratio": 1.7778,
+    "source": "plant-dragon-bone.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-dragon-bone-320.avif",
+      "640": "assets/encyclopedia/plant-dragon-bone-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-dragon-bone-320.webp",
+      "640": "assets/encyclopedia/plant-dragon-bone-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-dragon-bone-320.jpg",
+      "640": "assets/encyclopedia/plant-dragon-bone-640.jpg"
     }
   },
   "encyclopedia/plant-english-ivy": {
@@ -386,6 +485,153 @@
       "640": "assets/encyclopedia/plant-fortune-640.jpg"
     }
   },
+  "encyclopedia/plant-gardenia": {
+    "base": "plant-gardenia",
+    "intrinsic": {
+      "width": 2560,
+      "height": 1440
+    },
+    "ratio": 1.7778,
+    "source": "plant-gardenia.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-gardenia-320.avif",
+      "640": "assets/encyclopedia/plant-gardenia-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-gardenia-320.webp",
+      "640": "assets/encyclopedia/plant-gardenia-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-gardenia-320.jpg",
+      "640": "assets/encyclopedia/plant-gardenia-640.jpg"
+    }
+  },
+  "encyclopedia/plant-golden-barrel": {
+    "base": "plant-golden-barrel",
+    "intrinsic": {
+      "width": 2560,
+      "height": 1440
+    },
+    "ratio": 1.7778,
+    "source": "plant-golden-barrel.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-golden-barrel-320.avif",
+      "640": "assets/encyclopedia/plant-golden-barrel-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-golden-barrel-320.webp",
+      "640": "assets/encyclopedia/plant-golden-barrel-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-golden-barrel-320.jpg",
+      "640": "assets/encyclopedia/plant-golden-barrel-640.jpg"
+    }
+  },
+  "encyclopedia/plant-haworthia": {
+    "base": "plant-haworthia",
+    "intrinsic": {
+      "width": 2560,
+      "height": 1440
+    },
+    "ratio": 1.7778,
+    "source": "plant-haworthia.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-haworthia-320.avif",
+      "640": "assets/encyclopedia/plant-haworthia-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-haworthia-320.webp",
+      "640": "assets/encyclopedia/plant-haworthia-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-haworthia-320.jpg",
+      "640": "assets/encyclopedia/plant-haworthia-640.jpg"
+    }
+  },
+  "encyclopedia/plant-hoya": {
+    "base": "plant-hoya",
+    "intrinsic": {
+      "width": 2560,
+      "height": 1440
+    },
+    "ratio": 1.7778,
+    "source": "plant-hoya.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-hoya-320.avif",
+      "640": "assets/encyclopedia/plant-hoya-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-hoya-320.webp",
+      "640": "assets/encyclopedia/plant-hoya-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-hoya-320.jpg",
+      "640": "assets/encyclopedia/plant-hoya-640.jpg"
+    }
+  },
+  "encyclopedia/plant-hyacinth": {
+    "base": "plant-hyacinth",
+    "intrinsic": {
+      "width": 2560,
+      "height": 1440
+    },
+    "ratio": 1.7778,
+    "source": "plant-hyacinth.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-hyacinth-320.avif",
+      "640": "assets/encyclopedia/plant-hyacinth-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-hyacinth-320.webp",
+      "640": "assets/encyclopedia/plant-hyacinth-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-hyacinth-320.jpg",
+      "640": "assets/encyclopedia/plant-hyacinth-640.jpg"
+    }
+  },
+  "encyclopedia/plant-jasmine": {
+    "base": "plant-jasmine",
+    "intrinsic": {
+      "width": 2560,
+      "height": 1440
+    },
+    "ratio": 1.7778,
+    "source": "plant-jasmine.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-jasmine-320.avif",
+      "640": "assets/encyclopedia/plant-jasmine-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-jasmine-320.webp",
+      "640": "assets/encyclopedia/plant-jasmine-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-jasmine-320.jpg",
+      "640": "assets/encyclopedia/plant-jasmine-640.jpg"
+    }
+  },
+  "encyclopedia/plant-lithops": {
+    "base": "plant-lithops",
+    "intrinsic": {
+      "width": 2560,
+      "height": 1440
+    },
+    "ratio": 1.7778,
+    "source": "plant-lithops.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-lithops-320.avif",
+      "640": "assets/encyclopedia/plant-lithops-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-lithops-320.webp",
+      "640": "assets/encyclopedia/plant-lithops-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-lithops-320.jpg",
+      "640": "assets/encyclopedia/plant-lithops-640.jpg"
+    }
+  },
   "encyclopedia/plant-lucky-bamboo": {
     "base": "plant-lucky-bamboo",
     "intrinsic": {
@@ -428,6 +674,27 @@
       "640": "assets/encyclopedia/plant-monstera-640.jpg"
     }
   },
+  "encyclopedia/plant-moss": {
+    "base": "plant-moss",
+    "intrinsic": {
+      "width": 2560,
+      "height": 1440
+    },
+    "ratio": 1.7778,
+    "source": "plant-moss.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-moss-320.avif",
+      "640": "assets/encyclopedia/plant-moss-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-moss-320.webp",
+      "640": "assets/encyclopedia/plant-moss-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-moss-320.jpg",
+      "640": "assets/encyclopedia/plant-moss-640.jpg"
+    }
+  },
   "encyclopedia/plant-orchid": {
     "base": "plant-orchid",
     "intrinsic": {
@@ -449,6 +716,111 @@
       "640": "assets/encyclopedia/plant-orchid-640.jpg"
     }
   },
+  "encyclopedia/plant-pachyphytum": {
+    "base": "plant-pachyphytum",
+    "intrinsic": {
+      "width": 2560,
+      "height": 1440
+    },
+    "ratio": 1.7778,
+    "source": "plant-pachyphytum.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-pachyphytum-320.avif",
+      "640": "assets/encyclopedia/plant-pachyphytum-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-pachyphytum-320.webp",
+      "640": "assets/encyclopedia/plant-pachyphytum-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-pachyphytum-320.jpg",
+      "640": "assets/encyclopedia/plant-pachyphytum-640.jpg"
+    }
+  },
+  "encyclopedia/plant-parlor-palm": {
+    "base": "plant-parlor-palm",
+    "intrinsic": {
+      "width": 2560,
+      "height": 1440
+    },
+    "ratio": 1.7778,
+    "source": "plant-parlor-palm.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-parlor-palm-320.avif",
+      "640": "assets/encyclopedia/plant-parlor-palm-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-parlor-palm-320.webp",
+      "640": "assets/encyclopedia/plant-parlor-palm-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-parlor-palm-320.jpg",
+      "640": "assets/encyclopedia/plant-parlor-palm-640.jpg"
+    }
+  },
+  "encyclopedia/plant-pennywort": {
+    "base": "plant-pennywort",
+    "intrinsic": {
+      "width": 2560,
+      "height": 1440
+    },
+    "ratio": 1.7778,
+    "source": "plant-pennywort.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-pennywort-320.avif",
+      "640": "assets/encyclopedia/plant-pennywort-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-pennywort-320.webp",
+      "640": "assets/encyclopedia/plant-pennywort-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-pennywort-320.jpg",
+      "640": "assets/encyclopedia/plant-pennywort-640.jpg"
+    }
+  },
+  "encyclopedia/plant-peperomia": {
+    "base": "plant-peperomia",
+    "intrinsic": {
+      "width": 2560,
+      "height": 1440
+    },
+    "ratio": 1.7778,
+    "source": "plant-peperomia.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-peperomia-320.avif",
+      "640": "assets/encyclopedia/plant-peperomia-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-peperomia-320.webp",
+      "640": "assets/encyclopedia/plant-peperomia-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-peperomia-320.jpg",
+      "640": "assets/encyclopedia/plant-peperomia-640.jpg"
+    }
+  },
+  "encyclopedia/plant-phalaenopsis": {
+    "base": "plant-phalaenopsis",
+    "intrinsic": {
+      "width": 2560,
+      "height": 1440
+    },
+    "ratio": 1.7778,
+    "source": "plant-phalaenopsis.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-phalaenopsis-320.avif",
+      "640": "assets/encyclopedia/plant-phalaenopsis-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-phalaenopsis-320.webp",
+      "640": "assets/encyclopedia/plant-phalaenopsis-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-phalaenopsis-320.jpg",
+      "640": "assets/encyclopedia/plant-phalaenopsis-640.jpg"
+    }
+  },
   "encyclopedia/plant-pothos": {
     "base": "plant-pothos",
     "intrinsic": {
@@ -468,6 +840,27 @@
     "jpeg": {
       "320": "assets/encyclopedia/plant-pothos-320.jpg",
       "640": "assets/encyclopedia/plant-pothos-640.jpg"
+    }
+  },
+  "encyclopedia/plant-rubber": {
+    "base": "plant-rubber",
+    "intrinsic": {
+      "width": 2560,
+      "height": 1440
+    },
+    "ratio": 1.7778,
+    "source": "plant-rubber.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-rubber-320.avif",
+      "640": "assets/encyclopedia/plant-rubber-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-rubber-320.webp",
+      "640": "assets/encyclopedia/plant-rubber-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-rubber-320.jpg",
+      "640": "assets/encyclopedia/plant-rubber-640.jpg"
     }
   },
   "encyclopedia/plant-snake": {
@@ -533,6 +926,90 @@
       "640": "assets/encyclopedia/plant-succulent-640.jpg"
     }
   },
+  "encyclopedia/plant-turtle-back": {
+    "base": "plant-turtle-back",
+    "intrinsic": {
+      "width": 2560,
+      "height": 1440
+    },
+    "ratio": 1.7778,
+    "source": "plant-turtle-back.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-turtle-back-320.avif",
+      "640": "assets/encyclopedia/plant-turtle-back-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-turtle-back-320.webp",
+      "640": "assets/encyclopedia/plant-turtle-back-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-turtle-back-320.jpg",
+      "640": "assets/encyclopedia/plant-turtle-back-640.jpg"
+    }
+  },
+  "encyclopedia/plant-venus-flytrap": {
+    "base": "plant-venus-flytrap",
+    "intrinsic": {
+      "width": 2560,
+      "height": 1440
+    },
+    "ratio": 1.7778,
+    "source": "plant-venus-flytrap.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-venus-flytrap-320.avif",
+      "640": "assets/encyclopedia/plant-venus-flytrap-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-venus-flytrap-320.webp",
+      "640": "assets/encyclopedia/plant-venus-flytrap-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-venus-flytrap-320.jpg",
+      "640": "assets/encyclopedia/plant-venus-flytrap-640.jpg"
+    }
+  },
+  "encyclopedia/plant-water-lily": {
+    "base": "plant-water-lily",
+    "intrinsic": {
+      "width": 2560,
+      "height": 1440
+    },
+    "ratio": 1.7778,
+    "source": "plant-water-lily.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-water-lily-320.avif",
+      "640": "assets/encyclopedia/plant-water-lily-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-water-lily-320.webp",
+      "640": "assets/encyclopedia/plant-water-lily-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-water-lily-320.jpg",
+      "640": "assets/encyclopedia/plant-water-lily-640.jpg"
+    }
+  },
+  "encyclopedia/plant-yucca": {
+    "base": "plant-yucca",
+    "intrinsic": {
+      "width": 2560,
+      "height": 1440
+    },
+    "ratio": 1.7778,
+    "source": "plant-yucca.jpg",
+    "avif": {
+      "320": "assets/encyclopedia/plant-yucca-320.avif",
+      "640": "assets/encyclopedia/plant-yucca-640.avif"
+    },
+    "webp": {
+      "320": "assets/encyclopedia/plant-yucca-320.webp",
+      "640": "assets/encyclopedia/plant-yucca-640.webp"
+    },
+    "jpeg": {
+      "320": "assets/encyclopedia/plant-yucca-320.jpg",
+      "640": "assets/encyclopedia/plant-yucca-640.jpg"
+    }
+  },
   "encyclopedia/plant-zz": {
     "base": "plant-zz",
     "intrinsic": {
@@ -552,6 +1029,54 @@
     "jpeg": {
       "320": "assets/encyclopedia/plant-zz-320.jpg",
       "640": "assets/encyclopedia/plant-zz-640.jpg"
+    }
+  },
+  "hero": {
+    "base": "hero",
+    "intrinsic": {
+      "width": 1368,
+      "height": 724
+    },
+    "ratio": 1.8895,
+    "source": "hero-v2.jpg",
+    "avif": {
+      "640": "assets/hero-640.avif",
+      "960": "assets/hero-960.avif",
+      "1368": "assets/hero-1368.avif"
+    },
+    "webp": {
+      "640": "assets/hero-640.webp",
+      "960": "assets/hero-960.webp",
+      "1368": "assets/hero-1368.webp"
+    },
+    "jpeg": {
+      "640": "assets/hero-640.jpg",
+      "960": "assets/hero-960.jpg",
+      "1368": "assets/hero-1368.jpg"
+    }
+  },
+  "propagation-methods": {
+    "base": "propagation-methods",
+    "intrinsic": {
+      "width": 1368,
+      "height": 724
+    },
+    "ratio": 1.8895,
+    "source": "propagation-methods.jpg",
+    "avif": {
+      "400": "assets/propagation-methods-400.avif",
+      "800": "assets/propagation-methods-800.avif",
+      "1216": "assets/propagation-methods-1216.avif"
+    },
+    "webp": {
+      "400": "assets/propagation-methods-400.webp",
+      "800": "assets/propagation-methods-800.webp",
+      "1216": "assets/propagation-methods-1216.webp"
+    },
+    "jpeg": {
+      "400": "assets/propagation-methods-400.jpg",
+      "800": "assets/propagation-methods-800.jpg",
+      "1216": "assets/propagation-methods-1216.jpg"
     }
   }
 }

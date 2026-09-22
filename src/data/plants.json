@@ -589,7 +589,7 @@
       "客厅棕榈"
     ],
     "icon": "seedling",
-    "image": "assets/encyclopedia/plant-palm",
+    "image": "assets/encyclopedia/plant-parlor-palm",
     "light": "耐阴",
     "difficulty": "新手",
     "function": "观赏",
@@ -655,7 +655,7 @@
       "醉美人"
     ],
     "icon": "flower",
-    "image": "assets/encyclopedia/plant-succulent",
+    "image": "assets/encyclopedia/plant-pachyphytum",
     "light": "强光",
     "difficulty": "新手",
     "function": "观赏",
@@ -687,7 +687,7 @@
       "熊掌多肉"
     ],
     "icon": "seedling",
-    "image": "assets/encyclopedia/plant-succulent",
+    "image": "assets/encyclopedia/plant-bear-paw",
     "light": "强光",
     "difficulty": "新手",
     "function": "观赏",
@@ -719,7 +719,7 @@
       "冰灯玉露"
     ],
     "icon": "seedling",
-    "image": "assets/encyclopedia/plant-succulent",
+    "image": "assets/encyclopedia/plant-haworthia",
     "light": "散射光",
     "difficulty": "新手",
     "function": "观赏",
@@ -751,7 +751,7 @@
       "象牙球"
     ],
     "icon": "cactus",
-    "image": "assets/encyclopedia/plant-succulent",
+    "image": "assets/encyclopedia/plant-golden-barrel",
     "light": "强光",
     "difficulty": "新手",
     "function": "观赏",
@@ -783,7 +783,7 @@
       "火龙果苗"
     ],
     "icon": "cactus",
-    "image": "assets/encyclopedia/plant-succulent",
+    "image": "assets/encyclopedia/plant-dragon-bone",
     "light": "强光",
     "difficulty": "新手",
     "function": "观赏",
@@ -813,7 +813,7 @@
       "象脚薯蓣"
     ],
     "icon": "pot",
-    "image": "assets/encyclopedia/plant-succulent",
+    "image": "assets/encyclopedia/plant-turtle-back",
     "light": "散射光",
     "difficulty": "进阶",
     "function": "观赏",
@@ -844,7 +844,7 @@
       "不夜城芦荟"
     ],
     "icon": "seedling",
-    "image": "assets/encyclopedia/plant-succulent",
+    "image": "assets/encyclopedia/plant-aloe",
     "light": "强光",
     "difficulty": "新手",
     "function": "药用",
@@ -877,7 +877,7 @@
       "石头花"
     ],
     "icon": "seedling",
-    "image": "assets/encyclopedia/plant-succulent",
+    "image": "assets/encyclopedia/plant-lithops",
     "light": "强光",
     "difficulty": "进阶",
     "function": "观赏",
@@ -908,7 +908,7 @@
       "蝶兰"
     ],
     "icon": "butterfly",
-    "image": "assets/encyclopedia/plant-orchid",
+    "image": "assets/encyclopedia/plant-phalaenopsis",
     "light": "散射光",
     "difficulty": "进阶",
     "function": "观赏",
@@ -941,7 +941,7 @@
       "铁皮石斛"
     ],
     "icon": "butterfly",
-    "image": "assets/encyclopedia/plant-orchid",
+    "image": "assets/encyclopedia/plant-dendrobium",
     "light": "散射光",
     "difficulty": "进阶",
     "function": "观赏",
@@ -972,7 +972,7 @@
       "五色水仙"
     ],
     "icon": "flower",
-    "image": "assets/encyclopedia/plant-flower",
+    "image": "assets/encyclopedia/plant-hyacinth",
     "light": "强光",
     "difficulty": "新手",
     "function": "观赏",
@@ -1004,7 +1004,7 @@
       "香魂"
     ],
     "icon": "flower",
-    "image": "assets/encyclopedia/plant-flower",
+    "image": "assets/encyclopedia/plant-jasmine",
     "light": "强光",
     "difficulty": "新手",
     "function": "芳香",
@@ -1036,7 +1036,7 @@
       "黄栀子"
     ],
     "icon": "flower",
-    "image": "assets/encyclopedia/plant-flower",
+    "image": "assets/encyclopedia/plant-gardenia",
     "light": "散射光",
     "difficulty": "进阶",
     "function": "芳香",
@@ -1067,7 +1067,7 @@
       "凤尾竹"
     ],
     "icon": "seedling",
-    "image": "assets/encyclopedia/plant-palm",
+    "image": "assets/encyclopedia/plant-areca-palm",
     "light": "散射光",
     "difficulty": "新手",
     "function": "观赏",
@@ -1101,7 +1101,7 @@
       "象脚丝兰"
     ],
     "icon": "tree",
-    "image": "assets/encyclopedia/plant-dracaena",
+    "image": "assets/encyclopedia/plant-yucca",
     "light": "强光",
     "difficulty": "新手",
     "function": "观赏",
@@ -1133,7 +1133,7 @@
       "水浮莲"
     ],
     "icon": "water",
-    "image": "assets/encyclopedia/plant-water",
+    "image": "assets/encyclopedia/plant-water-lily",
     "light": "强光",
     "difficulty": "新手",
     "function": "观赏",
@@ -1164,7 +1164,7 @@
       "过路黄"
     ],
     "icon": "money",
-    "image": "assets/encyclopedia/plant-water",
+    "image": "assets/encyclopedia/plant-pennywort",
     "light": "强光",
     "difficulty": "新手",
     "function": "招财",
@@ -1197,7 +1197,7 @@
       "铁兰"
     ],
     "icon": "wind",
-    "image": "assets/encyclopedia/plant-airplant",
+    "image": "assets/encyclopedia/plant-air-plant",
     "light": "散射光",
     "difficulty": "新手",
     "function": "观赏",
@@ -1230,7 +1230,7 @@
       "维纳斯捕蝇草"
     ],
     "icon": "clover",
-    "image": "assets/encyclopedia/plant-fern",
+    "image": "assets/encyclopedia/plant-venus-flytrap",
     "light": "强光",
     "difficulty": "进阶",
     "function": "趣味",
@@ -1262,7 +1262,7 @@
       " cushion moss"
     ],
     "icon": "clover",
-    "image": "assets/encyclopedia/plant-fern",
+    "image": "assets/encyclopedia/plant-moss",
     "light": "耐阴",
     "difficulty": "新手",
     "function": "造景",

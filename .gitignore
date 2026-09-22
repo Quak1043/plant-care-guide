@@ -6,3 +6,6 @@ _build/build.log
 # Python 缓存
 __pycache__/
 *.pyc
+
+# Node.js 依赖
+node_modules/

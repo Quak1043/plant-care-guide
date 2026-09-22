@@ -376,6 +376,50 @@ function renderPlantCards(plants, manifest) {
     .join('\n');
 }
 
+/** 植物推荐卡片：根据植物 ID 列表生成推荐卡片，链接到植物百科锚点。
+ *  用于文章底部展示与内容相关的植物，引导用户浏览百科。 */
+function renderRelatedPlants(plantIds, plants, manifest) {
+  const ids = plantIds.split(',').map((s) => s.trim());
+  const picked = ids
+    .map((id) => plants.find((p) => p.id === id))
+    .filter(Boolean)
+    .slice(0, 3);
+
+  if (picked.length === 0) return '';
+
+  const cards = picked
+    .map((plant) => {
+      const key = plant.image.replace(/^assets\//, '');
+      const picture = renderPicture(
+        `${key}|sizes=(max-width:560px) 92vw, (max-width:900px) 45vw, 300px|alt=${plant.nameZh}`,
+        manifest
+      );
+      return `<article class="card">
+        <a class="card__media" href="encyclopedia.html#${plant.id}" tabindex="-1" aria-hidden="true">
+          ${indent(picture, 10).trimStart()}
+        </a>
+        <div class="card__body">
+          <span class="card__tag">${plant.function} · ${plant.difficulty}</span>
+          <h3 class="card__title"><a href="encyclopedia.html#${plant.id}">${plant.nameZh}</a></h3>
+          <p class="card__text">${plant.summary}</p>
+        </div>
+      </article>`;
+    })
+    .join('\n\n')
+    .split('\n')
+    .map((line) => (line ? `          ${line}` : line))
+    .join('\n');
+
+  return `<section class="related">
+    <div class="container">
+      <h2>相关植物</h2>
+      <div class="card-grid">
+${cards}
+      </div>
+    </div>
+  </section>`;
+}
+
 /** 相关推荐：从 pages.json 里挑同栏目、优先级高的 3 篇，自动排除当前页。
  *  v7 的 article-detail 相关推荐 3 张卡全部链接到自己（自链接死循环）。 */
 function renderRelated(currentId, pages, manifest) {
@@ -758,6 +802,7 @@ function renderShortcodes(html, ctx) {
     )
     .replace(/\{\{articles\}\}/g, () => renderArticleList(pages, manifest))
     .replace(/\{\{related:([a-z0-9-]+)\}\}/g, (_, id) => renderRelated(id, pages, manifest))
+    .replace(/\{\{relatedPlants:([^}]+)\}\}/g, (_, ids) => renderRelatedPlants(ids, plants, manifest))
     .replace(/\{\{faq:([a-z0-9-]+)\}\}/g, (_, id) => renderFaq(faq[id]))
     .replace(/\{\{ad\}\}/g, () => renderAd(site))
     .replace(/\{\{breadcrumb\}\}/g, () => renderBreadcrumb(page, site));
