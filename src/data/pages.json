@@ -443,7 +443,7 @@
     "date": "2026-08-15",
     "updated": "2026-08-15",
     "read": "10",
-    "image": "card-monstera",
+    "image": "card-araceae",
     "imageAlt": "天南星科植物养护",
     "categories": [
       "foliage",
@@ -475,7 +475,7 @@
     "date": "2026-08-20",
     "updated": "2026-08-20",
     "read": "8",
-    "image": "card-beginner",
+    "image": "card-calathea",
     "imageAlt": "竹芋类植物养护",
     "categories": [
       "foliage",
@@ -507,7 +507,7 @@
     "date": "2026-07-10",
     "updated": "2026-07-10",
     "read": "12",
-    "image": "card-beginner",
+    "image": "card-succulent-summer",
     "imageAlt": "多肉植物度夏指南",
     "categories": [
       "succulent",
@@ -539,7 +539,7 @@
     "date": "2026-07-25",
     "updated": "2026-07-25",
     "read": "7",
-    "image": "card-pests",
+    "image": "card-cactus-guide",
     "imageAlt": "仙人掌养护指南",
     "categories": [
       "succulent",
@@ -570,7 +570,7 @@
     "date": "2026-08-05",
     "updated": "2026-08-05",
     "read": "9",
-    "image": "card-watering",
+    "image": "card-phalaenopsis-care",
     "imageAlt": "蝴蝶兰花后养护",
     "categories": [
       "flowering",
@@ -602,7 +602,7 @@
     "date": "2026-09-01",
     "updated": "2026-09-01",
     "read": "6",
-    "image": "card-light",
+    "image": "card-bulb-flower",
     "imageAlt": "球根花卉种植指南",
     "categories": [
       "flowering",
@@ -635,7 +635,7 @@
     "date": "2026-08-25",
     "updated": "2026-08-25",
     "read": "11",
-    "image": "card-repot",
+    "image": "card-large-plants-guide",
     "imageAlt": "大型绿植选购指南",
     "categories": [
       "large-plants",
@@ -668,7 +668,7 @@
     "date": "2026-09-10",
     "updated": "2026-09-10",
     "read": "8",
-    "image": "card-repot",
+    "image": "card-fiddle-leaf-fig",
     "imageAlt": "琴叶榕养护全解析",
     "categories": [
       "large-plants",
@@ -700,7 +700,7 @@
     "date": "2026-07-15",
     "updated": "2026-07-15",
     "read": "10",
-    "image": "card-light",
+    "image": "card-hydroponic",
     "imageAlt": "水培植物养护指南",
     "categories": [
       "hydroponic",
@@ -733,7 +733,7 @@
     "date": "2026-08-30",
     "updated": "2026-08-30",
     "read": "6",
-    "image": "card-watering",
+    "image": "card-aquatic-plants",
     "imageAlt": "水生植物造景入门",
     "categories": [
       "hydroponic",
@@ -766,7 +766,7 @@
     "date": "2026-07-20",
     "updated": "2026-07-20",
     "read": "7",
-    "image": "card-fertilizer",
+    "image": "card-fern-care",
     "imageAlt": "蕨类植物养护入门",
     "categories": [
       "fern-special",
@@ -799,7 +799,7 @@
     "date": "2026-09-05",
     "updated": "2026-09-05",
     "read": "9",
-    "image": "card-propagation",
+    "image": "card-air-plant-guide",
     "imageAlt": "空气凤梨养护完全指南",
     "categories": [
       "fern-special",

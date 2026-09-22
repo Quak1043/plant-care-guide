@@ -8,7 +8,7 @@
     "parent": null,
     "description": "以叶片形态和色彩为主要观赏点的室内植物，四季常青，是家居装饰的核心品类。",
     "icon": "leaf",
-    "image": "card-monstera",
+    "image": "cat-foliage",
     "imageAlt": "观叶植物合集",
     "order": 1
   },
@@ -20,7 +20,7 @@
     "parent": null,
     "description": "耐旱多肉类植物，形态各异，阳光越足颜色越美，是桌面和阳台的最佳伴侣。",
     "icon": "cactus",
-    "image": "card-beginner",
+    "image": "cat-succulent",
     "imageAlt": "多肉仙人掌植物",
     "order": 2
   },
@@ -32,7 +32,7 @@
     "parent": null,
     "description": "以花朵观赏为主的植物，花期观赏价值极高，为家居增添色彩与芬芳。",
     "icon": "flower",
-    "image": "card-watering",
+    "image": "cat-flowering",
     "imageAlt": "开花植物",
     "order": 3
   },
@@ -44,7 +44,7 @@
     "parent": null,
     "description": "适合客厅、办公室的大中型植物，高大挺拔，瞬间提升空间气质。",
     "icon": "tree",
-    "image": "card-repot",
+    "image": "cat-large-plants",
     "imageAlt": "大型绿植",
     "order": 4
   },
@@ -56,7 +56,7 @@
     "parent": null,
     "description": "水培、水生及半水栖植物，干净整洁不需土壤，只需定期换水即可。",
     "icon": "water",
-    "image": "card-light",
+    "image": "cat-hydroponic",
     "imageAlt": "水培水生植物",
     "order": 5
   },
@@ -68,7 +68,7 @@
     "parent": null,
     "description": "蕨类、苔藓、空气凤梨等特色植物，喜欢湿润阴凉环境，别具一格的观赏体验。",
     "icon": "feather",
-    "image": "card-fertilizer",
+    "image": "cat-fern-special",
     "imageAlt": "蕨类与另类植物",
     "order": 6
   },

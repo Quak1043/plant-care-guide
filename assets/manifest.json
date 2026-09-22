@@ -1,4 +1,76 @@
 {
+  "card-air-plant-guide": {
+    "base": "card-air-plant-guide",
+    "intrinsic": {
+      "width": 2240,
+      "height": 1680
+    },
+    "ratio": 1.3333,
+    "source": "card-air-plant-guide.jpg",
+    "avif": {
+      "400": "assets/card-air-plant-guide-400.avif",
+      "800": "assets/card-air-plant-guide-800.avif",
+      "1216": "assets/card-air-plant-guide-1216.avif"
+    },
+    "webp": {
+      "400": "assets/card-air-plant-guide-400.webp",
+      "800": "assets/card-air-plant-guide-800.webp",
+      "1216": "assets/card-air-plant-guide-1216.webp"
+    },
+    "jpeg": {
+      "400": "assets/card-air-plant-guide-400.jpg",
+      "800": "assets/card-air-plant-guide-800.jpg",
+      "1216": "assets/card-air-plant-guide-1216.jpg"
+    }
+  },
+  "card-aquatic-plants": {
+    "base": "card-aquatic-plants",
+    "intrinsic": {
+      "width": 2240,
+      "height": 1680
+    },
+    "ratio": 1.3333,
+    "source": "card-aquatic-plants.jpg",
+    "avif": {
+      "400": "assets/card-aquatic-plants-400.avif",
+      "800": "assets/card-aquatic-plants-800.avif",
+      "1216": "assets/card-aquatic-plants-1216.avif"
+    },
+    "webp": {
+      "400": "assets/card-aquatic-plants-400.webp",
+      "800": "assets/card-aquatic-plants-800.webp",
+      "1216": "assets/card-aquatic-plants-1216.webp"
+    },
+    "jpeg": {
+      "400": "assets/card-aquatic-plants-400.jpg",
+      "800": "assets/card-aquatic-plants-800.jpg",
+      "1216": "assets/card-aquatic-plants-1216.jpg"
+    }
+  },
+  "card-araceae": {
+    "base": "card-araceae",
+    "intrinsic": {
+      "width": 2240,
+      "height": 1680
+    },
+    "ratio": 1.3333,
+    "source": "card-araceae.jpg",
+    "avif": {
+      "400": "assets/card-araceae-400.avif",
+      "800": "assets/card-araceae-800.avif",
+      "1216": "assets/card-araceae-1216.avif"
+    },
+    "webp": {
+      "400": "assets/card-araceae-400.webp",
+      "800": "assets/card-araceae-800.webp",
+      "1216": "assets/card-araceae-1216.webp"
+    },
+    "jpeg": {
+      "400": "assets/card-araceae-400.jpg",
+      "800": "assets/card-araceae-800.jpg",
+      "1216": "assets/card-araceae-1216.jpg"
+    }
+  },
   "card-beginner": {
     "base": "card-beginner",
     "intrinsic": {
@@ -23,6 +95,102 @@
       "1216": "assets/card-beginner-1216.jpg"
     }
   },
+  "card-bulb-flower": {
+    "base": "card-bulb-flower",
+    "intrinsic": {
+      "width": 2240,
+      "height": 1680
+    },
+    "ratio": 1.3333,
+    "source": "card-bulb-flower.jpg",
+    "avif": {
+      "400": "assets/card-bulb-flower-400.avif",
+      "800": "assets/card-bulb-flower-800.avif",
+      "1216": "assets/card-bulb-flower-1216.avif"
+    },
+    "webp": {
+      "400": "assets/card-bulb-flower-400.webp",
+      "800": "assets/card-bulb-flower-800.webp",
+      "1216": "assets/card-bulb-flower-1216.webp"
+    },
+    "jpeg": {
+      "400": "assets/card-bulb-flower-400.jpg",
+      "800": "assets/card-bulb-flower-800.jpg",
+      "1216": "assets/card-bulb-flower-1216.jpg"
+    }
+  },
+  "card-cactus-guide": {
+    "base": "card-cactus-guide",
+    "intrinsic": {
+      "width": 2240,
+      "height": 1680
+    },
+    "ratio": 1.3333,
+    "source": "card-cactus-guide.jpg",
+    "avif": {
+      "400": "assets/card-cactus-guide-400.avif",
+      "800": "assets/card-cactus-guide-800.avif",
+      "1216": "assets/card-cactus-guide-1216.avif"
+    },
+    "webp": {
+      "400": "assets/card-cactus-guide-400.webp",
+      "800": "assets/card-cactus-guide-800.webp",
+      "1216": "assets/card-cactus-guide-1216.webp"
+    },
+    "jpeg": {
+      "400": "assets/card-cactus-guide-400.jpg",
+      "800": "assets/card-cactus-guide-800.jpg",
+      "1216": "assets/card-cactus-guide-1216.jpg"
+    }
+  },
+  "card-calathea": {
+    "base": "card-calathea",
+    "intrinsic": {
+      "width": 2240,
+      "height": 1680
+    },
+    "ratio": 1.3333,
+    "source": "card-calathea.jpg",
+    "avif": {
+      "400": "assets/card-calathea-400.avif",
+      "800": "assets/card-calathea-800.avif",
+      "1216": "assets/card-calathea-1216.avif"
+    },
+    "webp": {
+      "400": "assets/card-calathea-400.webp",
+      "800": "assets/card-calathea-800.webp",
+      "1216": "assets/card-calathea-1216.webp"
+    },
+    "jpeg": {
+      "400": "assets/card-calathea-400.jpg",
+      "800": "assets/card-calathea-800.jpg",
+      "1216": "assets/card-calathea-1216.jpg"
+    }
+  },
+  "card-fern-care": {
+    "base": "card-fern-care",
+    "intrinsic": {
+      "width": 2240,
+      "height": 1680
+    },
+    "ratio": 1.3333,
+    "source": "card-fern-care.jpg",
+    "avif": {
+      "400": "assets/card-fern-care-400.avif",
+      "800": "assets/card-fern-care-800.avif",
+      "1216": "assets/card-fern-care-1216.avif"
+    },
+    "webp": {
+      "400": "assets/card-fern-care-400.webp",
+      "800": "assets/card-fern-care-800.webp",
+      "1216": "assets/card-fern-care-1216.webp"
+    },
+    "jpeg": {
+      "400": "assets/card-fern-care-400.jpg",
+      "800": "assets/card-fern-care-800.jpg",
+      "1216": "assets/card-fern-care-1216.jpg"
+    }
+  },
   "card-fertilizer": {
     "base": "card-fertilizer",
     "intrinsic": {
@@ -45,6 +213,78 @@
       "400": "assets/card-fertilizer-400.jpg",
       "800": "assets/card-fertilizer-800.jpg",
       "1216": "assets/card-fertilizer-1216.jpg"
+    }
+  },
+  "card-fiddle-leaf-fig": {
+    "base": "card-fiddle-leaf-fig",
+    "intrinsic": {
+      "width": 2240,
+      "height": 1680
+    },
+    "ratio": 1.3333,
+    "source": "card-fiddle-leaf-fig.jpg",
+    "avif": {
+      "400": "assets/card-fiddle-leaf-fig-400.avif",
+      "800": "assets/card-fiddle-leaf-fig-800.avif",
+      "1216": "assets/card-fiddle-leaf-fig-1216.avif"
+    },
+    "webp": {
+      "400": "assets/card-fiddle-leaf-fig-400.webp",
+      "800": "assets/card-fiddle-leaf-fig-800.webp",
+      "1216": "assets/card-fiddle-leaf-fig-1216.webp"
+    },
+    "jpeg": {
+      "400": "assets/card-fiddle-leaf-fig-400.jpg",
+      "800": "assets/card-fiddle-leaf-fig-800.jpg",
+      "1216": "assets/card-fiddle-leaf-fig-1216.jpg"
+    }
+  },
+  "card-hydroponic": {
+    "base": "card-hydroponic",
+    "intrinsic": {
+      "width": 2240,
+      "height": 1680
+    },
+    "ratio": 1.3333,
+    "source": "card-hydroponic.jpg",
+    "avif": {
+      "400": "assets/card-hydroponic-400.avif",
+      "800": "assets/card-hydroponic-800.avif",
+      "1216": "assets/card-hydroponic-1216.avif"
+    },
+    "webp": {
+      "400": "assets/card-hydroponic-400.webp",
+      "800": "assets/card-hydroponic-800.webp",
+      "1216": "assets/card-hydroponic-1216.webp"
+    },
+    "jpeg": {
+      "400": "assets/card-hydroponic-400.jpg",
+      "800": "assets/card-hydroponic-800.jpg",
+      "1216": "assets/card-hydroponic-1216.jpg"
+    }
+  },
+  "card-large-plants-guide": {
+    "base": "card-large-plants-guide",
+    "intrinsic": {
+      "width": 2240,
+      "height": 1680
+    },
+    "ratio": 1.3333,
+    "source": "card-large-plants-guide.jpg",
+    "avif": {
+      "400": "assets/card-large-plants-guide-400.avif",
+      "800": "assets/card-large-plants-guide-800.avif",
+      "1216": "assets/card-large-plants-guide-1216.avif"
+    },
+    "webp": {
+      "400": "assets/card-large-plants-guide-400.webp",
+      "800": "assets/card-large-plants-guide-800.webp",
+      "1216": "assets/card-large-plants-guide-1216.webp"
+    },
+    "jpeg": {
+      "400": "assets/card-large-plants-guide-400.jpg",
+      "800": "assets/card-large-plants-guide-800.jpg",
+      "1216": "assets/card-large-plants-guide-1216.jpg"
     }
   },
   "card-light": {
@@ -119,6 +359,30 @@
       "1216": "assets/card-pests-1216.jpg"
     }
   },
+  "card-phalaenopsis-care": {
+    "base": "card-phalaenopsis-care",
+    "intrinsic": {
+      "width": 2240,
+      "height": 1680
+    },
+    "ratio": 1.3333,
+    "source": "card-phalaenopsis-care.jpg",
+    "avif": {
+      "400": "assets/card-phalaenopsis-care-400.avif",
+      "800": "assets/card-phalaenopsis-care-800.avif",
+      "1216": "assets/card-phalaenopsis-care-1216.avif"
+    },
+    "webp": {
+      "400": "assets/card-phalaenopsis-care-400.webp",
+      "800": "assets/card-phalaenopsis-care-800.webp",
+      "1216": "assets/card-phalaenopsis-care-1216.webp"
+    },
+    "jpeg": {
+      "400": "assets/card-phalaenopsis-care-400.jpg",
+      "800": "assets/card-phalaenopsis-care-800.jpg",
+      "1216": "assets/card-phalaenopsis-care-1216.jpg"
+    }
+  },
   "card-propagation": {
     "base": "card-propagation",
     "intrinsic": {
@@ -167,6 +431,30 @@
       "1216": "assets/card-repot-1216.jpg"
     }
   },
+  "card-succulent-summer": {
+    "base": "card-succulent-summer",
+    "intrinsic": {
+      "width": 2240,
+      "height": 1680
+    },
+    "ratio": 1.3333,
+    "source": "card-succulent-summer.jpg",
+    "avif": {
+      "400": "assets/card-succulent-summer-400.avif",
+      "800": "assets/card-succulent-summer-800.avif",
+      "1216": "assets/card-succulent-summer-1216.avif"
+    },
+    "webp": {
+      "400": "assets/card-succulent-summer-400.webp",
+      "800": "assets/card-succulent-summer-800.webp",
+      "1216": "assets/card-succulent-summer-1216.webp"
+    },
+    "jpeg": {
+      "400": "assets/card-succulent-summer-400.jpg",
+      "800": "assets/card-succulent-summer-800.jpg",
+      "1216": "assets/card-succulent-summer-1216.jpg"
+    }
+  },
   "card-watering": {
     "base": "card-watering",
     "intrinsic": {
@@ -189,6 +477,150 @@
       "400": "assets/card-watering-400.jpg",
       "800": "assets/card-watering-800.jpg",
       "1216": "assets/card-watering-1216.jpg"
+    }
+  },
+  "cat-fern-special": {
+    "base": "cat-fern-special",
+    "intrinsic": {
+      "width": 2240,
+      "height": 1680
+    },
+    "ratio": 1.3333,
+    "source": "cat-fern-special.jpg",
+    "avif": {
+      "400": "assets/cat-fern-special-400.avif",
+      "800": "assets/cat-fern-special-800.avif",
+      "1216": "assets/cat-fern-special-1216.avif"
+    },
+    "webp": {
+      "400": "assets/cat-fern-special-400.webp",
+      "800": "assets/cat-fern-special-800.webp",
+      "1216": "assets/cat-fern-special-1216.webp"
+    },
+    "jpeg": {
+      "400": "assets/cat-fern-special-400.jpg",
+      "800": "assets/cat-fern-special-800.jpg",
+      "1216": "assets/cat-fern-special-1216.jpg"
+    }
+  },
+  "cat-flowering": {
+    "base": "cat-flowering",
+    "intrinsic": {
+      "width": 2240,
+      "height": 1680
+    },
+    "ratio": 1.3333,
+    "source": "cat-flowering.jpg",
+    "avif": {
+      "400": "assets/cat-flowering-400.avif",
+      "800": "assets/cat-flowering-800.avif",
+      "1216": "assets/cat-flowering-1216.avif"
+    },
+    "webp": {
+      "400": "assets/cat-flowering-400.webp",
+      "800": "assets/cat-flowering-800.webp",
+      "1216": "assets/cat-flowering-1216.webp"
+    },
+    "jpeg": {
+      "400": "assets/cat-flowering-400.jpg",
+      "800": "assets/cat-flowering-800.jpg",
+      "1216": "assets/cat-flowering-1216.jpg"
+    }
+  },
+  "cat-foliage": {
+    "base": "cat-foliage",
+    "intrinsic": {
+      "width": 2240,
+      "height": 1680
+    },
+    "ratio": 1.3333,
+    "source": "cat-foliage.jpg",
+    "avif": {
+      "400": "assets/cat-foliage-400.avif",
+      "800": "assets/cat-foliage-800.avif",
+      "1216": "assets/cat-foliage-1216.avif"
+    },
+    "webp": {
+      "400": "assets/cat-foliage-400.webp",
+      "800": "assets/cat-foliage-800.webp",
+      "1216": "assets/cat-foliage-1216.webp"
+    },
+    "jpeg": {
+      "400": "assets/cat-foliage-400.jpg",
+      "800": "assets/cat-foliage-800.jpg",
+      "1216": "assets/cat-foliage-1216.jpg"
+    }
+  },
+  "cat-hydroponic": {
+    "base": "cat-hydroponic",
+    "intrinsic": {
+      "width": 2240,
+      "height": 1680
+    },
+    "ratio": 1.3333,
+    "source": "cat-hydroponic.jpg",
+    "avif": {
+      "400": "assets/cat-hydroponic-400.avif",
+      "800": "assets/cat-hydroponic-800.avif",
+      "1216": "assets/cat-hydroponic-1216.avif"
+    },
+    "webp": {
+      "400": "assets/cat-hydroponic-400.webp",
+      "800": "assets/cat-hydroponic-800.webp",
+      "1216": "assets/cat-hydroponic-1216.webp"
+    },
+    "jpeg": {
+      "400": "assets/cat-hydroponic-400.jpg",
+      "800": "assets/cat-hydroponic-800.jpg",
+      "1216": "assets/cat-hydroponic-1216.jpg"
+    }
+  },
+  "cat-large-plants": {
+    "base": "cat-large-plants",
+    "intrinsic": {
+      "width": 2240,
+      "height": 1680
+    },
+    "ratio": 1.3333,
+    "source": "cat-large-plants.jpg",
+    "avif": {
+      "400": "assets/cat-large-plants-400.avif",
+      "800": "assets/cat-large-plants-800.avif",
+      "1216": "assets/cat-large-plants-1216.avif"
+    },
+    "webp": {
+      "400": "assets/cat-large-plants-400.webp",
+      "800": "assets/cat-large-plants-800.webp",
+      "1216": "assets/cat-large-plants-1216.webp"
+    },
+    "jpeg": {
+      "400": "assets/cat-large-plants-400.jpg",
+      "800": "assets/cat-large-plants-800.jpg",
+      "1216": "assets/cat-large-plants-1216.jpg"
+    }
+  },
+  "cat-succulent": {
+    "base": "cat-succulent",
+    "intrinsic": {
+      "width": 2240,
+      "height": 1680
+    },
+    "ratio": 1.3333,
+    "source": "cat-succulent.jpg",
+    "avif": {
+      "400": "assets/cat-succulent-400.avif",
+      "800": "assets/cat-succulent-800.avif",
+      "1216": "assets/cat-succulent-1216.avif"
+    },
+    "webp": {
+      "400": "assets/cat-succulent-400.webp",
+      "800": "assets/cat-succulent-800.webp",
+      "1216": "assets/cat-succulent-1216.webp"
+    },
+    "jpeg": {
+      "400": "assets/cat-succulent-400.jpg",
+      "800": "assets/cat-succulent-800.jpg",
+      "1216": "assets/cat-succulent-1216.jpg"
     }
   },
   "encyclopedia/plant-air-plant": {
