@@ -482,5 +482,806 @@
       "office",
       "gift"
     ]
+  },
+  {
+    "id": "plant-peacock-calathea",
+    "slug": "peacock-calathea",
+    "nameZh": "孔雀竹芋",
+    "nameLa": "Calathea makoyana",
+    "aliases": [
+      "孔雀竹芋",
+      "马克奥竹芋"
+    ],
+    "icon": "leaf",
+    "image": "assets/encyclopedia/plant-calathea",
+    "light": "散射光",
+    "difficulty": "进阶",
+    "function": "观赏",
+    "summary": "叶片上精美的花纹如同孔雀羽毛，是竹芋科中最受欢迎的品种之一，喜欢温暖湿润的环境。",
+    "care": {
+      "光照": "散射光，忌强光直射",
+      "温度": "18-28°C，不低于15°C",
+      "浇水": "保持土壤微湿，约3-4天1次",
+      "土壤": "疏松透气腐殖土"
+    },
+    "faq": "叶片边缘焦枯是空气湿度过低或水质问题，建议使用纯净水或雨水浇灌，并经常向叶面喷水。夜间叶片会竖立合拢，这是竹芋的正常睡眠运动，不是缺水。",
+    "tips": "竹芋对水质敏感，自来水中的氟和氯会导致叶尖干枯，建议使用晾晒24小时以上的自来水或纯净水。放置在加湿器附近或托盘水培法增加湿度效果最佳。",
+    "categories": [
+      "foliage",
+      "calathea",
+      "internet-famous",
+      "pet-safe",
+      "advanced"
+    ]
+  },
+  {
+    "id": "plant-watermelon-peperomia",
+    "slug": "watermelon-peperomia",
+    "nameZh": "西瓜皮椒草",
+    "nameLa": "Peperomia argyreia",
+    "aliases": [
+      "西瓜皮椒草",
+      "西瓜椒草"
+    ],
+    "icon": "leaf",
+    "image": "assets/encyclopedia/plant-peperomia",
+    "light": "散射光",
+    "difficulty": "新手",
+    "function": "观赏",
+    "summary": "叶片圆润带西瓜纹路，小巧可爱，是桌面盆栽的热门选择，养护简单适合新手。",
+    "care": {
+      "光照": "明亮散射光",
+      "温度": "18-28°C，不低于10°C",
+      "浇水": "土干再浇，约每周1次",
+      "土壤": "疏松透气排水好"
+    },
+    "faq": "叶片发软下垂是浇水过多导致烂根的信号，需立即减少浇水频率并检查根部。叶片褪色失去纹路是光照不足，移至明亮散射光处可恢复。",
+    "tips": "椒草叶片肥厚储水能力强，宁干勿湿，浇水过多是新手最常见的错误。用透气的小花盆栽种更有利于根系呼吸，也更容易控制浇水量。",
+    "categories": [
+      "foliage",
+      "calathea",
+      "beginner",
+      "desktop-small",
+      "pet-safe"
+    ]
+  },
+  {
+    "id": "plant-rubber-plant",
+    "slug": "rubber-plant",
+    "nameZh": "橡皮树",
+    "nameLa": "Ficus elastica",
+    "aliases": [
+      "橡皮树",
+      "印度榕",
+      "黑金刚"
+    ],
+    "icon": "tree",
+    "image": "assets/encyclopedia/plant-rubber",
+    "light": "强光",
+    "difficulty": "新手",
+    "function": "观赏",
+    "summary": "叶片厚实油亮呈深绿色，品种\"黑金刚\"叶色近黑，气质沉稳，是家居装饰的高级感植物。",
+    "care": {
+      "光照": "充足明亮光照，耐半阴",
+      "温度": "15-30°C，不低于10°C",
+      "浇水": "土干2-3cm再浇，约每周1次",
+      "土壤": "疏松肥沃排水好"
+    },
+    "faq": "落叶是环境变化或浇水过多引起的应激反应，橡皮树不喜欢频繁移动位置。汁液有轻微毒性，修剪时建议戴手套，避免接触皮肤和眼睛。",
+    "tips": "定期用湿布擦拭叶片既能保持光泽又能预防介壳虫。生长季节每月施一次液肥，叶色会更加油亮。可以通过打顶控制高度，促进侧枝生长。",
+    "categories": [
+      "foliage",
+      "ficus-palm",
+      "large-plants",
+      "ficus-tree",
+      "internet-famous",
+      "air-purifying"
+    ]
+  },
+  {
+    "id": "plant-parlor-palm",
+    "slug": "parlor-palm",
+    "nameZh": "袖珍椰子",
+    "nameLa": "Chamaedorea elegans",
+    "aliases": [
+      "袖珍椰子",
+      "矮生椰子",
+      "客厅棕榈"
+    ],
+    "icon": "seedling",
+    "image": "assets/encyclopedia/plant-palm",
+    "light": "耐阴",
+    "difficulty": "新手",
+    "function": "观赏",
+    "summary": "体型小巧的棕榈科植物，耐阴性极强，很适合放在书桌或办公室增添热带风情。",
+    "care": {
+      "光照": "耐阴，散射光更佳",
+      "温度": "16-28°C，不低于8°C",
+      "浇水": "土干再浇，约每周1次",
+      "土壤": "疏松肥沃排水好"
+    },
+    "faq": "叶尖干枯是空气干燥或浇水不足，袖珍椰子喜欢较高的空气湿度。叶尖发黄可能是水质问题，建议用晾晒过的水浇灌。",
+    "tips": "袖珍椰子生长缓慢，不需要频繁换盆，2-3年换一次即可。对宠物无毒，是养猫狗家庭的理想选择。定期喷水可保持叶片翠绿。",
+    "categories": [
+      "foliage",
+      "ficus-palm",
+      "beginner",
+      "low-light",
+      "office",
+      "pet-safe",
+      "desktop-small"
+    ]
+  },
+  {
+    "id": "plant-hoya",
+    "slug": "hoya",
+    "nameZh": "球兰",
+    "nameLa": "Hoya carnosa",
+    "aliases": [
+      "球兰",
+      "蜡兰",
+      "樱花葛"
+    ],
+    "icon": "flower",
+    "image": "assets/encyclopedia/plant-hoya",
+    "light": "散射光",
+    "difficulty": "新手",
+    "function": "观赏",
+    "summary": "叶片肥厚带蜡质感，花期开出球状伞形花序，花香浓郁，悬挂养护极具装饰感。",
+    "care": {
+      "光照": "明亮散射光，耐半阴",
+      "温度": "15-28°C，不低于8°C",
+      "浇水": "土干透再浇，约1-2周1次",
+      "土壤": "疏松透气排水好"
+    },
+    "faq": "不开花通常是光照不足或植株太小，球兰需要充足的散射光才能孕育花苞。花谢后不要剪掉花茎，来年还会在同一位置开花。",
+    "tips": "球兰是多肉植物，储水能力强，浇水过多容易烂根，一定要等土干透再浇。用小盆栽种更容易开花，因为球兰喜欢根系稍微拥挤的感觉。",
+    "categories": [
+      "foliage",
+      "vining-foliage",
+      "flowering",
+      "beginner",
+      "pet-safe"
+    ]
+  },
+  {
+    "id": "plant-pachyphytum",
+    "slug": "pachyphytum",
+    "nameZh": "桃蛋",
+    "nameLa": "Graptopetalum amethystinum",
+    "aliases": [
+      "桃蛋",
+      "桃之卵",
+      "醉美人"
+    ],
+    "icon": "flower",
+    "image": "assets/encyclopedia/plant-succulent",
+    "light": "强光",
+    "difficulty": "新手",
+    "function": "观赏",
+    "summary": "叶片圆润饱满如桃子，出状态后呈粉嫩的粉紫色，是最受欢迎的景天科多肉之一。",
+    "care": {
+      "光照": "全日照，至少4小时直射光",
+      "温度": "10-28°C，可耐0°C低温",
+      "浇水": "干透浇透，约2-3周1次",
+      "土壤": "多肉颗粒土，排水快"
+    },
+    "faq": "徒长变绿是光照不足，需移至阳光充足处。叶片化水是浇水过多或高温闷热，需立即断水并加强通风。",
+    "tips": "桃蛋上色需要充足光照和较大的昼夜温差，春秋季露养最容易出状态。夏季高温时需遮阴控水，避免暴晒和淋雨。",
+    "categories": [
+      "succulent",
+      "echeveria",
+      "beginner",
+      "internet-famous",
+      "desktop-small",
+      "sun-loving"
+    ]
+  },
+  {
+    "id": "plant-bear-paw",
+    "slug": "bear-paw",
+    "nameZh": "熊童子",
+    "nameLa": "Cotyledon tomentosa",
+    "aliases": [
+      "熊童子",
+      "熊掌多肉"
+    ],
+    "icon": "seedling",
+    "image": "assets/encyclopedia/plant-succulent",
+    "light": "强光",
+    "difficulty": "新手",
+    "function": "观赏",
+    "summary": "叶片肥厚毛茸茸，顶端有红色爪齿，酷似小熊的脚掌，造型呆萌可爱。",
+    "care": {
+      "光照": "充足阳光，避免夏季暴晒",
+      "温度": "10-28°C，不低于5°C",
+      "浇水": "干透浇透，约2-3周1次",
+      "土壤": "多肉颗粒土"
+    },
+    "faq": "掉叶子是浇水过多或通风不良，熊童子夏季容易掉叶，需严格控水并加强通风。叶片变软发皱是缺水，浇水后会很快恢复饱满。",
+    "tips": "熊童子夏季休眠，需遮阴断水，秋天凉爽后再恢复浇水。叶片容易掉，搬动时要小心，掉下来的健康叶片可以叶插繁殖。",
+    "categories": [
+      "succulent",
+      "echeveria",
+      "beginner",
+      "desktop-small",
+      "sun-loving"
+    ]
+  },
+  {
+    "id": "plant-haworthia",
+    "slug": "haworthia",
+    "nameZh": "玉露",
+    "nameLa": "Haworthia cooperi",
+    "aliases": [
+      "玉露",
+      "姬玉露",
+      "冰灯玉露"
+    ],
+    "icon": "seedling",
+    "image": "assets/encyclopedia/plant-succulent",
+    "light": "散射光",
+    "difficulty": "新手",
+    "function": "观赏",
+    "summary": "叶片顶端透明如水晶，在阳光下晶莹剔透，是百合科瓦苇属的经典多肉品种。",
+    "care": {
+      "光照": "明亮散射光，忌暴晒",
+      "温度": "10-28°C，不低于5°C",
+      "浇水": "干透浇透，约2周1次",
+      "土壤": "多肉颗粒土，透气好"
+    },
+    "faq": "叶片发灰不透明是光照过强晒伤，需移至散射光处。叶片徒长拉长是光照不足，需增加光照。",
+    "tips": "玉露不需要太强的阳光，放在东向或北向窗台最合适。夏季高温时休眠需控水，春秋生长季可适当增加浇水频率，叶片会更加饱满透亮。",
+    "categories": [
+      "succulent",
+      "other-succulent",
+      "beginner",
+      "desktop-small",
+      "pet-safe"
+    ]
+  },
+  {
+    "id": "plant-golden-barrel",
+    "slug": "golden-barrel",
+    "nameZh": "金琥",
+    "nameLa": "Echinocactus grusonii",
+    "aliases": [
+      "金琥",
+      "金虎",
+      "象牙球"
+    ],
+    "icon": "cactus",
+    "image": "assets/encyclopedia/plant-succulent",
+    "light": "强光",
+    "difficulty": "新手",
+    "function": "观赏",
+    "summary": "球体浑圆呈金黄色，刺座金黄夺目，是仙人掌中的经典品种，寿命可达上百年。",
+    "care": {
+      "光照": "全日照，越晒越金黄",
+      "温度": "10-35°C，不低于5°C",
+      "浇水": "干透浇透，约3-4周1次",
+      "土壤": "仙人掌专用沙质土"
+    },
+    "faq": "球体发软是浇水过多烂根，需立即脱盆检查根部，切除腐烂部分晾干后重新栽种。刺色变淡变绿是光照不足，需增加光照。",
+    "tips": "金琥生长缓慢，不需要频繁换盆，5-10年换一次即可。喜充足阳光，越晒球体越圆、刺越金黄。冬季低温断水可耐0°C左右低温。",
+    "categories": [
+      "succulent",
+      "cactus",
+      "beginner",
+      "sun-loving",
+      "lucky"
+    ]
+  },
+  {
+    "id": "plant-dragon-bone",
+    "slug": "dragon-bone",
+    "nameZh": "量天尺",
+    "nameLa": "Hylocereus undatus",
+    "aliases": [
+      "量天尺",
+      "霸王鞭",
+      "火龙果苗"
+    ],
+    "icon": "cactus",
+    "image": "assets/encyclopedia/plant-succulent",
+    "light": "强光",
+    "difficulty": "新手",
+    "function": "观赏",
+    "summary": "三棱柱状仙人掌，生长迅速，可长至数米高，火龙果就是它的果实，开花硕大美丽。",
+    "care": {
+      "光照": "充足阳光，耐半阴",
+      "温度": "15-35°C，不低于8°C",
+      "浇水": "干透浇透，约2周1次",
+      "土壤": "疏松排水沙质土"
+    },
+    "faq": "茎干发软腐烂是浇水过多或低温冻伤，需剪除腐烂部分晾干后重新扦插。生长缓慢是光照不足，需移至阳光充足处。",
+    "tips": "量天尺生长速度快，每年可长30-50厘米，需要定期修剪控制高度。扦插繁殖非常容易，剪下一段晾干伤口插入土中即可生根。",
+    "categories": [
+      "succulent",
+      "cactus",
+      "beginner",
+      "sun-loving"
+    ]
+  },
+  {
+    "id": "plant-turtle-back",
+    "slug": "turtle-back",
+    "nameZh": "龟甲龙",
+    "nameLa": "Dioscorea elephantipes",
+    "aliases": [
+      "龟甲龙",
+      "象脚薯蓣"
+    ],
+    "icon": "pot",
+    "image": "assets/encyclopedia/plant-succulent",
+    "light": "散射光",
+    "difficulty": "进阶",
+    "function": "观赏",
+    "summary": "块根表面呈龟甲状裂纹，造型奇特，是块根植物中的经典代表，适合进阶玩家收藏。",
+    "care": {
+      "光照": "明亮散射光",
+      "温度": "10-25°C，夏季休眠",
+      "浇水": "生长期干透浇透，休眠期断水",
+      "土壤": "颗粒土为主，排水极好"
+    },
+    "faq": "夏季叶片枯黄是正常休眠现象，需断水移至阴凉通风处。块根发软是浇水过多烂根，需立即脱盆处理。",
+    "tips": "龟甲龙是冬型种，秋冬春生长，夏季休眠。休眠期完全断水，放在阴凉通风处即可。生长期需要充足但不强烈的光照，避免暴晒。",
+    "categories": [
+      "succulent",
+      "caudex",
+      "advanced",
+      "internet-famous"
+    ]
+  },
+  {
+    "id": "plant-aloe",
+    "slug": "aloe",
+    "nameZh": "芦荟",
+    "nameLa": "Aloe vera",
+    "aliases": [
+      "芦荟",
+      "库拉索芦荟",
+      "不夜城芦荟"
+    ],
+    "icon": "seedling",
+    "image": "assets/encyclopedia/plant-succulent",
+    "light": "强光",
+    "difficulty": "新手",
+    "function": "药用",
+    "summary": "最常见的多肉植物之一，叶片肥厚含凝胶，有美容和药用价值，养护极其简单。",
+    "care": {
+      "光照": "充足阳光，耐半阴",
+      "温度": "10-35°C，不低于5°C",
+      "浇水": "干透浇透，约2-3周1次",
+      "土壤": "排水良好的沙质土"
+    },
+    "faq": "叶片发黄发软是浇水过多烂根，需减少浇水并检查根部。叶片变薄变瘦是光照不足，需移至阳光充足处。",
+    "tips": "芦荟非常耐旱，忘记浇水比浇水过多更安全。侧芽繁殖能力强，母株周围会不断长出小芦荟，分株即可繁殖。冬季低温需控水，避免冻伤。",
+    "categories": [
+      "succulent",
+      "other-succulent",
+      "beginner",
+      "air-purifying",
+      "sun-loving",
+      "pet-safe"
+    ]
+  },
+  {
+    "id": "plant-lithops",
+    "slug": "lithops",
+    "nameZh": "生石花",
+    "nameLa": "Lithops",
+    "aliases": [
+      "生石花",
+      "屁股花",
+      "石头花"
+    ],
+    "icon": "seedling",
+    "image": "assets/encyclopedia/plant-succulent",
+    "light": "强光",
+    "difficulty": "进阶",
+    "function": "观赏",
+    "summary": "外形酷似鹅卵石，是自然界伪装术的极致体现，开花时从中间缝隙绽放，十分神奇。",
+    "care": {
+      "光照": "充足直射光",
+      "温度": "10-28°C，不低于5°C",
+      "浇水": "极少，蜕皮期断水",
+      "土壤": "纯颗粒土"
+    },
+    "faq": "化水是浇水过多或高温闷热，生石花需严格控水。蜕皮期间绝对不能浇水，否则新叶会徒长变形。",
+    "tips": "生石花养护的关键是控水和蜕皮管理。每年春季蜕皮，老叶逐渐干枯被新叶吸收，期间完全断水。夏季高温休眠也要断水，秋季凉爽后恢复浇水并可能开花。",
+    "categories": [
+      "succulent",
+      "other-succulent",
+      "advanced",
+      "desktop-small",
+      "sun-loving"
+    ]
+  },
+  {
+    "id": "plant-phalaenopsis",
+    "slug": "phalaenopsis",
+    "nameZh": "蝴蝶兰",
+    "nameLa": "Phalaenopsis",
+    "aliases": [
+      "蝴蝶兰",
+      "蝶兰"
+    ],
+    "icon": "butterfly",
+    "image": "assets/encyclopedia/plant-orchid",
+    "light": "散射光",
+    "difficulty": "进阶",
+    "function": "观赏",
+    "summary": "花形如蝴蝶翩翩起舞，花期长达3-4个月，是年宵花的首选，优雅高贵。",
+    "care": {
+      "光照": "明亮散射光，忌暴晒",
+      "温度": "18-28°C，昼夜温差5-8°C",
+      "浇水": "水苔干透再浇，约5-7天1次",
+      "土壤": "水苔或树皮基质"
+    },
+    "faq": "花苞掉落是环境变化过大或浇水不当，花期应保持环境稳定。叶片发软起皱是缺水或烂根，需检查根系状态。",
+    "tips": "蝴蝶兰花谢后，从花茎基部第2-3节处剪断，有机会再次抽花茎开花。用透明塑料盆种植便于观察根系状态，绿色根系表示健康，褐色或干瘪表示缺水或烂根。",
+    "categories": [
+      "flowering",
+      "orchid",
+      "gift",
+      "internet-famous",
+      "advanced",
+      "lucky"
+    ]
+  },
+  {
+    "id": "plant-dendrobium",
+    "slug": "dendrobium",
+    "nameZh": "石斛兰",
+    "nameLa": "Dendrobium",
+    "aliases": [
+      "石斛兰",
+      "石斛",
+      "铁皮石斛"
+    ],
+    "icon": "butterfly",
+    "image": "assets/encyclopedia/plant-orchid",
+    "light": "散射光",
+    "difficulty": "进阶",
+    "function": "观赏",
+    "summary": "假鳞茎直立，花量大花色丰富，部分品种如铁皮石斛还有很高的药用价值。",
+    "care": {
+      "光照": "明亮散射光",
+      "温度": "15-28°C，冬季需低温春化",
+      "浇水": "生长期见干见湿，冬季减少",
+      "土壤": "树皮、水苔等兰花基质"
+    },
+    "faq": "不开花可能是冬季没有经历低温春化，石斛需要10-15°C的低温刺激1-2个月才能孕育花苞。假鳞茎干瘪是缺水，浇水后会恢复饱满。",
+    "tips": "石斛兰分春石斛和秋石斛，开花习性不同。春石斛需要冬季低温春化，秋石斛则在短日照下开花。生长期多施磷钾肥可促进开花。",
+    "categories": [
+      "flowering",
+      "orchid",
+      "advanced",
+      "gift"
+    ]
+  },
+  {
+    "id": "plant-hyacinth",
+    "slug": "hyacinth",
+    "nameZh": "风信子",
+    "nameLa": "Hyacinthus orientalis",
+    "aliases": [
+      "风信子",
+      "洋水仙",
+      "五色水仙"
+    ],
+    "icon": "flower",
+    "image": "assets/encyclopedia/plant-flower",
+    "light": "强光",
+    "difficulty": "新手",
+    "function": "观赏",
+    "summary": "春季球根花卉代表，花序饱满花色丰富，花香浓郁，水培土培均可，开花非常壮观。",
+    "care": {
+      "光照": "充足阳光",
+      "温度": "10-20°C，需低温春化",
+      "浇水": "保持土壤微湿",
+      "土壤": "疏松肥沃排水好"
+    },
+    "faq": "夹箭（花茎抽不出来）是温度过高或光照不足，需移至低温明亮处。花谢后叶片继续光合作用，养球来年再开花。",
+    "tips": "风信子需要经过8-12周的低温春化才能开花，购买\"五度球\"可直接种植。水培风信子只需将球根底部接触水面即可，发根后水位逐渐降低。",
+    "categories": [
+      "flowering",
+      "bulb-flower",
+      "beginner",
+      "gift",
+      "sun-loving"
+    ]
+  },
+  {
+    "id": "plant-jasmine",
+    "slug": "jasmine",
+    "nameZh": "茉莉",
+    "nameLa": "Jasminum sambac",
+    "aliases": [
+      "茉莉花",
+      "茉莉",
+      "香魂"
+    ],
+    "icon": "flower",
+    "image": "assets/encyclopedia/plant-flower",
+    "light": "强光",
+    "difficulty": "新手",
+    "function": "芳香",
+    "summary": "花色洁白花香浓郁，有\"天下第一香\"的美誉，花期长，养护得当可多次开花。",
+    "care": {
+      "光照": "充足阳光，越晒花越多",
+      "温度": "18-32°C，不低于5°C",
+      "浇水": "见干见湿，约2-3天1次",
+      "土壤": "疏松肥沃微酸性土"
+    },
+    "faq": "不开花是光照不足或氮肥过多，茉莉需要充足的阳光和磷钾肥才能开花。叶片发黄是土壤偏碱或缺铁，可浇施硫酸亚铁溶液。",
+    "tips": "茉莉喜阳，每天至少4-6小时直射光才能开花旺盛。花后及时修剪可促进新枝萌发，新枝开花更多。生长期每周施一次磷钾肥，花量更大。",
+    "categories": [
+      "flowering",
+      "woody-flower",
+      "beginner",
+      "sun-loving",
+      "gift"
+    ]
+  },
+  {
+    "id": "plant-gardenia",
+    "slug": "gardenia",
+    "nameZh": "栀子花",
+    "nameLa": "Gardenia jasminoides",
+    "aliases": [
+      "栀子花",
+      "栀子",
+      "黄栀子"
+    ],
+    "icon": "flower",
+    "image": "assets/encyclopedia/plant-flower",
+    "light": "散射光",
+    "difficulty": "进阶",
+    "function": "芳香",
+    "summary": "花色乳白花形优雅，花香清新怡人，是中国传统名花，但对养护环境要求较高。",
+    "care": {
+      "光照": "明亮散射光，忌暴晒",
+      "温度": "18-25°C，不低于5°C",
+      "浇水": "保持土壤湿润，约2-3天1次",
+      "土壤": "酸性腐殖土"
+    },
+    "faq": "叶片发黄是土壤偏碱或缺铁，栀子花必须用酸性土壤养护，定期浇施矾肥水。掉花苞是环境变化或浇水不当，花苞期需保持环境稳定。",
+    "tips": "栀子花喜酸，北方养护需要特别注意水质，可用雨水或加了醋的水浇灌。喜欢高湿度环境，可经常向叶面喷水或放置在加湿器旁。",
+    "categories": [
+      "flowering",
+      "woody-flower",
+      "advanced",
+      "gift"
+    ]
+  },
+  {
+    "id": "plant-areca-palm",
+    "slug": "areca-palm",
+    "nameZh": "散尾葵",
+    "nameLa": "Dypsis lutescens",
+    "aliases": [
+      "散尾葵",
+      "黄椰子",
+      "凤尾竹"
+    ],
+    "icon": "seedling",
+    "image": "assets/encyclopedia/plant-palm",
+    "light": "散射光",
+    "difficulty": "新手",
+    "function": "观赏",
+    "summary": "羽状复叶柔软飘逸，热带风情十足，是客厅和办公室最受欢迎的大型绿植之一。",
+    "care": {
+      "光照": "明亮散射光，耐半阴",
+      "温度": "18-28°C，不低于10°C",
+      "浇水": "土干2cm再浇，约每周1次",
+      "土壤": "疏松肥沃排水好"
+    },
+    "faq": "叶尖干枯是空气湿度过低，散尾葵需要较高的空气湿度，建议经常喷水或使用加湿器。叶片发黄是浇水过多或光照不足。",
+    "tips": "散尾葵喜欢温暖湿润的环境，冬季注意保暖，远离空调出风口。对宠物无毒，是养宠家庭的理想大型绿植选择。定期擦拭叶片保持光泽。",
+    "categories": [
+      "large-plants",
+      "palm-tree",
+      "foliage",
+      "ficus-palm",
+      "air-purifying",
+      "beginner",
+      "pet-safe"
+    ]
+  },
+  {
+    "id": "plant-yucca",
+    "slug": "yucca",
+    "nameZh": "荷兰铁",
+    "nameLa": "Yucca elephantipes",
+    "aliases": [
+      "荷兰铁",
+      "巨丝兰",
+      "象脚丝兰"
+    ],
+    "icon": "tree",
+    "image": "assets/encyclopedia/plant-dracaena",
+    "light": "强光",
+    "difficulty": "新手",
+    "function": "观赏",
+    "summary": "茎干粗壮直立，叶片坚硬呈剑形，气质硬朗，是工业风、北欧风家居的绝佳搭配。",
+    "care": {
+      "光照": "充足阳光，耐半阴",
+      "温度": "15-30°C，不低于5°C",
+      "浇水": "干透再浇，约2-3周1次",
+      "土壤": "疏松排水沙质土"
+    },
+    "faq": "叶尖干枯是空气干燥或缺水，荷兰铁耐旱但空气太干叶尖也会焦枯。叶片发黄是浇水过多，需减少浇水频率。",
+    "tips": "荷兰铁非常耐旱，是出差族的理想选择。生长缓慢，不需要频繁施肥，每年春季施一次缓释肥即可。可以通过砍头来促进侧枝生长，使株型更丰满。",
+    "categories": [
+      "large-plants",
+      "dracaena-tree",
+      "beginner",
+      "low-light",
+      "office"
+    ]
+  },
+  {
+    "id": "plant-water-lily",
+    "slug": "water-lily",
+    "nameZh": "睡莲",
+    "nameLa": "Nymphaea",
+    "aliases": [
+      "睡莲",
+      "子午莲",
+      "水浮莲"
+    ],
+    "icon": "water",
+    "image": "assets/encyclopedia/plant-water",
+    "light": "强光",
+    "difficulty": "新手",
+    "function": "观赏",
+    "summary": "叶片浮于水面，花朵白天开放夜晚闭合，是水缸和小池塘造景的必选植物。",
+    "care": {
+      "光照": "全日照，至少6小时直射光",
+      "温度": "15-30°C，冬季休眠",
+      "浇水": "水养，保持水位稳定",
+      "土壤": "塘泥土种植于水中"
+    },
+    "faq": "不开花是光照不足，睡莲需要充足的阳光才能开花。叶片腐烂是水质问题或施肥过多，需换水并清理腐烂叶片。",
+    "tips": "睡莲需要大容器和充足阳光才能开花良好，建议盆径30cm以上。冬季温带品种可在水中越冬，热带品种需移至室内保暖。生长期可在泥中施缓释肥促进开花。",
+    "categories": [
+      "hydroponic",
+      "aquatic",
+      "sun-loving",
+      "advanced"
+    ]
+  },
+  {
+    "id": "plant-pennywort",
+    "slug": "pennywort",
+    "nameZh": "铜钱草",
+    "nameLa": "Hydrocotyle vulgaris",
+    "aliases": [
+      "铜钱草",
+      "金钱草",
+      "过路黄"
+    ],
+    "icon": "money",
+    "image": "assets/encyclopedia/plant-water",
+    "light": "强光",
+    "difficulty": "新手",
+    "function": "招财",
+    "summary": "叶片圆圆如铜钱，寓意招财进宝，水培土培半水均可，生长迅速极易爆盆。",
+    "care": {
+      "光照": "充足阳光",
+      "温度": "15-28°C，不低于5°C",
+      "浇水": "水培或保持湿润",
+      "土壤": "半水半土最佳"
+    },
+    "faq": "叶片发黄徒长是光照不足，铜钱草需要充足的阳光才能长得矮壮油绿。冬季地上部分枯萎是正常现象，春季会重新萌发。",
+    "tips": "铜钱草最好养的方式是半水半土，下面一层土上面一层水，生长最快。生长迅速，需要定期分株避免过于拥挤。寓意招财，是开业送礼的热门选择。",
+    "categories": [
+      "hydroponic",
+      "semi-aquatic",
+      "beginner",
+      "lucky",
+      "sun-loving",
+      "desktop-small"
+    ]
+  },
+  {
+    "id": "plant-tillandsia",
+    "slug": "tillandsia",
+    "nameZh": "空气凤梨",
+    "nameLa": "Tillandsia",
+    "aliases": [
+      "空气凤梨",
+      "空气草",
+      "铁兰"
+    ],
+    "icon": "wind",
+    "image": "assets/encyclopedia/plant-airplant",
+    "light": "散射光",
+    "difficulty": "新手",
+    "function": "观赏",
+    "summary": "不需要土壤的神奇植物，靠叶片吸收空气中的水分和养分，可随意摆放创意造景。",
+    "care": {
+      "光照": "明亮散射光",
+      "温度": "15-28°C，不低于5°C",
+      "浇水": "每周喷水2-3次",
+      "土壤": "无需土壤"
+    },
+    "faq": "叶片发灰卷曲是缺水，喷水后几小时内会恢复饱满。叶片发软发黑是浇水过多或通风不良导致腐烂，需减少浇水并加强通风。",
+    "tips": "空气凤梨浇水的正确方式是每周浸泡10-15分钟，比单纯喷水效果更好。浇水后要确保叶心没有积水，倒挂沥干可有效防止烂心。空气流通很重要，闷养容易腐烂。",
+    "categories": [
+      "fern-special",
+      "air-plant",
+      "beginner",
+      "desktop-small",
+      "pet-safe",
+      "internet-famous"
+    ]
+  },
+  {
+    "id": "plant-sundew",
+    "slug": "sundew",
+    "nameZh": "捕蝇草",
+    "nameLa": "Dionaea muscipula",
+    "aliases": [
+      "捕蝇草",
+      "食虫草",
+      "维纳斯捕蝇草"
+    ],
+    "icon": "clover",
+    "image": "assets/encyclopedia/plant-fern",
+    "light": "强光",
+    "difficulty": "进阶",
+    "function": "趣味",
+    "summary": "叶片顶端有捕虫夹，能捕食昆虫，是最有名的食虫植物，极具趣味和科普价值。",
+    "care": {
+      "光照": "充足直射光",
+      "温度": "15-28°C，冬季休眠",
+      "浇水": "保持湿润，用纯净水",
+      "土壤": "水苔或泥炭+珍珠岩"
+    },
+    "faq": "夹子变黑是触碰过多或消化失败，不要经常玩弄捕虫夹，会消耗植株能量。叶片发黄是水质问题或光照不足，必须用纯净水或雨水浇灌。",
+    "tips": "捕蝇草必须用矿物质含量低的水（纯净水、雨水、蒸馏水），自来水会导致死亡。需要充足的光照才能健康生长和捕虫。冬季低温休眠是正常现象，春季会重新萌发。",
+    "categories": [
+      "fern-special",
+      "moss-mini",
+      "advanced",
+      "desktop-small",
+      "internet-famous"
+    ]
+  },
+  {
+    "id": "plant-moss",
+    "slug": "moss",
+    "nameZh": "白发藓",
+    "nameLa": "Leucobryum glaucum",
+    "aliases": [
+      "白发藓",
+      "苔藓",
+      " cushion moss"
+    ],
+    "icon": "clover",
+    "image": "assets/encyclopedia/plant-fern",
+    "light": "耐阴",
+    "difficulty": "新手",
+    "function": "造景",
+    "summary": "颜色银白带绿的丛生苔藓，质地松软如绒毯，是苔藓微景观和生态瓶的核心材料。",
+    "care": {
+      "光照": "散射光到耐阴",
+      "温度": "10-25°C，喜凉爽",
+      "浇水": "保持高湿度，每天喷水",
+      "土壤": "腐殖土或直接附生"
+    },
+    "faq": "苔藓变黄变干是湿度过低或光照过强，需增加喷水频率并移至阴凉处。苔藓发黑是浇水过多或通风不良导致发霉，需减少浇水并加强通风。",
+    "tips": "苔藓靠叶片吸收水分和养分，不需要根部浇水，保持高空气湿度更重要。适合放在封闭的生态瓶中，能形成自循环的小生态系统。用纯净水或雨水浇灌最佳。",
+    "categories": [
+      "fern-special",
+      "moss-mini",
+      "beginner",
+      "desktop-small",
+      "pet-safe",
+      "low-light"
+    ]
   }
 ]

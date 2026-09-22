@@ -105,6 +105,181 @@
     "keywords": "发财树 Pachira aquatica 发财树 瓜栗 马拉巴栗"
   },
   {
+    "title": "孔雀竹芋",
+    "sub": "植物 · 散射光 · 进阶 · 观赏",
+    "url": "encyclopedia.html#plant-peacock-calathea",
+    "icon": "leaf",
+    "keywords": "孔雀竹芋 Calathea makoyana 孔雀竹芋 马克奥竹芋"
+  },
+  {
+    "title": "西瓜皮椒草",
+    "sub": "植物 · 散射光 · 新手 · 观赏",
+    "url": "encyclopedia.html#plant-watermelon-peperomia",
+    "icon": "leaf",
+    "keywords": "西瓜皮椒草 Peperomia argyreia 西瓜皮椒草 西瓜椒草"
+  },
+  {
+    "title": "橡皮树",
+    "sub": "植物 · 强光 · 新手 · 观赏",
+    "url": "encyclopedia.html#plant-rubber-plant",
+    "icon": "tree",
+    "keywords": "橡皮树 Ficus elastica 橡皮树 印度榕 黑金刚"
+  },
+  {
+    "title": "袖珍椰子",
+    "sub": "植物 · 耐阴 · 新手 · 观赏",
+    "url": "encyclopedia.html#plant-parlor-palm",
+    "icon": "seedling",
+    "keywords": "袖珍椰子 Chamaedorea elegans 袖珍椰子 矮生椰子 客厅棕榈"
+  },
+  {
+    "title": "球兰",
+    "sub": "植物 · 散射光 · 新手 · 观赏",
+    "url": "encyclopedia.html#plant-hoya",
+    "icon": "flower",
+    "keywords": "球兰 Hoya carnosa 球兰 蜡兰 樱花葛"
+  },
+  {
+    "title": "桃蛋",
+    "sub": "植物 · 强光 · 新手 · 观赏",
+    "url": "encyclopedia.html#plant-pachyphytum",
+    "icon": "flower",
+    "keywords": "桃蛋 Graptopetalum amethystinum 桃蛋 桃之卵 醉美人"
+  },
+  {
+    "title": "熊童子",
+    "sub": "植物 · 强光 · 新手 · 观赏",
+    "url": "encyclopedia.html#plant-bear-paw",
+    "icon": "seedling",
+    "keywords": "熊童子 Cotyledon tomentosa 熊童子 熊掌多肉"
+  },
+  {
+    "title": "玉露",
+    "sub": "植物 · 散射光 · 新手 · 观赏",
+    "url": "encyclopedia.html#plant-haworthia",
+    "icon": "seedling",
+    "keywords": "玉露 Haworthia cooperi 玉露 姬玉露 冰灯玉露"
+  },
+  {
+    "title": "金琥",
+    "sub": "植物 · 强光 · 新手 · 观赏",
+    "url": "encyclopedia.html#plant-golden-barrel",
+    "icon": "cactus",
+    "keywords": "金琥 Echinocactus grusonii 金琥 金虎 象牙球"
+  },
+  {
+    "title": "量天尺",
+    "sub": "植物 · 强光 · 新手 · 观赏",
+    "url": "encyclopedia.html#plant-dragon-bone",
+    "icon": "cactus",
+    "keywords": "量天尺 Hylocereus undatus 量天尺 霸王鞭 火龙果苗"
+  },
+  {
+    "title": "龟甲龙",
+    "sub": "植物 · 散射光 · 进阶 · 观赏",
+    "url": "encyclopedia.html#plant-turtle-back",
+    "icon": "pot",
+    "keywords": "龟甲龙 Dioscorea elephantipes 龟甲龙 象脚薯蓣"
+  },
+  {
+    "title": "芦荟",
+    "sub": "植物 · 强光 · 新手 · 药用",
+    "url": "encyclopedia.html#plant-aloe",
+    "icon": "seedling",
+    "keywords": "芦荟 Aloe vera 芦荟 库拉索芦荟 不夜城芦荟"
+  },
+  {
+    "title": "生石花",
+    "sub": "植物 · 强光 · 进阶 · 观赏",
+    "url": "encyclopedia.html#plant-lithops",
+    "icon": "seedling",
+    "keywords": "生石花 Lithops 生石花 屁股花 石头花"
+  },
+  {
+    "title": "蝴蝶兰",
+    "sub": "植物 · 散射光 · 进阶 · 观赏",
+    "url": "encyclopedia.html#plant-phalaenopsis",
+    "icon": "butterfly",
+    "keywords": "蝴蝶兰 Phalaenopsis 蝴蝶兰 蝶兰"
+  },
+  {
+    "title": "石斛兰",
+    "sub": "植物 · 散射光 · 进阶 · 观赏",
+    "url": "encyclopedia.html#plant-dendrobium",
+    "icon": "butterfly",
+    "keywords": "石斛兰 Dendrobium 石斛兰 石斛 铁皮石斛"
+  },
+  {
+    "title": "风信子",
+    "sub": "植物 · 强光 · 新手 · 观赏",
+    "url": "encyclopedia.html#plant-hyacinth",
+    "icon": "flower",
+    "keywords": "风信子 Hyacinthus orientalis 风信子 洋水仙 五色水仙"
+  },
+  {
+    "title": "茉莉",
+    "sub": "植物 · 强光 · 新手 · 芳香",
+    "url": "encyclopedia.html#plant-jasmine",
+    "icon": "flower",
+    "keywords": "茉莉 Jasminum sambac 茉莉花 茉莉 香魂"
+  },
+  {
+    "title": "栀子花",
+    "sub": "植物 · 散射光 · 进阶 · 芳香",
+    "url": "encyclopedia.html#plant-gardenia",
+    "icon": "flower",
+    "keywords": "栀子花 Gardenia jasminoides 栀子花 栀子 黄栀子"
+  },
+  {
+    "title": "散尾葵",
+    "sub": "植物 · 散射光 · 新手 · 观赏",
+    "url": "encyclopedia.html#plant-areca-palm",
+    "icon": "seedling",
+    "keywords": "散尾葵 Dypsis lutescens 散尾葵 黄椰子 凤尾竹"
+  },
+  {
+    "title": "荷兰铁",
+    "sub": "植物 · 强光 · 新手 · 观赏",
+    "url": "encyclopedia.html#plant-yucca",
+    "icon": "tree",
+    "keywords": "荷兰铁 Yucca elephantipes 荷兰铁 巨丝兰 象脚丝兰"
+  },
+  {
+    "title": "睡莲",
+    "sub": "植物 · 强光 · 新手 · 观赏",
+    "url": "encyclopedia.html#plant-water-lily",
+    "icon": "water",
+    "keywords": "睡莲 Nymphaea 睡莲 子午莲 水浮莲"
+  },
+  {
+    "title": "铜钱草",
+    "sub": "植物 · 强光 · 新手 · 招财",
+    "url": "encyclopedia.html#plant-pennywort",
+    "icon": "money",
+    "keywords": "铜钱草 Hydrocotyle vulgaris 铜钱草 金钱草 过路黄"
+  },
+  {
+    "title": "空气凤梨",
+    "sub": "植物 · 散射光 · 新手 · 观赏",
+    "url": "encyclopedia.html#plant-tillandsia",
+    "icon": "wind",
+    "keywords": "空气凤梨 Tillandsia 空气凤梨 空气草 铁兰"
+  },
+  {
+    "title": "捕蝇草",
+    "sub": "植物 · 强光 · 进阶 · 趣味",
+    "url": "encyclopedia.html#plant-sundew",
+    "icon": "clover",
+    "keywords": "捕蝇草 Dionaea muscipula 捕蝇草 食虫草 维纳斯捕蝇草"
+  },
+  {
+    "title": "白发藓",
+    "sub": "植物 · 耐阴 · 新手 · 造景",
+    "url": "encyclopedia.html#plant-moss",
+    "icon": "clover",
+    "keywords": "白发藓 Leucobryum glaucum 白发藓 苔藓  cushion moss"
+  },
+  {
     "title": "首页",
     "sub": "页面 · 绿植养护指南",
     "url": "index.html",
@@ -194,6 +369,90 @@
     "url": "contact.html",
     "icon": "mail",
     "keywords": "联系 联系表单 反馈 提问 合作"
+  },
+  {
+    "title": "天南星科植物养护全攻略：龟背竹绿萝蔓绿绒怎么养",
+    "sub": "文章 · 观叶植物",
+    "url": "araceae-guide.html",
+    "icon": "herb",
+    "keywords": "天南星科 龟背竹 绿萝 蔓绿绒 万年青 红掌 观叶植物养护"
+  },
+  {
+    "title": "竹芋类植物养护秘籍：叶片精美但娇气，怎么养才不焦边",
+    "sub": "文章 · 观叶植物",
+    "url": "calathea-care.html",
+    "icon": "leaf",
+    "keywords": "竹芋 孔雀竹芋 青苹果竹芋 焦边 湿度 水质 观叶植物"
+  },
+  {
+    "title": "多肉植物度夏指南：如何让你的多肉安全度过夏天",
+    "sub": "文章 · 多肉仙人掌",
+    "url": "succulent-summer.html",
+    "icon": "sun",
+    "keywords": "多肉度夏 黑腐 化水 遮阴 控水 多肉养护 夏季养护"
+  },
+  {
+    "title": "仙人掌养护完全指南：耐旱不等于放养，新手常见误区盘点",
+    "sub": "文章 · 多肉仙人掌",
+    "url": "cactus-guide.html",
+    "icon": "cactus",
+    "keywords": "仙人掌 仙人球 金琥 量天尺 仙人掌养护 多肉植物"
+  },
+  {
+    "title": "蝴蝶兰花后养护与复花技巧：开一次花就扔？太浪费了",
+    "sub": "文章 · 开花植物",
+    "url": "phalaenopsis-care.html",
+    "icon": "butterfly",
+    "keywords": "蝴蝶兰 兰花养护 复花 花后修剪 换盆 兰花施肥"
+  },
+  {
+    "title": "球根花卉种植全攻略：风信子郁金香水仙怎么种才开花",
+    "sub": "文章 · 开花植物",
+    "url": "bulb-flower-guide.html",
+    "icon": "flower",
+    "keywords": "球根花卉 风信子 郁金香 水仙 种球 春化 水培花卉"
+  },
+  {
+    "title": "大型绿植选购与摆放指南：客厅放什么植物又好养又好看",
+    "sub": "文章 · 大型绿植",
+    "url": "large-plant-guide.html",
+    "icon": "tree",
+    "keywords": "大型绿植 客厅植物 琴叶榕 散尾葵 天堂鸟 室内大型植物 家居装饰"
+  },
+  {
+    "title": "琴叶榕养护全解析：网红植物为什么总是掉叶子",
+    "sub": "文章 · 大型绿植",
+    "url": "fiddle-leaf-fig-care.html",
+    "icon": "tree",
+    "keywords": "琴叶榕 琴叶榕养护 掉叶子 大型观叶植物 网红植物 榕属植物"
+  },
+  {
+    "title": "水培植物养护完全指南：干净又好养，新手也能轻松上手",
+    "sub": "文章 · 水培水生",
+    "url": "hydroponic-guide.html",
+    "icon": "water",
+    "keywords": "水培植物 水培方法 营养液 换水 水培绿萝 富贵竹 办公室植物"
+  },
+  {
+    "title": "水生植物造景入门：水缸和小池塘种什么花好看",
+    "sub": "文章 · 水培水生",
+    "url": "aquatic-plant-guide.html",
+    "icon": "water",
+    "keywords": "水生植物 睡莲 碗莲 铜钱草 水缸造景 池塘植物 水培花卉"
+  },
+  {
+    "title": "蕨类植物养护入门：喜欢阴凉潮湿的植物家族",
+    "sub": "文章 · 蕨类与另类",
+    "url": "fern-care-guide.html",
+    "icon": "feather",
+    "keywords": "蕨类植物 波士顿蕨 鸟巢蕨 铁线蕨 耐阴植物 湿度 蕨类养护"
+  },
+  {
+    "title": "空气凤梨养护完全指南：不用土的神奇植物怎么养",
+    "sub": "文章 · 蕨类与另类",
+    "url": "air-plant-guide.html",
+    "icon": "wind",
+    "keywords": "空气凤梨 空气草 铁兰 无土栽培 创意植物 桌面植物 空气凤梨养护"
   },
   {
     "title": "观叶植物",
