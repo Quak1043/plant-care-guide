@@ -194,5 +194,194 @@
     "url": "contact.html",
     "icon": "mail",
     "keywords": "联系 联系表单 反馈 提问 合作"
+  },
+  {
+    "title": "观叶植物",
+    "sub": "分类 · 一级分类",
+    "url": "category-foliage.html",
+    "icon": "leaf",
+    "keywords": "观叶植物"
+  },
+  {
+    "title": "多肉仙人掌",
+    "sub": "分类 · 一级分类",
+    "url": "category-succulent.html",
+    "icon": "cactus",
+    "keywords": "多肉仙人掌"
+  },
+  {
+    "title": "开花植物",
+    "sub": "分类 · 一级分类",
+    "url": "category-flowering.html",
+    "icon": "flower",
+    "keywords": "开花植物"
+  },
+  {
+    "title": "大型绿植",
+    "sub": "分类 · 一级分类",
+    "url": "category-large-plants.html",
+    "icon": "tree",
+    "keywords": "大型绿植"
+  },
+  {
+    "title": "水培水生",
+    "sub": "分类 · 一级分类",
+    "url": "category-hydroponic.html",
+    "icon": "water",
+    "keywords": "水培水生"
+  },
+  {
+    "title": "蕨类与另类",
+    "sub": "分类 · 一级分类",
+    "url": "category-fern-special.html",
+    "icon": "feather",
+    "keywords": "蕨类与另类"
+  },
+  {
+    "title": "天南星科",
+    "sub": "分类 · 二级分类",
+    "url": "category-araceae.html",
+    "icon": "herb",
+    "keywords": "天南星科"
+  },
+  {
+    "title": "竹芋与椒草",
+    "sub": "分类 · 二级分类",
+    "url": "category-calathea.html",
+    "icon": "leaf",
+    "keywords": "竹芋与椒草"
+  },
+  {
+    "title": "龙血树类",
+    "sub": "分类 · 二级分类",
+    "url": "category-dracaena-foliage.html",
+    "icon": "tree",
+    "keywords": "龙血树类"
+  },
+  {
+    "title": "藤蔓垂吊",
+    "sub": "分类 · 二级分类",
+    "url": "category-vining-foliage.html",
+    "icon": "seedling",
+    "keywords": "藤蔓垂吊"
+  },
+  {
+    "title": "榕与棕榈",
+    "sub": "分类 · 二级分类",
+    "url": "category-ficus-palm.html",
+    "icon": "tree",
+    "keywords": "榕与棕榈"
+  },
+  {
+    "title": "景天多肉",
+    "sub": "分类 · 二级分类",
+    "url": "category-echeveria.html",
+    "icon": "flower",
+    "keywords": "景天多肉"
+  },
+  {
+    "title": "仙人掌科",
+    "sub": "分类 · 二级分类",
+    "url": "category-cactus.html",
+    "icon": "cactus",
+    "keywords": "仙人掌科"
+  },
+  {
+    "title": "块根与球茎",
+    "sub": "分类 · 二级分类",
+    "url": "category-caudex.html",
+    "icon": "pot",
+    "keywords": "块根与球茎"
+  },
+  {
+    "title": "芦荟与其他",
+    "sub": "分类 · 二级分类",
+    "url": "category-other-succulent.html",
+    "icon": "seedling",
+    "keywords": "芦荟与其他"
+  },
+  {
+    "title": "兰花系列",
+    "sub": "分类 · 二级分类",
+    "url": "category-orchid.html",
+    "icon": "butterfly",
+    "keywords": "兰花系列"
+  },
+  {
+    "title": "球根花卉",
+    "sub": "分类 · 二级分类",
+    "url": "category-bulb-flower.html",
+    "icon": "flower",
+    "keywords": "球根花卉"
+  },
+  {
+    "title": "木本花卉",
+    "sub": "分类 · 二级分类",
+    "url": "category-woody-flower.html",
+    "icon": "tree",
+    "keywords": "木本花卉"
+  },
+  {
+    "title": "榕属大树",
+    "sub": "分类 · 二级分类",
+    "url": "category-ficus-tree.html",
+    "icon": "tree",
+    "keywords": "榕属大树"
+  },
+  {
+    "title": "棕榈科植物",
+    "sub": "分类 · 二级分类",
+    "url": "category-palm-tree.html",
+    "icon": "seedling",
+    "keywords": "棕榈科植物"
+  },
+  {
+    "title": "龙血树大树",
+    "sub": "分类 · 二级分类",
+    "url": "category-dracaena-tree.html",
+    "icon": "tree",
+    "keywords": "龙血树大树"
+  },
+  {
+    "title": "水培观叶",
+    "sub": "分类 · 二级分类",
+    "url": "category-hydroponic-foliage.html",
+    "icon": "water",
+    "keywords": "水培观叶"
+  },
+  {
+    "title": "水生植物",
+    "sub": "分类 · 二级分类",
+    "url": "category-aquatic.html",
+    "icon": "water",
+    "keywords": "水生植物"
+  },
+  {
+    "title": "半水栖植物",
+    "sub": "分类 · 二级分类",
+    "url": "category-semi-aquatic.html",
+    "icon": "seedling",
+    "keywords": "半水栖植物"
+  },
+  {
+    "title": "观赏蕨类",
+    "sub": "分类 · 二级分类",
+    "url": "category-ornamental-fern.html",
+    "icon": "feather",
+    "keywords": "观赏蕨类"
+  },
+  {
+    "title": "空气凤梨",
+    "sub": "分类 · 二级分类",
+    "url": "category-air-plant.html",
+    "icon": "wind",
+    "keywords": "空气凤梨"
+  },
+  {
+    "title": "苔藓与微景观",
+    "sub": "分类 · 二级分类",
+    "url": "category-moss-mini.html",
+    "icon": "clover",
+    "keywords": "苔藓与微景观"
   }
 ]

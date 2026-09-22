@@ -11,8 +11,14 @@
     "active": "home",
     "icon": "home",
     "crumb": "首页",
-    "keywords": ["首页", "绿植养护", "室内植物", "新手入门", "植物养护"],
-    "priority": 1.0,
+    "keywords": [
+      "首页",
+      "绿植养护",
+      "室内植物",
+      "新手入门",
+      "植物养护"
+    ],
+    "priority": 1,
     "image": "hero",
     "imageAlt": "温馨的室内植物空间",
     "lazy": "0"
@@ -28,7 +34,12 @@
     "active": "articles",
     "icon": "list",
     "crumb": "文章列表",
-    "keywords": ["文章", "文章列表", "养护文章", "教程"],
+    "keywords": [
+      "文章",
+      "文章列表",
+      "养护文章",
+      "教程"
+    ],
     "priority": 0.9,
     "image": "card-beginner",
     "imageAlt": "室内植物养护文章"
@@ -44,12 +55,30 @@
     "active": "articles",
     "icon": "water",
     "crumb": "浇水完全指南",
-    "keywords": ["浇水", "见干见湿", "烂根", "浇水频率", "浸盆法", "浇水方法", "浇透"],
+    "keywords": [
+      "浇水",
+      "见干见湿",
+      "烂根",
+      "浇水频率",
+      "浸盆法",
+      "浇水方法",
+      "浇透"
+    ],
     "priority": 0.8,
     "date": "2026-06-12",
-    "updated": "2026-06-12",    "read": "7",
+    "updated": "2026-06-12",
+    "read": "7",
     "image": "card-watering",
-    "imageAlt": "室内植物浇水技巧"
+    "imageAlt": "室内植物浇水技巧",
+    "categories": [
+      "foliage",
+      "succulent",
+      "flowering",
+      "large-plants",
+      "hydroponic",
+      "fern-special",
+      "beginner"
+    ]
   },
   {
     "id": "top10-plants",
@@ -61,12 +90,28 @@
     "active": "articles",
     "icon": "trophy",
     "crumb": "新手绿植推荐",
-    "keywords": ["推荐", "排名", "榜单", "好养植物", "新手植物", "室内绿植推荐"],
+    "keywords": [
+      "推荐",
+      "排名",
+      "榜单",
+      "好养植物",
+      "新手植物",
+      "室内绿植推荐"
+    ],
     "priority": 0.8,
     "date": "2026-06-11",
-    "updated": "2026-06-11",    "read": "6",
+    "updated": "2026-06-11",
+    "read": "6",
     "image": "card-beginner",
-    "imageAlt": "新手室内绿植推荐"
+    "imageAlt": "新手室内绿植推荐",
+    "categories": [
+      "foliage",
+      "succulent",
+      "hydroponic",
+      "beginner",
+      "desktop-small",
+      "office"
+    ]
   },
   {
     "id": "propagation-guide",
@@ -78,12 +123,26 @@
     "active": "articles",
     "icon": "seedling",
     "crumb": "植物繁殖入门",
-    "keywords": ["繁殖", "扦插", "分株", "水插", "叶插", "一盆变十盆"],
+    "keywords": [
+      "繁殖",
+      "扦插",
+      "分株",
+      "水插",
+      "叶插",
+      "一盆变十盆"
+    ],
     "priority": 0.8,
     "date": "2026-06-21",
-    "updated": "2026-06-21",    "read": "8",
+    "updated": "2026-06-21",
+    "read": "8",
     "image": "card-propagation",
-    "imageAlt": "植物扦插与分株繁殖"
+    "imageAlt": "植物扦插与分株繁殖",
+    "categories": [
+      "foliage",
+      "succulent",
+      "fern-special",
+      "beginner"
+    ]
   },
   {
     "id": "encyclopedia",
@@ -96,7 +155,13 @@
     "active": "encyclopedia",
     "icon": "grid",
     "crumb": "植物百科",
-    "keywords": ["植物百科", "室内植物", "植物图鉴", "筛选", "养护信息"],
+    "keywords": [
+      "植物百科",
+      "室内植物",
+      "植物图鉴",
+      "筛选",
+      "养护信息"
+    ],
     "priority": 0.8,
     "image": "card-monstera",
     "imageAlt": "室内植物百科图鉴"
@@ -111,12 +176,26 @@
     "active": "articles",
     "icon": "book",
     "crumb": "新手入门",
-    "keywords": ["新手入门", "第一盆植物", "选植物", "入门", "怎么选"],
+    "keywords": [
+      "新手入门",
+      "第一盆植物",
+      "选植物",
+      "入门",
+      "怎么选"
+    ],
     "priority": 0.8,
     "date": "2026-06-10",
-    "updated": "2026-06-10",    "read": "5",
+    "updated": "2026-06-10",
+    "read": "5",
     "image": "card-beginner",
-    "imageAlt": "新手入门选对第一盆植物"
+    "imageAlt": "新手入门选对第一盆植物",
+    "categories": [
+      "foliage",
+      "succulent",
+      "hydroponic",
+      "beginner",
+      "desktop-small"
+    ]
   },
   {
     "id": "lighting-guide",
@@ -128,12 +207,31 @@
     "active": "articles",
     "icon": "sun",
     "crumb": "室内光照指南",
-    "keywords": ["光照", "散射光", "直射光", "耐阴", "窗户朝向", "手影法", "摆放位置"],
+    "keywords": [
+      "光照",
+      "散射光",
+      "直射光",
+      "耐阴",
+      "窗户朝向",
+      "手影法",
+      "摆放位置"
+    ],
     "priority": 0.7,
     "date": "2026-06-09",
-    "updated": "2026-06-09",    "read": "5",
+    "updated": "2026-06-09",
+    "read": "5",
     "image": "card-light",
-    "imageAlt": "室内光照指南"
+    "imageAlt": "室内光照指南",
+    "categories": [
+      "foliage",
+      "succulent",
+      "flowering",
+      "large-plants",
+      "hydroponic",
+      "fern-special",
+      "low-light",
+      "sun-loving"
+    ]
   },
   {
     "id": "repotting-guide",
@@ -145,12 +243,30 @@
     "active": "articles",
     "icon": "pot",
     "crumb": "换盆与土壤全攻略",
-    "keywords": ["换盆", "土壤", "配土", "选盆", "缓苗", "根系", "何时换盆"],
+    "keywords": [
+      "换盆",
+      "土壤",
+      "配土",
+      "选盆",
+      "缓苗",
+      "根系",
+      "何时换盆"
+    ],
     "priority": 0.7,
     "date": "2026-06-08",
-    "updated": "2026-06-08",    "read": "6",
+    "updated": "2026-06-08",
+    "read": "6",
     "image": "card-repot",
-    "imageAlt": "换盆与土壤选择"
+    "imageAlt": "换盆与土壤选择",
+    "categories": [
+      "foliage",
+      "succulent",
+      "flowering",
+      "large-plants",
+      "hydroponic",
+      "fern-special",
+      "beginner"
+    ]
   },
   {
     "id": "fertilizer-guide",
@@ -162,12 +278,30 @@
     "active": "articles",
     "icon": "flask",
     "crumb": "施肥完全攻略",
-    "keywords": ["施肥", "肥料", "薄肥勤施", "缺肥", "氮磷钾", "缓释肥", "施肥频率"],
+    "keywords": [
+      "施肥",
+      "肥料",
+      "薄肥勤施",
+      "缺肥",
+      "氮磷钾",
+      "缓释肥",
+      "施肥频率"
+    ],
     "priority": 0.7,
     "date": "2026-06-07",
-    "updated": "2026-06-07",    "read": "5",
+    "updated": "2026-06-07",
+    "read": "5",
     "image": "card-fertilizer",
-    "imageAlt": "家庭养花施肥指南"
+    "imageAlt": "家庭养花施肥指南",
+    "categories": [
+      "foliage",
+      "succulent",
+      "flowering",
+      "large-plants",
+      "hydroponic",
+      "fern-special",
+      "beginner"
+    ]
   },
   {
     "id": "pest-article",
@@ -179,12 +313,32 @@
     "active": "pests",
     "icon": "bug",
     "crumb": "病虫害防治大全",
-    "keywords": ["病虫害", "蚜虫", "红蜘蛛", "小黑飞", "介壳虫", "白粉病", "叶斑病", "防治"],
+    "keywords": [
+      "病虫害",
+      "蚜虫",
+      "红蜘蛛",
+      "小黑飞",
+      "介壳虫",
+      "白粉病",
+      "叶斑病",
+      "防治"
+    ],
     "priority": 0.7,
     "date": "2026-06-06",
-    "updated": "2026-06-20",    "read": "8",
+    "updated": "2026-06-20",
+    "read": "8",
     "image": "card-pests",
-    "imageAlt": "常见病虫害识别与防治"
+    "imageAlt": "常见病虫害识别与防治",
+    "categories": [
+      "foliage",
+      "succulent",
+      "flowering",
+      "large-plants",
+      "hydroponic",
+      "fern-special",
+      "beginner",
+      "advanced"
+    ]
   },
   {
     "id": "about",
@@ -197,7 +351,12 @@
     "active": "about",
     "icon": "info",
     "crumb": "关于我们",
-    "keywords": ["关于", "关于我们", "团队", "网站介绍"],
+    "keywords": [
+      "关于",
+      "关于我们",
+      "团队",
+      "网站介绍"
+    ],
     "priority": 0.6
   },
   {
@@ -211,7 +370,13 @@
     "active": "",
     "icon": "mail",
     "crumb": "联系我们",
-    "keywords": ["联系", "联系表单", "反馈", "提问", "合作"],
+    "keywords": [
+      "联系",
+      "联系表单",
+      "反馈",
+      "提问",
+      "合作"
+    ],
     "priority": 0.5
   },
   {
@@ -225,7 +390,13 @@
     "active": "",
     "icon": "shield",
     "crumb": "图片来源与版权",
-    "keywords": ["版权", "图片来源", "授权", "转载", "投诉"],
+    "keywords": [
+      "版权",
+      "图片来源",
+      "授权",
+      "转载",
+      "投诉"
+    ],
     "priority": 0.3,
     "omitFromSearch": true
   },
@@ -240,7 +411,12 @@
     "active": "",
     "icon": "lock",
     "crumb": "隐私政策",
-    "keywords": ["隐私政策", "隐私", "Cookie", "GDPR"],
+    "keywords": [
+      "隐私政策",
+      "隐私",
+      "Cookie",
+      "GDPR"
+    ],
     "priority": 0.4,
     "omitFromSearch": true
   }

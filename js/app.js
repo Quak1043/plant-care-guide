@@ -5,7 +5,7 @@
  * 免去打包步骤，GitHub Pages 直接托管即可。
  */
 
-import { initNav } from './nav.js';
+import { initNav, initNavDropdown } from './nav.js';
 import { initTheme } from './theme.js';
 import { initReveal, initToTop } from './tools.js';
 
@@ -14,6 +14,7 @@ const has = (selector) => document.querySelector(selector) !== null;
 async function boot() {
   initTheme();
   initNav();
+  initNavDropdown();
   initReveal();
   initToTop();
 

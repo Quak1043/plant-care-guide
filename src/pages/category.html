@@ -1,0 +1,47 @@
+<!-- @meta
+kind: category
+active: encyclopedia
+-->
+
+{{breadcrumb}}
+
+<section class="hero hero--category">
+  <div class="hero__overlay"></div>
+  <div class="hero__content">
+    <p class="hero__eyebrow">植物分类</p>
+    <h1>{{CATEGORY_NAME}}</h1>
+    <p>{{CATEGORY_DESCRIPTION}}</p>
+    <div class="hero__stats">
+      <span><strong>{{CATEGORY_PLANT_COUNT}}</strong> 种植物</span>
+      <span><strong>{{CATEGORY_ARTICLE_COUNT}}</strong> 篇指南</span>
+    </div>
+  </div>
+</section>
+
+{{CATEGORY_SUBCATS}}
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>该分类植物</h2>
+      <p>精选{{CATEGORY_PLANT_COUNT}}种{{CATEGORY_NAME}}，点击查看详细养护方法</p>
+    </div>
+    <div class="card-grid plant-grid">
+      {{CATEGORY_PLANTS}}
+    </div>
+  </div>
+</section>
+
+{{ad}}
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>养护指南</h2>
+      <p>针对{{CATEGORY_NAME}}的实用养护技巧文章</p>
+    </div>
+    <div class="card-grid">
+      {{CATEGORY_ARTICLES}}
+    </div>
+  </div>
+</section>

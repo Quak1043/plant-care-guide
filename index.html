@@ -143,6 +143,7 @@
   <symbol id="i-list" viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></symbol>
   <symbol id="i-file-text" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></symbol>
   <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+  <symbol id="i-chevron-down" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></symbol>
 </svg>
 
 
@@ -157,6 +158,26 @@
       <li><a href="index.html" aria-current="page">首页</a></li>
       <li><a href="articles.html">文章</a></li>
       <li><a href="encyclopedia.html">植物百科</a></li>
+      <li class="nav-dropdown">
+        <button type="button" class="nav-dropdown__toggle" aria-expanded="false" aria-haspopup="true">
+          植物分类
+          <svg class="icon icon--chevron" aria-hidden="true"><use href="#i-chevron-down"></use></svg>
+        </button>
+        <div class="nav-dropdown__menu" role="menu">
+          <div class="nav-dropdown__cols">
+            <ul>
+              <li><a href="category-foliage.html">观叶植物</a></li>
+              <li><a href="category-succulent.html">多肉仙人掌</a></li>
+              <li><a href="category-flowering.html">开花植物</a></li>
+            </ul>
+            <ul>
+              <li><a href="category-large-plants.html">大型绿植</a></li>
+              <li><a href="category-hydroponic.html">水培水生</a></li>
+              <li><a href="category-fern-special.html">蕨类与另类</a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
       <li><a href="pest-article.html">病虫害</a></li>
       <li><a href="about.html">关于</a></li>
     </nav>
@@ -319,6 +340,118 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>植物分类</h2>
+      <p>按植物类型浏览，快速找到你感兴趣的品类</p>
+    </div>
+    <div class="category-grid">
+            <article class="category-card">
+                <a class="category-card__media" href="category-foliage.html" tabindex="-1" aria-hidden="true">
+                  <picture>
+                    <source type="image/avif" srcset="assets/card-monstera-400.avif 400w, assets/card-monstera-800.avif 800w, assets/card-monstera-1216.avif 1216w" sizes="(max-width:560px) 92vw, (max-width:900px) 45vw, 300px">
+                    <source type="image/webp" srcset="assets/card-monstera-400.webp 400w, assets/card-monstera-800.webp 800w, assets/card-monstera-1216.webp 1216w" sizes="(max-width:560px) 92vw, (max-width:900px) 45vw, 300px">
+                    <img src="assets/card-monstera-1216.jpg" srcset="assets/card-monstera-400.jpg 400w, assets/card-monstera-800.jpg 800w, assets/card-monstera-1216.jpg 1216w" sizes="(max-width:560px) 92vw, (max-width:900px) 45vw, 300px" width="1216" height="868" alt="观叶植物合集" loading="lazy" decoding="async">
+                  </picture>
+                </a>
+                <div class="category-card__body">
+                  <div class="category-card__icon">
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-leaf"></use></svg>
+                  </div>
+                  <h3 class="category-card__name"><a href="category-foliage.html">观叶植物</a></h3>
+                  <p class="category-card__count">7 种植物</p>
+                </div>
+              </article>
+
+      <article class="category-card">
+                <a class="category-card__media" href="category-succulent.html" tabindex="-1" aria-hidden="true">
+                  <picture>
+                    <source type="image/avif" srcset="assets/card-beginner-400.avif 400w, assets/card-beginner-800.avif 800w, assets/card-beginner-1216.avif 1216w" sizes="(max-width:560px) 92vw, (max-width:900px) 45vw, 300px">
+                    <source type="image/webp" srcset="assets/card-beginner-400.webp 400w, assets/card-beginner-800.webp 800w, assets/card-beginner-1216.webp 1216w" sizes="(max-width:560px) 92vw, (max-width:900px) 45vw, 300px">
+                    <img src="assets/card-beginner-1216.jpg" srcset="assets/card-beginner-400.jpg 400w, assets/card-beginner-800.jpg 800w, assets/card-beginner-1216.jpg 1216w" sizes="(max-width:560px) 92vw, (max-width:900px) 45vw, 300px" width="1216" height="868" alt="多肉仙人掌植物" loading="lazy" decoding="async">
+                  </picture>
+                </a>
+                <div class="category-card__body">
+                  <div class="category-card__icon">
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-cactus"></use></svg>
+                  </div>
+                  <h3 class="category-card__name"><a href="category-succulent.html">多肉仙人掌</a></h3>
+                  <p class="category-card__count">1 种植物</p>
+                </div>
+              </article>
+
+      <article class="category-card">
+                <a class="category-card__media" href="category-flowering.html" tabindex="-1" aria-hidden="true">
+                  <picture>
+                    <source type="image/avif" srcset="assets/card-watering-400.avif 400w, assets/card-watering-800.avif 800w, assets/card-watering-1216.avif 1216w" sizes="(max-width:560px) 92vw, (max-width:900px) 45vw, 300px">
+                    <source type="image/webp" srcset="assets/card-watering-400.webp 400w, assets/card-watering-800.webp 800w, assets/card-watering-1216.webp 1216w" sizes="(max-width:560px) 92vw, (max-width:900px) 45vw, 300px">
+                    <img src="assets/card-watering-1216.jpg" srcset="assets/card-watering-400.jpg 400w, assets/card-watering-800.jpg 800w, assets/card-watering-1216.jpg 1216w" sizes="(max-width:560px) 92vw, (max-width:900px) 45vw, 300px" width="1216" height="868" alt="开花植物" loading="lazy" decoding="async">
+                  </picture>
+                </a>
+                <div class="category-card__body">
+                  <div class="category-card__icon">
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-flower"></use></svg>
+                  </div>
+                  <h3 class="category-card__name"><a href="category-flowering.html">开花植物</a></h3>
+                  <p class="category-card__count">1 种植物</p>
+                </div>
+              </article>
+
+      <article class="category-card">
+                <a class="category-card__media" href="category-large-plants.html" tabindex="-1" aria-hidden="true">
+                  <picture>
+                    <source type="image/avif" srcset="assets/card-repot-400.avif 400w, assets/card-repot-800.avif 800w, assets/card-repot-1216.avif 1216w" sizes="(max-width:560px) 92vw, (max-width:900px) 45vw, 300px">
+                    <source type="image/webp" srcset="assets/card-repot-400.webp 400w, assets/card-repot-800.webp 800w, assets/card-repot-1216.webp 1216w" sizes="(max-width:560px) 92vw, (max-width:900px) 45vw, 300px">
+                    <img src="assets/card-repot-1216.jpg" srcset="assets/card-repot-400.jpg 400w, assets/card-repot-800.jpg 800w, assets/card-repot-1216.jpg 1216w" sizes="(max-width:560px) 92vw, (max-width:900px) 45vw, 300px" width="1216" height="868" alt="大型绿植" loading="lazy" decoding="async">
+                  </picture>
+                </a>
+                <div class="category-card__body">
+                  <div class="category-card__icon">
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-tree"></use></svg>
+                  </div>
+                  <h3 class="category-card__name"><a href="category-large-plants.html">大型绿植</a></h3>
+                  <p class="category-card__count">4 种植物</p>
+                </div>
+              </article>
+
+      <article class="category-card">
+                <a class="category-card__media" href="category-hydroponic.html" tabindex="-1" aria-hidden="true">
+                  <picture>
+                    <source type="image/avif" srcset="assets/card-light-400.avif 400w, assets/card-light-800.avif 800w, assets/card-light-1216.avif 1216w" sizes="(max-width:560px) 92vw, (max-width:900px) 45vw, 300px">
+                    <source type="image/webp" srcset="assets/card-light-400.webp 400w, assets/card-light-800.webp 800w, assets/card-light-1216.webp 1216w" sizes="(max-width:560px) 92vw, (max-width:900px) 45vw, 300px">
+                    <img src="assets/card-light-1216.jpg" srcset="assets/card-light-400.jpg 400w, assets/card-light-800.jpg 800w, assets/card-light-1216.jpg 1216w" sizes="(max-width:560px) 92vw, (max-width:900px) 45vw, 300px" width="1216" height="868" alt="水培水生植物" loading="lazy" decoding="async">
+                  </picture>
+                </a>
+                <div class="category-card__body">
+                  <div class="category-card__icon">
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-water"></use></svg>
+                  </div>
+                  <h3 class="category-card__name"><a href="category-hydroponic.html">水培水生</a></h3>
+                  <p class="category-card__count">1 种植物</p>
+                </div>
+              </article>
+
+      <article class="category-card">
+                <a class="category-card__media" href="category-fern-special.html" tabindex="-1" aria-hidden="true">
+                  <picture>
+                    <source type="image/avif" srcset="assets/card-fertilizer-400.avif 400w, assets/card-fertilizer-800.avif 800w, assets/card-fertilizer-1216.avif 1216w" sizes="(max-width:560px) 92vw, (max-width:900px) 45vw, 300px">
+                    <source type="image/webp" srcset="assets/card-fertilizer-400.webp 400w, assets/card-fertilizer-800.webp 800w, assets/card-fertilizer-1216.webp 1216w" sizes="(max-width:560px) 92vw, (max-width:900px) 45vw, 300px">
+                    <img src="assets/card-fertilizer-1216.jpg" srcset="assets/card-fertilizer-400.jpg 400w, assets/card-fertilizer-800.jpg 800w, assets/card-fertilizer-1216.jpg 1216w" sizes="(max-width:560px) 92vw, (max-width:900px) 45vw, 300px" width="1216" height="868" alt="蕨类与另类植物" loading="lazy" decoding="async">
+                  </picture>
+                </a>
+                <div class="category-card__body">
+                  <div class="category-card__icon">
+                    <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-feather"></use></svg>
+                  </div>
+                  <h3 class="category-card__name"><a href="category-fern-special.html">蕨类与另类</a></h3>
+                  <p class="category-card__count">1 种植物</p>
+                </div>
+              </article>
+    </div>
+  </div>
+</section>
+
 <section class="checker" id="checker">
   <div class="container">
     <h2>
@@ -434,6 +567,17 @@
         <ul class="footer__links">
           <li><a href="privacy.html">隐私政策</a></li>
           <li><a href="credits.html">图片来源与版权</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__title">植物分类</p>
+        <ul class="footer__links">
+          <li><a href="category-foliage.html">观叶植物</a></li>
+          <li><a href="category-succulent.html">多肉仙人掌</a></li>
+          <li><a href="category-flowering.html">开花植物</a></li>
+          <li><a href="category-large-plants.html">大型绿植</a></li>
+          <li><a href="category-hydroponic.html">水培水生</a></li>
+          <li><a href="category-fern-special.html">蕨类与另类</a></li>
         </ul>
       </div>
     </div>

@@ -1,0 +1,485 @@
+[
+  /* ===== 一级分类（6个）：植物核心形态/身份维度 ===== */
+  {
+    "id": "foliage",
+    "name": "观叶植物",
+    "slug": "foliage",
+    "level": 1,
+    "parent": null,
+    "description": "以叶片形态和色彩为主要观赏点的室内植物，四季常青，是家居装饰的核心品类。",
+    "icon": "leaf",
+    "image": "card-monstera",
+    "imageAlt": "观叶植物合集",
+    "order": 1
+  },
+  {
+    "id": "succulent",
+    "name": "多肉仙人掌",
+    "slug": "succulent",
+    "level": 1,
+    "parent": null,
+    "description": "耐旱多肉类植物，形态各异，阳光越足颜色越美，是桌面和阳台的最佳伴侣。",
+    "icon": "cactus",
+    "image": "card-beginner",
+    "imageAlt": "多肉仙人掌植物",
+    "order": 2
+  },
+  {
+    "id": "flowering",
+    "name": "开花植物",
+    "slug": "flowering",
+    "level": 1,
+    "parent": null,
+    "description": "以花朵观赏为主的植物，花期观赏价值极高，为家居增添色彩与芬芳。",
+    "icon": "flower",
+    "image": "card-watering",
+    "imageAlt": "开花植物",
+    "order": 3
+  },
+  {
+    "id": "large-plants",
+    "name": "大型绿植",
+    "slug": "large-plants",
+    "level": 1,
+    "parent": null,
+    "description": "适合客厅、办公室的大中型植物，高大挺拔，瞬间提升空间气质。",
+    "icon": "tree",
+    "image": "card-repot",
+    "imageAlt": "大型绿植",
+    "order": 4
+  },
+  {
+    "id": "hydroponic",
+    "name": "水培水生",
+    "slug": "hydroponic",
+    "level": 1,
+    "parent": null,
+    "description": "水培、水生及半水栖植物，干净整洁不需土壤，只需定期换水即可。",
+    "icon": "water",
+    "image": "card-light",
+    "imageAlt": "水培水生植物",
+    "order": 5
+  },
+  {
+    "id": "fern-special",
+    "name": "蕨类与另类",
+    "slug": "fern-special",
+    "level": 1,
+    "parent": null,
+    "description": "蕨类、苔藓、空气凤梨等特色植物，喜欢湿润阴凉环境，别具一格的观赏体验。",
+    "icon": "feather",
+    "image": "card-fertilizer",
+    "imageAlt": "蕨类与另类植物",
+    "order": 6
+  },
+
+  /* ===== 二级分类：观叶植物（5个细分） ===== */
+  {
+    "id": "araceae",
+    "name": "天南星科",
+    "slug": "araceae",
+    "level": 2,
+    "parent": "foliage",
+    "description": "龟背竹、绿萝、蔓绿绒、万年青、红掌等天南星科植物，品种丰富颜值高。",
+    "icon": "herb",
+    "image": "card-monstera",
+    "imageAlt": "天南星科植物",
+    "order": 101
+  },
+  {
+    "id": "calathea",
+    "name": "竹芋与椒草",
+    "slug": "calathea",
+    "level": 2,
+    "parent": "foliage",
+    "description": "孔雀竹芋、青苹果竹芋、西瓜皮椒草等，叶片花纹精美的中小型观叶。",
+    "icon": "leaf",
+    "image": "card-beginner",
+    "imageAlt": "竹芋与椒草",
+    "order": 102
+  },
+  {
+    "id": "dracaena-foliage",
+    "name": "龙血树类",
+    "slug": "dracaena-foliage",
+    "level": 2,
+    "parent": "foliage",
+    "description": "巴西铁、虎皮兰、金钱树等，耐阴性极强，适合办公室和光线不足的角落。",
+    "icon": "tree",
+    "image": "card-light",
+    "imageAlt": "龙血树类植物",
+    "order": 103
+  },
+  {
+    "id": "vining-foliage",
+    "name": "藤蔓垂吊",
+    "slug": "vining-foliage",
+    "level": 2,
+    "parent": "foliage",
+    "description": "绿萝、吊兰、常春藤、球兰等藤蔓垂吊型植物，悬挂摆放极具装饰感。",
+    "icon": "seedling",
+    "image": "card-propagation",
+    "imageAlt": "藤蔓垂吊植物",
+    "order": 104
+  },
+  {
+    "id": "ficus-palm",
+    "name": "榕与棕榈",
+    "slug": "ficus-palm",
+    "level": 2,
+    "parent": "foliage",
+    "description": "琴叶榕、橡皮树、散尾葵、袖珍椰子等，大中型观叶植物的代表品类。",
+    "icon": "tree",
+    "image": "card-repot",
+    "imageAlt": "榕与棕榈植物",
+    "order": 105
+  },
+
+  /* ===== 二级分类：多肉仙人掌（4个细分） ===== */
+  {
+    "id": "echeveria",
+    "name": "景天多肉",
+    "slug": "echeveria",
+    "level": 2,
+    "parent": "succulent",
+    "description": "拟石莲属、景天属、青锁龙属等景天科多肉，品种最丰富的多肉家族。",
+    "icon": "flower",
+    "image": "card-beginner",
+    "imageAlt": "景天多肉",
+    "order": 201
+  },
+  {
+    "id": "cactus",
+    "name": "仙人掌科",
+    "slug": "cactus",
+    "level": 2,
+    "parent": "succulent",
+    "description": "仙人球、仙人掌、量天尺等仙人掌科植物，耐旱耐造，开花惊艳。",
+    "icon": "cactus",
+    "image": "card-pests",
+    "imageAlt": "仙人掌科植物",
+    "order": 202
+  },
+  {
+    "id": "caudex",
+    "name": "块根与球茎",
+    "slug": "caudex",
+    "level": 2,
+    "parent": "succulent",
+    "description": "龟甲龙、睡布袋、佛肚树等块根植物，造型独特，进阶玩家的最爱。",
+    "icon": "pot",
+    "image": "card-fertilizer",
+    "imageAlt": "块根与球茎植物",
+    "order": 203
+  },
+  {
+    "id": "other-succulent",
+    "name": "芦荟与其他",
+    "slug": "other-succulent",
+    "level": 2,
+    "parent": "succulent",
+    "description": "芦荟、生石花、十二卷等其他科属的多肉植物。",
+    "icon": "seedling",
+    "image": "card-repot",
+    "imageAlt": "芦荟与其他多肉",
+    "order": 204
+  },
+
+  /* ===== 二级分类：开花植物（3个细分） ===== */
+  {
+    "id": "orchid",
+    "name": "兰花系列",
+    "slug": "orchid",
+    "level": 2,
+    "parent": "flowering",
+    "description": "蝴蝶兰、石斛兰、文心兰等兰花，花中君子，姿态优雅。",
+    "icon": "butterfly",
+    "image": "card-watering",
+    "imageAlt": "兰花系列",
+    "order": 301
+  },
+  {
+    "id": "bulb-flower",
+    "name": "球根花卉",
+    "slug": "bulb-flower",
+    "level": 2,
+    "parent": "flowering",
+    "description": "风信子、郁金香、水仙等球根花卉，花期集中，开花壮观。",
+    "icon": "flower",
+    "image": "card-light",
+    "imageAlt": "球根花卉",
+    "order": 302
+  },
+  {
+    "id": "woody-flower",
+    "name": "木本花卉",
+    "slug": "woody-flower",
+    "level": 2,
+    "parent": "flowering",
+    "description": "月季、茉莉、栀子、米兰等木本开花植物，花香浓郁。",
+    "icon": "tree",
+    "image": "card-propagation",
+    "imageAlt": "木本花卉",
+    "order": 303
+  },
+
+  /* ===== 二级分类：大型绿植（3个细分） ===== */
+  {
+    "id": "ficus-tree",
+    "name": "榕属大树",
+    "slug": "ficus-tree",
+    "level": 2,
+    "parent": "large-plants",
+    "description": "琴叶榕、橡皮树、菩提树等榕属大型植物，室内大型观叶的颜值担当。",
+    "icon": "tree",
+    "image": "card-repot",
+    "imageAlt": "榕属大树",
+    "order": 401
+  },
+  {
+    "id": "palm-tree",
+    "name": "棕榈科植物",
+    "slug": "palm-tree",
+    "level": 2,
+    "parent": "large-plants",
+    "description": "散尾葵、天堂鸟、夏威夷椰子等棕榈科植物，热带风情十足。",
+    "icon": "seedling",
+    "image": "card-monstera",
+    "imageAlt": "棕榈科植物",
+    "order": 402
+  },
+  {
+    "id": "dracaena-tree",
+    "name": "龙血树大树",
+    "slug": "dracaena-tree",
+    "level": 2,
+    "parent": "large-plants",
+    "description": "巴西铁、也门铁、荷兰铁等大型龙血树，高大挺拔耐阴性强。",
+    "icon": "tree",
+    "image": "card-light",
+    "imageAlt": "龙血树大树",
+    "order": 403
+  },
+
+  /* ===== 二级分类：水培水生（3个细分） ===== */
+  {
+    "id": "hydroponic-foliage",
+    "name": "水培观叶",
+    "slug": "hydroponic-foliage",
+    "level": 2,
+    "parent": "hydroponic",
+    "description": "水培绿萝、富贵竹、白掌等水培观叶植物，干净整洁好养护。",
+    "icon": "water",
+    "image": "card-light",
+    "imageAlt": "水培观叶植物",
+    "order": 501
+  },
+  {
+    "id": "aquatic",
+    "name": "水生植物",
+    "slug": "aquatic",
+    "level": 2,
+    "parent": "hydroponic",
+    "description": "睡莲、碗莲、浮萍等水生植物，适合水缸和小池塘造景。",
+    "icon": "water",
+    "image": "card-watering",
+    "imageAlt": "水生植物",
+    "order": 502
+  },
+  {
+    "id": "semi-aquatic",
+    "name": "半水栖植物",
+    "slug": "semi-aquatic",
+    "level": 2,
+    "parent": "hydroponic",
+    "description": "铜钱草、龟背竹水培、滴水观音等半水半土植物。",
+    "icon": "seedling",
+    "image": "card-fertilizer",
+    "imageAlt": "半水栖植物",
+    "order": 503
+  },
+
+  /* ===== 二级分类：蕨类与另类（3个细分） ===== */
+  {
+    "id": "ornamental-fern",
+    "name": "观赏蕨类",
+    "slug": "ornamental-fern",
+    "level": 2,
+    "parent": "fern-special",
+    "description": "波士顿蕨、鸟巢蕨、铁线蕨等观赏蕨类，叶片细密如羽毛。",
+    "icon": "feather",
+    "image": "card-fertilizer",
+    "imageAlt": "观赏蕨类",
+    "order": 601
+  },
+  {
+    "id": "air-plant",
+    "name": "空气凤梨",
+    "slug": "air-plant",
+    "level": 2,
+    "parent": "fern-special",
+    "description": "不需要土壤的奇特植物，靠吸收空气中的水分和养分生存。",
+    "icon": "wind",
+    "image": "card-propagation",
+    "imageAlt": "空气凤梨",
+    "order": 602
+  },
+  {
+    "id": "moss-mini",
+    "name": "苔藓与微景观",
+    "slug": "moss-mini",
+    "level": 2,
+    "parent": "fern-special",
+    "description": "苔藓、卷柏、食虫植物等，适合打造微景观生态瓶。",
+    "icon": "clover",
+    "image": "card-beginner",
+    "imageAlt": "苔藓与微景观",
+    "order": 603
+  },
+
+  /* ===== 功能标签（12个）：横向场景/功效维度 ===== */
+  {
+    "id": "beginner",
+    "name": "新手友好",
+    "slug": "beginner",
+    "level": 0,
+    "parent": null,
+    "description": "适合新手的植物，皮实好养不容易死。",
+    "icon": "trophy",
+    "image": "card-beginner",
+    "imageAlt": "新手友好植物",
+    "order": 901
+  },
+  {
+    "id": "air-purifying",
+    "name": "净化空气",
+    "slug": "air-purifying",
+    "level": 0,
+    "parent": null,
+    "description": "能有效净化室内空气、吸收有害气体的植物。",
+    "icon": "wind",
+    "image": "card-light",
+    "imageAlt": "净化空气植物",
+    "order": 902
+  },
+  {
+    "id": "low-light",
+    "name": "耐阴耐旱",
+    "slug": "low-light",
+    "level": 0,
+    "parent": null,
+    "description": "耐阴、耐旱的植物，适合光线不好或经常忘记浇水的人。",
+    "icon": "eye",
+    "image": "card-fertilizer",
+    "imageAlt": "耐阴耐旱植物",
+    "order": 903
+  },
+  {
+    "id": "office",
+    "name": "办公室",
+    "slug": "office",
+    "level": 0,
+    "parent": null,
+    "description": "适合办公室环境的植物，耐阴、干净、不需要太多照料。",
+    "icon": "grid",
+    "image": "card-repot",
+    "imageAlt": "办公室植物",
+    "order": 904
+  },
+  {
+    "id": "internet-famous",
+    "name": "网红植物",
+    "slug": "internet-famous",
+    "level": 0,
+    "parent": null,
+    "description": "近年来流行的网红植物，颜值高拍照好看。",
+    "icon": "star",
+    "image": "card-monstera",
+    "imageAlt": "网红植物",
+    "order": 905
+  },
+  {
+    "id": "pet-safe",
+    "name": "宠物安全",
+    "slug": "pet-safe",
+    "level": 0,
+    "parent": null,
+    "description": "对猫狗等宠物无毒的植物，家里有毛孩子也可以放心养。",
+    "icon": "heart",
+    "image": "card-propagation",
+    "imageAlt": "宠物安全植物",
+    "order": 906
+  },
+  {
+    "id": "lucky",
+    "name": "招财寓意",
+    "slug": "lucky",
+    "level": 0,
+    "parent": null,
+    "description": "寓意招财、吉祥的植物，适合开业、乔迁送礼。",
+    "icon": "money",
+    "image": "card-watering",
+    "imageAlt": "招财寓意植物",
+    "order": 907
+  },
+  {
+    "id": "gift",
+    "name": "送礼推荐",
+    "slug": "gift",
+    "level": 0,
+    "parent": null,
+    "description": "适合作为礼物的植物，寓意好又体面。",
+    "icon": "box",
+    "image": "card-pests",
+    "imageAlt": "送礼推荐植物",
+    "order": 908
+  },
+  {
+    "id": "desktop-small",
+    "name": "桌面小型",
+    "slug": "desktop-small",
+    "level": 0,
+    "parent": null,
+    "description": "体型小巧、适合放在书桌或办公桌上的植物。",
+    "icon": "seedling",
+    "image": "card-beginner",
+    "imageAlt": "桌面小型植物",
+    "order": 909
+  },
+  {
+    "id": "bedroom",
+    "name": "卧室推荐",
+    "slug": "bedroom",
+    "level": 0,
+    "parent": null,
+    "description": "适合放在卧室的植物，夜间不抢氧、有助睡眠。",
+    "icon": "moon",
+    "image": "card-light",
+    "imageAlt": "卧室推荐植物",
+    "order": 910
+  },
+  {
+    "id": "sun-loving",
+    "name": "喜阳喜湿",
+    "slug": "sun-loving",
+    "level": 0,
+    "parent": null,
+    "description": "喜欢充足阳光和较高湿度的植物。",
+    "icon": "sun",
+    "image": "card-watering",
+    "imageAlt": "喜阳喜湿植物",
+    "order": 911
+  },
+  {
+    "id": "advanced",
+    "name": "进阶玩家",
+    "slug": "advanced",
+    "level": 0,
+    "parent": null,
+    "description": "有一定养护难度，适合有经验的植物爱好者挑战。",
+    "icon": "flask",
+    "image": "card-pests",
+    "imageAlt": "进阶玩家植物",
+    "order": 912
+  }
+]

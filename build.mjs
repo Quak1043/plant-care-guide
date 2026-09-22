@@ -39,7 +39,60 @@ const SRC = join(ROOT, 'src');
 /* ----------------------------------------------------------------- 工具函数 */
 
 const read = (path) => readFile(path, 'utf8');
-const readJSON = async (path) => JSON.parse(await read(path));
+
+/** 从 JSON 字符串中剥离行注释和块注释（尊重字符串边界）。 */
+function stripJsonComments(str) {
+  let result = '';
+  let inString = false;
+  let escape = false;
+  let i = 0;
+  while (i < str.length) {
+    const ch = str[i];
+    if (escape) {
+      result += ch;
+      escape = false;
+      i++;
+      continue;
+    }
+    if (inString) {
+      if (ch === '\\') {
+        result += ch;
+        escape = true;
+        i++;
+        continue;
+      }
+      if (ch === '"') {
+        inString = false;
+      }
+      result += ch;
+      i++;
+      continue;
+    }
+    if (ch === '"') {
+      inString = true;
+      result += ch;
+      i++;
+      continue;
+    }
+    if (ch === '/' && str[i + 1] === '/') {
+      // 行注释
+      while (i < str.length && str[i] !== '\n') i++;
+      continue;
+    }
+    if (ch === '/' && str[i + 1] === '*') {
+      // 块注释
+      i += 2;
+      while (i < str.length && !(str[i] === '*' && str[i + 1] === '/')) i++;
+      i += 2;
+      continue;
+    }
+    result += ch;
+    i++;
+  }
+  return result;
+}
+
+const readJSON = async (path) => JSON.parse(stripJsonComments(await read(path)));
 
 /** JSON 内联到 <script> 时转义 `<`，避免内容里出现 </script> 破坏文档。 */
 const jsonForScript = (value) => JSON.stringify(value, null, 2).replace(/</g, '\\u003c');
@@ -185,6 +238,12 @@ function renderAd(site) {
 function renderBreadcrumb(page, site) {
   const trail = [{ label: '首页', href: 'index.html' }];
   if (page.kind === 'article') trail.push({ label: '全部文章', href: 'articles.html' });
+  if (page.kind === 'category') {
+    trail.push({ label: '植物百科', href: 'encyclopedia.html' });
+    if (page.level === 2 && page.parentName) {
+      trail.push({ label: page.parentName, href: `category-${page.parentSlug}.html` });
+    }
+  }
   if (page.id !== 'home') trail.push({ label: page.crumb || page.title, href: null });
 
   const items = trail
@@ -389,6 +448,167 @@ function renderFaq(items) {
   </section>`;
 }
 
+/* -------------------------------------------------------------- 分类系统 */
+
+/** 根据 id 查找分类 */
+function findCategory(categories, id) {
+  return categories.find((c) => c.id === id);
+}
+
+/** 获取某个一级分类下的所有二级分类（按 order 排序） */
+function getSubcategories(categories, parentId) {
+  return categories
+    .filter((c) => c.level === 2 && c.parent === parentId)
+    .sort((a, b) => a.order - b.order);
+}
+
+/** 获取某个分类下的植物（一级分类包含所有子类植物，二级只含自身） */
+function getPlantsInCategory(plants, categoryId) {
+  return plants.filter((plant) => plant.categories?.includes(categoryId));
+}
+
+/** 获取某个分类相关的文章（按日期倒序） */
+function getArticlesInCategory(pages, categoryId) {
+  return pages
+    .filter((page) => page.kind === 'article' && page.categories?.includes(categoryId))
+    .sort((a, b) => (a.date < b.date ? 1 : -1));
+}
+
+/** 一级分类页的子分类横向标签条 */
+function renderCategorySubcats(category, categories) {
+  if (category.level !== 1) return '';
+  const subcats = getSubcategories(categories, category.id);
+  if (subcats.length === 0) return '';
+
+  const tabs = subcats
+    .map(
+      (sub) =>
+        `<a href="category-${sub.slug}.html" class="subcat-tab">${sub.name}</a>`
+    )
+    .join('\n          ');
+
+  return `<section class="subcat-bar">
+      <div class="container">
+        <div class="subcat-tabs">
+          <a href="category-${category.slug}.html" class="subcat-tab subcat-tab--active">全部</a>
+          ${tabs}
+        </div>
+      </div>
+    </section>`;
+}
+
+/** 首页分类卡片（6个一级分类，3列 x 2行） */
+function renderCategoryCards(categories, plants, manifest) {
+  const level1 = categories
+    .filter((c) => c.level === 1)
+    .sort((a, b) => a.order - b.order);
+
+  return level1
+    .map((cat) => {
+      const count = getPlantsInCategory(plants, cat.id).length;
+      const picture = renderPicture(
+        `${cat.image}|sizes=(max-width:560px) 92vw, (max-width:900px) 45vw, 300px|alt=${cat.imageAlt || cat.name}`,
+        manifest
+      );
+      return `<article class="category-card">
+          <a class="category-card__media" href="category-${cat.slug}.html" tabindex="-1" aria-hidden="true">
+            ${indent(picture, 12).trimStart()}
+          </a>
+          <div class="category-card__body">
+            <div class="category-card__icon">
+              <svg class="icon" aria-hidden="true" focusable="false"><use href="#i-${cat.icon}"></use></svg>
+            </div>
+            <h3 class="category-card__name"><a href="category-${cat.slug}.html">${cat.name}</a></h3>
+            <p class="category-card__count">${count} 种植物</p>
+          </div>
+        </article>`;
+    })
+    .join('\n\n')
+    .split('\n')
+    .map((line) => (line ? `      ${line}` : line))
+    .join('\n');
+}
+
+/** 文章卡片列表（仅卡片元素，用于分类页等自定义容器） */
+function renderArticleCardList(articles, manifest) {
+  if (articles.length === 0) return '<p class="empty-hint">暂无相关文章</p>';
+
+  return articles
+    .map((page) => {
+      const picture = renderPicture(
+        `${page.image}|sizes=(max-width:560px) 92vw, (max-width:900px) 45vw, 300px|alt=${
+          page.imageAlt || page.title
+        }`,
+        manifest
+      );
+      return `<article class="card">
+          <a class="card__media" href="${page.file}" tabindex="-1" aria-hidden="true">
+            ${indent(picture, 12).trimStart()}
+          </a>
+          <div class="card__body">
+            <span class="card__tag">${page.crumb || page.title}</span>
+            <h3 class="card__title"><a href="${page.file}">${page.title}</a></h3>
+            <p class="card__text">${page.description}</p>
+          </div>
+        </article>`;
+    })
+    .join('\n\n')
+    .split('\n')
+    .map((line) => (line ? `      ${line}` : line))
+    .join('\n');
+}
+
+/** 导航栏「植物分类」下拉菜单（两列布局） */
+function renderNavDropdown(categories) {
+  const level1 = categories
+    .filter((c) => c.level === 1)
+    .sort((a, b) => a.order - b.order);
+
+  const half = Math.ceil(level1.length / 2);
+  const col1 = level1.slice(0, half);
+  const col2 = level1.slice(half);
+
+  const renderCol = (items) =>
+    items
+      .map((cat) => `<li><a href="category-${cat.slug}.html">${cat.name}</a></li>`)
+      .join('\n              ');
+
+  return `      <li class="nav-dropdown">
+        <button type="button" class="nav-dropdown__toggle" aria-expanded="false" aria-haspopup="true">
+          植物分类
+          <svg class="icon icon--chevron" aria-hidden="true"><use href="#i-chevron-down"></use></svg>
+        </button>
+        <div class="nav-dropdown__menu" role="menu">
+          <div class="nav-dropdown__cols">
+            <ul>
+              ${renderCol(col1)}
+            </ul>
+            <ul>
+              ${renderCol(col2)}
+            </ul>
+          </div>
+        </div>
+      </li>`;
+}
+
+/** 页脚分类链接列 */
+function renderFooterCatLinks(categories) {
+  const level1 = categories
+    .filter((c) => c.level === 1)
+    .sort((a, b) => a.order - b.order);
+
+  const links = level1
+    .map((cat) => `          <li><a href="category-${cat.slug}.html">${cat.name}</a></li>`)
+    .join('\n');
+
+  return `      <div>
+        <p class="footer__title">植物分类</p>
+        <ul class="footer__links">
+${links}
+        </ul>
+      </div>`;
+}
+
 /* ------------------------------------------------------------------- JSON-LD */
 
 function buildJsonLd({ meta, page, site, canonical, manifest }) {
@@ -461,10 +681,38 @@ function buildJsonLd({ meta, page, site, canonical, manifest }) {
               },
               { '@type': 'ListItem', position: 3, name: page.crumb || page.title, item: canonical },
             ]
-          : [
-              { '@type': 'ListItem', position: 1, name: '首页', item: `${site.url}/` },
-              { '@type': 'ListItem', position: 2, name: page.crumb || page.title, item: canonical },
-            ],
+          : page.kind === 'category'
+            ? page.level === 1
+              ? [
+                  { '@type': 'ListItem', position: 1, name: '首页', item: `${site.url}/` },
+                  {
+                    '@type': 'ListItem',
+                    position: 2,
+                    name: '植物百科',
+                    item: `${site.url}/encyclopedia.html`,
+                  },
+                  { '@type': 'ListItem', position: 3, name: page.crumb || page.title, item: canonical },
+                ]
+              : [
+                  { '@type': 'ListItem', position: 1, name: '首页', item: `${site.url}/` },
+                  {
+                    '@type': 'ListItem',
+                    position: 2,
+                    name: '植物百科',
+                    item: `${site.url}/encyclopedia.html`,
+                  },
+                  {
+                    '@type': 'ListItem',
+                    position: 3,
+                    name: page.parentName || '',
+                    item: `${site.url}/category-${page.parentSlug || ''}.html`,
+                  },
+                  { '@type': 'ListItem', position: 4, name: page.crumb || page.title, item: canonical },
+                ]
+            : [
+                { '@type': 'ListItem', position: 1, name: '首页', item: `${site.url}/` },
+                { '@type': 'ListItem', position: 2, name: page.crumb || page.title, item: canonical },
+              ],
   });
 
   return `<script type="application/ld+json">\n${jsonForScript({
@@ -490,7 +738,7 @@ function manifestSource(key, manifest) {
  *   3. {{picture:...}}、{{icon:...}} —— 兜住第 1 步生成内容里可能残留的书写
  */
 function renderShortcodes(html, ctx) {
-  const { manifest, pages, plants, faq, page, site, partials } = ctx;
+  const { manifest, pages, plants, faq, page, site, partials, categories } = ctx;
 
   let out = html
     .replace(/\{\{articleHeader\}\}/g, () =>
@@ -505,6 +753,9 @@ function renderShortcodes(html, ctx) {
     )
     .replace(/\{\{plants\}\}/g, () => renderPlantCards(plants, manifest))
     .replace(/\{\{filters\}\}/g, () => renderFilters(plants))
+    .replace(/\{\{CATEGORY_CARDS\}\}/g, () =>
+      categories ? renderCategoryCards(categories, plants, manifest) : ''
+    )
     .replace(/\{\{articles\}\}/g, () => renderArticleList(pages, manifest))
     .replace(/\{\{related:([a-z0-9-]+)\}\}/g, (_, id) => renderRelated(id, pages, manifest))
     .replace(/\{\{faq:([a-z0-9-]+)\}\}/g, (_, id) => renderFaq(faq[id]))
@@ -535,13 +786,31 @@ function renderShortcodes(html, ctx) {
 
 /* ------------------------------------------------------------------ 片段拼装 */
 
-function renderNavLinks(site, activeId) {
-  return site.nav
+function renderNavLinks(site, activeId, categories) {
+  const items = site.nav
     .map((item) => {
       const current = item.id === activeId ? ' aria-current="page"' : '';
       return `      <li><a href="${item.href}"${current}>${item.label}</a></li>`;
     })
     .join('\n');
+
+  // 在「植物百科」之后插入植物分类下拉菜单
+  if (categories && categories.length) {
+    const dropdown = renderNavDropdown(categories);
+    const encyclopediaItem = `      <li><a href="encyclopedia.html"`;
+    if (items.includes(encyclopediaItem)) {
+      // 找到 encyclopedia 那一行并在其后插入 dropdown
+      const lines = items.split('\n');
+      const insertIdx = lines.findIndex((l) => l.includes('encyclopedia.html'));
+      if (insertIdx !== -1) {
+        lines.splice(insertIdx + 1, 0, dropdown);
+        return lines.join('\n');
+      }
+    }
+    return items + '\n' + dropdown;
+  }
+
+  return items;
 }
 
 function renderFooterColumns(site) {
@@ -564,6 +833,9 @@ async function main() {
   const faq = existsSync(join(SRC, 'data', 'faq.json'))
     ? await readJSON(join(SRC, 'data', 'faq.json'))
     : {};
+  const categories = existsSync(join(SRC, 'data', 'categories.json'))
+    ? await readJSON(join(SRC, 'data', 'categories.json'))
+    : [];
   const manifest = await readJSON(join(ROOT, 'assets', 'manifest.json'));
 
   const partials = {
@@ -575,7 +847,9 @@ async function main() {
   };
 
   const pageFiles = existsSync(join(SRC, 'pages')) ? await readdir(join(SRC, 'pages')) : [];
-  const sources = pageFiles.filter((name) => name.endsWith('.html')).sort();
+  const sources = pageFiles
+    .filter((name) => name.endsWith('.html') && name !== 'category.html')
+    .sort();
 
   console.log(`构建 ${sources.length} 个页面（页面注册表共 ${pages.length} 项）\n`);
 
@@ -635,13 +909,14 @@ async function main() {
 
     const navbar = fill(partials.navbar, {
       SITE_NAME: site.name,
-      NAV_LINKS: renderNavLinks(site, merged.active),
+      NAV_LINKS: renderNavLinks(site, merged.active, categories),
     });
 
     const footer = fill(partials.footer, {
       SITE_NAME: site.name,
       FOOTER_DESC: site.footer.brandDesc,
       FOOTER_COLUMNS: renderFooterColumns(site),
+      FOOTER_CAT_LINKS: categories.length ? renderFooterCatLinks(categories) : '',
       SITE_EMAIL: site.email || '',
       YEAR: new Date().getFullYear(),
     });
@@ -654,6 +929,7 @@ async function main() {
       page: merged,
       site,
       partials,
+      categories,
     });
 
     const bodyAttrs = [
@@ -684,6 +960,138 @@ async function main() {
     console.log(`  ✓ ${filename.padEnd(26)} ${(size / 1024).toFixed(1)} KB`);
   }
 
+  /* ------------------------------------------------------- 分类页面生成 */
+
+  const catTemplate = existsSync(join(SRC, 'pages', 'category.html'))
+    ? await read(join(SRC, 'pages', 'category.html'))
+    : null;
+
+  if (catTemplate && categories.length) {
+    const { meta: catMeta, body: catBody } = parseMeta(catTemplate);
+    const levelCats = categories.filter((c) => c.level === 1 || c.level === 2);
+    console.log(`\n生成 ${levelCats.length} 个分类页面（${categories.filter((c) => c.level === 1).length} 个一级 + ${categories.filter((c) => c.level === 2).length} 个二级）\n`);
+
+    for (const cat of levelCats) {
+      const catPlants = getPlantsInCategory(plants, cat.id);
+      const catArticles = getArticlesInCategory(pages, cat.id);
+      const parentCat = cat.parent ? findCategory(categories, cat.parent) : null;
+
+      const catPage = {
+        id: `cat-${cat.id}`,
+        file: `category-${cat.slug}.html`,
+        title: `${cat.name} - 植物分类`,
+        description: cat.description,
+        kind: 'category',
+        active: 'encyclopedia',
+        icon: cat.icon,
+        crumb: cat.name,
+        level: cat.level,
+        parent: cat.parent,
+        parentName: parentCat?.name || '',
+        parentSlug: parentCat?.slug || '',
+        priority: cat.level === 1 ? 0.7 : 0.5,
+        image: cat.image,
+        imageAlt: cat.imageAlt || cat.name,
+      };
+
+      const merged = { ...catPage, ...catMeta };
+
+      const canonical = `${site.url}/${catPage.file}`;
+      const ogImageKey = cat.image || 'hero';
+      const ogEntry = manifest[ogImageKey];
+      const ogImage = `${site.url}/${manifestSource(ogImageKey, manifest)}`;
+
+      const preload = '';
+      const skipLink = '<a class="skip-link" href="#main">跳到主要内容</a>';
+
+      const head = fill(partials.head, {
+        LANG: site.lang,
+        TITLE: `${cat.name} - 植物分类 - ${site.name}`,
+        DESCRIPTION: cat.description,
+        THEME_COLOR: site.themeColor,
+        CANONICAL: canonical,
+        SITE_NAME: site.name,
+        OG_TYPE: 'website',
+        OG_IMAGE: ogImage,
+        OG_IMAGE_W: ogEntry?.intrinsic.width ?? 1368,
+        OG_IMAGE_H: ogEntry?.intrinsic.height ?? 768,
+        TWITTER_CARD: site.twitter,
+        ADSENSE: site.adsense,
+        GA4: site.ga4,
+        PRELOAD: preload,
+        JSONLD: buildJsonLd({ meta: merged, page: catPage, site, canonical, manifest }),
+        SKIP_LINK: skipLink,
+        ICONS: partials.icons,
+        HEAD_EXTRA: '',
+      });
+
+      const navbar = fill(partials.navbar, {
+        SITE_NAME: site.name,
+        NAV_LINKS: renderNavLinks(site, catPage.active, categories),
+      });
+
+      const footer = fill(partials.footer, {
+        SITE_NAME: site.name,
+        FOOTER_DESC: site.footer.brandDesc,
+        FOOTER_COLUMNS: renderFooterColumns(site),
+        FOOTER_CAT_LINKS: categories.length ? renderFooterCatLinks(categories) : '',
+        SITE_EMAIL: site.email || '',
+        YEAR: new Date().getFullYear(),
+      });
+
+      // 先填充分类特有的占位符（只用定向替换，避免清空其他短代码）
+      let catContent = catBody
+        .trim()
+        .replace(/\{\{CATEGORY_NAME\}\}/g, cat.name)
+        .replace(/\{\{CATEGORY_DESCRIPTION\}\}/g, cat.description)
+        .replace(/\{\{CATEGORY_PLANT_COUNT\}\}/g, String(catPlants.length))
+        .replace(/\{\{CATEGORY_ARTICLE_COUNT\}\}/g, String(catArticles.length))
+        .replace(/\{\{CATEGORY_SUBCATS\}\}/g, renderCategorySubcats(cat, categories))
+        .replace(/\{\{CATEGORY_PLANTS\}\}/g, renderPlantCards(catPlants, manifest))
+        .replace(
+          /\{\{CATEGORY_ARTICLES\}\}/g,
+          renderArticleCardList(catArticles.slice(0, 6), manifest)
+        );
+
+      // 再展开通用短代码
+      catContent = renderShortcodes(catContent, {
+        manifest,
+        pages,
+        plants,
+        faq,
+        page: catPage,
+        site,
+        partials,
+        categories,
+      });
+
+      const bodyAttrs = [
+        `data-page-kind="category"`,
+        `data-page="${catPage.id}"`,
+      ].join(' ');
+
+      const html = [
+        head,
+        navbar,
+        '<main id="main">',
+        catContent,
+        '</main>',
+        footer,
+        '<script type="module" src="js/app.js"></script>',
+        '</body>',
+        '</html>',
+        '',
+      ]
+        .join('\n')
+        .replace('<body>', `<body ${bodyAttrs}>`);
+
+      await writeFile(join(ROOT, catPage.file), html, 'utf8');
+      const size = Buffer.byteLength(html, 'utf8');
+      built.push({ file: catPage.file, size });
+      console.log(`  ✓ ${catPage.file.padEnd(26)} ${(size / 1024).toFixed(1)} KB`);
+    }
+  }
+
   /* --------------------------------------------------- 搜索索引（单一数据源） */
 
   const index = [];
@@ -709,6 +1117,18 @@ async function main() {
     });
   }
 
+  // 分类页面加入搜索索引
+  for (const cat of categories) {
+    if (cat.level === 0) continue; // 跳过功能标签
+    index.push({
+      title: cat.name,
+      sub: cat.level === 1 ? '分类 · 一级分类' : '分类 · 二级分类',
+      url: `category-${cat.slug}.html`,
+      icon: cat.icon || 'leaf',
+      keywords: cat.name,
+    });
+  }
+
   await mkdir(join(ROOT, 'js'), { recursive: true });
   await writeFile(
     join(ROOT, 'js', 'search-index.json'),
@@ -722,7 +1142,7 @@ async function main() {
   /* -------------------------------------------------------- sitemap / robots */
 
   const today = new Date().toISOString().slice(0, 10);
-  const urls = pages
+  const pageUrls = pages
     .filter((page) => page.priority)
     .map((page) => {
       const loc = page.id === 'home' ? `${site.url}/` : `${site.url}/${page.file}`;
@@ -738,6 +1158,22 @@ async function main() {
         .join('\n');
     })
     .join('\n');
+
+  const catUrls = categories
+    .filter((c) => c.level === 1 || c.level === 2)
+    .map((cat) => {
+      const priority = cat.level === 1 ? '0.7' : '0.5';
+      return [
+        '  <url>',
+        `    <loc>${site.url}/category-${cat.slug}.html</loc>`,
+        `    <lastmod>${today}</lastmod>`,
+        `    <priority>${priority}</priority>`,
+        '  </url>',
+      ].join('\n');
+    })
+    .join('\n');
+
+  const urls = pageUrls + (catUrls ? '\n' + catUrls : '');
 
   await writeFile(
     join(ROOT, 'sitemap.xml'),
@@ -755,7 +1191,10 @@ async function main() {
   );
 
   if (existsSync(join(ROOT, 'CNAME'))) console.log('  ✓ CNAME / ads.txt 保持不变');
-  console.log(`  ✓ sitemap.xml                  ${pages.filter((p) => p.priority).length} 条`);
+  const totalSitemap =
+    pages.filter((p) => p.priority).length +
+    categories.filter((c) => c.level === 1 || c.level === 2).length;
+  console.log(`  ✓ sitemap.xml                  ${totalSitemap} 条`);
   console.log('  ✓ robots.txt                   已移除对 /css/ 与 /js/ 的屏蔽');
 
   if (missing.length) {
